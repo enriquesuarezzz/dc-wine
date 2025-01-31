@@ -2,5 +2,9 @@
   "HomePage": {
     "title": "italiano!",
     "about": "italianooo"
+  },
+  "about": {
+    "title": "about",
+    "about": "esta es la pagina de about italiana"
   }
 }
