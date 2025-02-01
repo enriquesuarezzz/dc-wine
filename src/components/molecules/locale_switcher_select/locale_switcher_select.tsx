@@ -1,15 +1,15 @@
 'use client'
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
 import { Locale, routing, usePathname, useRouter } from '@/i18n/routing'
 import { useParams } from 'next/navigation'
 import { ReactNode } from 'react'
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from '../ui/select'
 
 type Props = {
   children: ReactNode
