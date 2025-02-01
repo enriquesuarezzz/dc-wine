@@ -1,10 +1,12 @@
 {
   "HomePage": {
-    "title": "Hola mundo!",
-    "about": "Ir al home"
+    "title": "Hola!",
+    "welcome": {
+      "title": "Bienvenido al home"
+    },
+    "contact": "Ir a contacto"
   },
-  "about": {
-    "title": "about",
-    "about": "esta es la pagina de about"
+  "ContactPage": {
+    "title": "Esta es la pagina de contacto"
   }
 }

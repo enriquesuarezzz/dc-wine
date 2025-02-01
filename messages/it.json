@@ -1,10 +1,12 @@
 {
   "HomePage": {
-    "title": "italiano!",
-    "about": "italianooo"
+    "title": "Ciao!",
+    "welcome": {
+      "title": "benvenuti nella home page"
+    },
+    "contact": "vai alla pagina dei contatti"
   },
-  "about": {
-    "title": "about",
-    "about": "esta es la pagina de about italiana"
+  "ContactPage": {
+    "title": "questa è la pagina di contatto"
   }
 }
