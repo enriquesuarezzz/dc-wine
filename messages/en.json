@@ -1,12 +1,16 @@
 {
-  "HomePage": {
+  "home_page": {
     "title": "Hello world!",
     "welcome": {
       "title": "Welcome to the home page"
     },
     "contact": "Go to the contact page"
   },
-  "ContactPage": {
+  "navbar": {
+    "about_us": "About Us",
+    "products": "Products"
+  },
+  "contact_page": {
     "title": "This is the contact page"
   }
 }
