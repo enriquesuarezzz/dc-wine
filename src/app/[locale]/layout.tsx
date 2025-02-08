@@ -2,7 +2,6 @@ import { Locale, routing } from '@/i18n/routing'
 import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
-
 import { notFound } from 'next/navigation'
 import './globals.css'
 import Navbar from '@/components/molecules/navbar/navbar'
@@ -40,9 +39,7 @@ export default async function RootLayout({
   const messages = await getMessages()
   return (
     <html lang={locale}>
-      <body
-        className={`${BarlowText.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${BarlowText.variable} ${geistMono.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}
