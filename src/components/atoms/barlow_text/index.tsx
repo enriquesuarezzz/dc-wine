@@ -1,6 +1,6 @@
 'use client'
 import { Barlow } from 'next/font/google'
-import { forwardRef, useEffect, useRef } from 'react'
+import { forwardRef } from 'react'
 
 export const barlow = Barlow({
   subsets: ['latin'],
@@ -8,7 +8,7 @@ export const barlow = Barlow({
 })
 
 export interface BarlowTextProps {
-  text: string
+  children: React.ReactNode // Allow JSX as children
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
   style?: 'light' | 'normal' | 'semibold' | 'bold'
   fontSize?: '16px' | '19px' | '22px' | '32px'
@@ -22,7 +22,7 @@ export const BarlowText = forwardRef<
 >(
   (
     {
-      text,
+      children,
       tag = 'p',
       style = 'regular',
       fontSize = '16px',
@@ -31,13 +31,6 @@ export const BarlowText = forwardRef<
     },
     ref, // Include the ref parameter here
   ) => {
-    const textContent = useRef<HTMLParagraphElement>(null)
-    useEffect(() => {
-      if (textContent.current) {
-        textContent.current.innerHTML = text
-      }
-    }, [text])
-
     function getSize() {
       switch (fontSize) {
         case '16px':
@@ -88,43 +81,43 @@ export const BarlowText = forwardRef<
         case 'h1':
           return (
             <h1 ref={ref} className={`${globalStyle} ${className}`}>
-              {text}
+              {children}
             </h1>
           )
         case 'h2':
           return (
             <h2 ref={ref} className={`${globalStyle} ${className}`}>
-              {text}
+              {children}
             </h2>
           )
         case 'h3':
           return (
             <h3 ref={ref} className={`${globalStyle} ${className}`}>
-              {text}
+              {children}
             </h3>
           )
         case 'h4':
           return (
             <h4 ref={ref} className={`${globalStyle} ${className}`}>
-              {text}
+              {children}
             </h4>
           )
         case 'h5':
           return (
             <h5 ref={ref} className={`${globalStyle} ${className}`}>
-              {text}
+              {children}
             </h5>
           )
         case 'h6':
           return (
             <h6 ref={ref} className={`${globalStyle} ${className}`}>
-              {text}
+              {children}
             </h6>
           )
         case 'p':
           return (
             <p ref={ref} className={`${globalStyle} ${className}`}>
-              {text}
+              {children}
             </p>
           )
       }
