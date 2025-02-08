@@ -1,49 +1,36 @@
 'use client'
-import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Autoplay, EffectCoverflow } from 'swiper/modules'
+import { Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import 'swiper/css/effect-coverflow'
+import { BarlowText } from '@/components/atoms/barlow_text'
 
 export default function MainCarousel() {
-  const images = [
-    '/images/carousel/slide_1.avif',
-    '/images/carousel/slide_2.avif',
-    '/images/carousel/slide_3.avif',
-    '/images/carousel/slide_1.avif',
-    '/images/carousel/slide_2.avif',
+  const slides = [
+    {
+      color: 'bg-[#b7e3f3]',
+      text: 'Deleita tu paladar con los <br/> mejores vinos importados desde Italia',
+    },
+    { color: 'bg-[#b7f3e4]', text: 'Hello Worlddd ' },
+    { color: 'bg-[#eaf3b7]', text: 'Hello Worlddddd' },
   ]
 
   return (
-    <div className="relative w-full max-w-[1280px]">
+    <div className="flex h-full w-full items-center justify-center px-72">
       <Swiper
-        modules={[Pagination, Autoplay, EffectCoverflow]}
-        spaceBetween={-20} // Reduce spacing between slides
-        slidesPerView={1.5} // More than 1 to show partial slides on sides
+        modules={[Pagination, Autoplay]}
+        spaceBetween={10}
+        slidesPerView={1}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 2600 }}
+        autoplay={{ delay: 3000 }}
         loop
-        centeredSlides
-        effect="coverflow"
-        coverflowEffect={{
-          rotate: 0, // No rotation
-          stretch: -80, // Negative value creates curve effect
-          depth: 250, // Higher depth to enhance perspective
-          modifier: 1.2, // Adjusts intensity
-          slideShadows: false, // Remove shadows for cleaner look
-        }}
-        className="mx-auto w-full"
+        className="h-[300px] w-full md:h-[650px]"
       >
-        {images.map((src, index) => (
-          <SwiperSlide key={index} className="flex justify-center">
-            <Image
-              src={src}
-              alt={`Slide ${index + 1}`}
-              width={900}
-              height={500}
-              className="h-[500px] w-[800px] max-w-[1280px] rounded-lg object-cover transition-transform duration-300 ease-in-out"
-            />
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index} className={`rounded-3xl ${slide.color}`}>
+            <BarlowText tag="h1" fontSize="32px" style="bold">
+              <span dangerouslySetInnerHTML={{ __html: slide.text }} />
+            </BarlowText>
           </SwiperSlide>
         ))}
       </Swiper>
