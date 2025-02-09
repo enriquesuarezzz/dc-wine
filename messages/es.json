@@ -1,9 +1,13 @@
 {
   "home_page": {
-    "title": "DCWine, la Pasión",
-    "subtitle": "El vino se define como un producto cultural y histórico, algo que siempre ha estado presente en todas las áreas de nuestra vida, ya sea a través de la gastronomía, la agricultura o simplemente en los eventos más lúdicos. El origen del vino es muy antiguo y estrechamente ligado al desarrollo del hombre. Presente en todas las civilizaciones. El vino también está conectado a la idea de celebrar; un evento, un momento, una fecha especial, un logro obtenido, un reencuentro, un amor. Todo esto viene amplificado cuando se aprecia lo que hay dentro de cada botella, y conociendo su historia."
+    "header": "Nueva cosecha",
+    "title": "DCWine <br/> the Passion",
+    "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
+    "button": "Compra ahora"
   },
+
   "navbar": {
+    "home": "Home",
     "about_us": "Sobre Nosotros",
     "products": "Productos"
   },

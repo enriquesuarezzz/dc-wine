@@ -1,9 +1,12 @@
 {
   "home_page": {
-    "title": "DCWine, the Passion",
-    "subtitle": "Wine is defined as a cultural and historical product, something that has always been present in all areas of our lives, whether through gastronomy, agriculture or simply in the most recreational events. The origin of wine is very ancient and closely linked to the development of man. Present in all civilizations. Wine is also connected to the idea of ​​celebrating; an event, a moment, a special date, an achievement, a reunion, a love. All of this is amplified when you appreciate what is inside each bottle, and knowing its history."
+    "header": "New arrivals",
+    "title": "DCWine <br/> the Passion",
+    "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
+    "button": "Shop Now"
   },
   "navbar": {
+    "home": "Home",
     "about_us": "About Us",
     "products": "Products"
   },
