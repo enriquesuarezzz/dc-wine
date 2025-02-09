@@ -1,13 +1,13 @@
 'use client'
-import { Barlow } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import { forwardRef } from 'react'
 
-export const barlow = Barlow({
+export const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '600', '700'],
 })
 
-export interface BarlowTextProps {
+export interface PoppinsTextProps {
   children: React.ReactNode // Allow JSX as children
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
   style?: 'light' | 'normal' | 'semibold' | 'bold'
@@ -16,9 +16,9 @@ export interface BarlowTextProps {
   className?: string
 }
 
-export const BarlowText = forwardRef<
+export const PoppinsText = forwardRef<
   HTMLHeadingElement | HTMLParagraphElement,
-  BarlowTextProps
+  PoppinsTextProps
 >(
   (
     {
@@ -74,7 +74,7 @@ export const BarlowText = forwardRef<
       }
     }
 
-    let globalStyle = `${barlow.className} ${getSize()} ${getLeading()} ${getStyle()} antialiased`
+    let globalStyle = `${poppins.className} ${getSize()} ${getLeading()} ${getStyle()} antialiased`
 
     function getTag() {
       switch (tag) {
@@ -127,4 +127,4 @@ export const BarlowText = forwardRef<
   },
 )
 
-BarlowText.displayName = 'BarlowText'
+PoppinsText.displayName = 'PoppinsText'
