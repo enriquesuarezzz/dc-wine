@@ -1,5 +1,4 @@
-import { BarlowText } from '@/components/atoms/barlow_text'
-import MainCarousel from '@/components/molecules/main_carousel/main_carousel'
+import MainCarousel from '@/components/molecules/header/header'
 import { getTranslations } from 'next-intl/server'
 
 export default async function HomePage() {

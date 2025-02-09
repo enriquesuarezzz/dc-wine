@@ -10,7 +10,7 @@ export default function Cart(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <path
-        fill="#737373"
+        fill="#000000"
         d="M0 1h4.764l.545 2h18.078l-3.666 11H7.78l-.5 2H22v2H4.72l1.246-4.989L3.236 3H0zm7.764 11h10.515l2.334-7H5.855zM4 21a2 2 0 1 1 4 0a2 2 0 0 1-4 0m14 0a2 2 0 1 1 4 0a2 2 0 0 1-4 0"
       />
     </svg>
