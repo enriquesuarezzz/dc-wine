@@ -12,6 +12,12 @@
       "dark_wine": "Vino tinto",
       "white_wine": "Vino blanco",
       "exotic_wine": "Vinos Exóticos"
+    },
+    "features": {
+      "feature_1": {
+        "title": "DCWine, la Pasión",
+        "subtitle": "El vino se define como un producto cultural y histórico, <br/> algo que siempre ha estado presente <br/> en todas las áreas."
+      }
     }
   },
 
