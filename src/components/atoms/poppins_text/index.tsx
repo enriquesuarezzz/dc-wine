@@ -11,7 +11,7 @@ export interface PoppinsTextProps {
   children: React.ReactNode // Allow JSX as children
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
   style?: 'light' | 'normal' | 'semibold' | 'bold'
-  fontSize?: '16px' | '19px' | '22px' | '32px'
+  fontSize?: '16px' | '19px' | '20px' | '22px' | '28px' | '32px' | '44px'
   leading?: 'normal' | 'none' | 'tight' | 'snug' | 'relaxed' | 'loose'
   className?: string
 }
@@ -37,10 +37,16 @@ export const PoppinsText = forwardRef<
           return 'text-[14px] md:text-[16px]'
         case '19px':
           return 'text-[14px] md:text-[16px] lg:text-[19px]'
+        case '20px':
+          return 'text-[16px] md:text-[20px]'
         case '22px':
           return 'text-[20px] md:text-[22px]'
+        case '28px':
+          return 'text-[20px] md:text-[28px]'
         case '32px':
           return 'text-[22px] md:text-[32px]'
+        case '44px':
+          return 'text-[22px]  md:text-[44px]'
       }
     }
 

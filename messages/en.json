@@ -1,10 +1,26 @@
 {
   "home_page": {
-    "header": "New arrivals",
-    "title": "DCWine <br/> the Passion",
-    "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
-    "button": "Shop Now"
+    "header": {
+      "header_title": "New arrivals",
+      "title": "DCWine <br/> the Passion",
+      "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
+      "button": "Shop Now"
+    },
+    "top_selling_products": {
+      "title": "Discover our top selling products",
+      "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
+      "dark_wine": "Black Wine",
+      "white_wine": "White Wine",
+      "exotic_wine": "Exotic Wine"
+    },
+    "features": {
+      "feature_1": {
+        "title": "DCWine, la Pasión",
+        "subtitle": "El vino se define como un producto cultural y histórico, <br/> algo que siempre ha estado presente <br/> en todas las áreas."
+      }
+    }
   },
+
   "navbar": {
     "home": "Home",
     "about_us": "About Us",
