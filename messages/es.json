@@ -1,9 +1,18 @@
 {
   "home_page": {
-    "header": "Nueva cosecha",
-    "title": "DCWine <br/> the Passion",
-    "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
-    "button": "Compra ahora"
+    "header": {
+      "header_title": "Nueva cosecha",
+      "title": "DCWine <br/> the Passion",
+      "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
+      "button": "Compra ahora"
+    },
+    "top_selling_products": {
+      "title": "Descubre nuestros productos más vendidos",
+      "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
+      "dark_wine": "Vino tinto",
+      "white_wine": "Vino blanco",
+      "exotic_wine": "Vinos Exóticos"
+    }
   },
 
   "navbar": {
