@@ -80,7 +80,7 @@ export const PoppinsText = forwardRef<
       }
     }
 
-    let globalStyle = `${poppins.className} ${getSize()} ${getLeading()} ${getStyle()} antialiased`
+    const globalStyle = `${poppins.className} ${getSize()} ${getLeading()} ${getStyle()} antialiased`
 
     function getTag() {
       switch (tag) {
