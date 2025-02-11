@@ -10,39 +10,45 @@ export default async function NavBar() {
   const t = await getTranslations('navbar')
   return (
     <div className="flex items-center justify-between rounded-3xl px-20 py-4 text-white">
+      {/* Logo */}
       <Image src="/images/logo.avif" alt="Logo" width={60} height={60} />
       <div className="flex items-center justify-center gap-10">
+        {/* Navigation Links */}
+        {/* Home link */}
         <Link href="/">
           <PoppinsText
             tag="h1"
             fontSize="16px"
             style="bold"
-            className="text-black"
+            className="after:bg-hover_orange hover:text-hover_orange relative block w-fit pl-2 text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {t('home')}
           </PoppinsText>
         </Link>
+        {/* About Us link */}
         <Link href="/about_us">
           <PoppinsText
             tag="h1"
             fontSize="16px"
             style="bold"
-            className="text-black"
+            className="after:bg-hover_orange hover:text-hover_orange relative block w-fit pl-2 text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {t('about_us')}
           </PoppinsText>
         </Link>
+        {/* Products link */}
         <Link href="/products">
           <PoppinsText
             tag="h1"
             fontSize="16px"
             style="bold"
-            className="text-black"
+            className="after:bg-hover_orange hover:text-hover_orange relative block w-fit pl-2 text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {t('products')}
           </PoppinsText>
         </Link>
       </div>
+      {/* Search, Cart and Locale Switcher */}
       <div className="flex items-center justify-center gap-10">
         <Search />
         <Cart />

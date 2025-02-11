@@ -16,15 +16,29 @@
     "features": {
       "feature_1": {
         "title": "DCWine, la Pasión",
-        "subtitle": "El vino se define como un producto cultural y histórico, <br/> algo que siempre ha estado presente <br/> en todas las áreas."
+        "subtitle": "El vino se define como un producto cultural y histórico, algo que siempre ha estado presente en todas las áreas de nuestra vida, ya sea a través de la gastronomía, la agricultura o simplemente en los eventos más lúdicos. El origen del vino es muy antiguo y estrechamente ligado al desarrollo del hombre. Presente en todas las civilizaciones. El vino también está conectado a la idea de celebrar; un evento, un momento, una fecha especial, un logro obtenido, un reencuentro, un amor. Todo esto viene amplificado cuando se aprecia lo que hay dentro de cada botella, y conociendo su historia."
+      },
+      "feature_2": {
+        "title": "El Prosecco",
+        "subtitle": "Las colinas de Prosecco di Conegliano y Valdobbiadene han sido declaradas Patrimonio de la Humanidad por la UNESCO (7 de julio 2018) debido al excepcional valor universal del paisaje del Véneto, estas colinas representan el mundo del prosecco italiano: treinta kilómetros de pendientes empinadas cubiertas de viñedos, gracias al clima y al terreno que facilitan su producción. Aquí nace el Prosecco DeGiusti, un producto de calidad, disponible en tres variantes, variedad de uva “Glera” realizado con un metodo exclusivo de doble fermentaciòn a presiòn en unos barriles que toman el nombre de «Autoclavi», unico al mundo y reconocido a nivel mundial, para una experiencia única y inigualable."
+      },
+      "feature_3": {
+        "title": "El Biológico",
+        "subtitle": "La palabra BIO desde el Latin significa «Vida», Vida que genera Vida. Un vino biológico, es aquel cuya producción está libre de productos químicos artificiales o dañinos para los viñedos o las personas que trabajan en ellos. Para obtener un vino certificado como biológico, se deben cuidar la vid y el campo por un periodo de más de cuatro años, Quien produce vino biológico merece un aplauso, porqué no está pensando solo en sí mismo o al momento presente; está pensando en el planeta, en las generaciones futuras y está también finalmente pensando en nosotros que en la copa servimos un vino cada vez más cuidadoso del planeta. Azienda Agricola La Fontursia lleva años con estas certificaciónes ya que sus viñedos respetan el proceso Biológico desde hace generaciones. Variedades de uvas únicas como el “Passerina” o el “Pecorino” hacen que estos vinos Biológicos, certificados por la UE, sean un referente internacional del saber hacer, en el respecto total de el medioambiente."
       }
     }
   },
-
   "navbar": {
     "home": "Home",
     "about_us": "Sobre Nosotros",
     "products": "Productos"
+  },
+  "footer": {
+    "home": "Home",
+    "about_us": "Sobre Nosotros",
+    "products": "Productos",
+    "cookies": "Política de Cookies",
+    "privacy": "Política de Privacidad"
   },
   "contact_page": {
     "title": "Esta es la pagina de contacto"
