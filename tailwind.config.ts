@@ -15,6 +15,7 @@ export default {
         light_orange: '#fff3e3',
         dark_orange: '#b98e2f',
         darker_orange: '#b98e2f',
+        hover_orange: '#cf9b25',
       },
     },
   },
