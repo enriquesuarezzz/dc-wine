@@ -1,7 +1,7 @@
 'use client'
 
 import { Locale, routing, usePathname, useRouter } from '@/i18n/routing'
-import { useParams } from 'next/navigation'
+
 import {
   Select,
   SelectTrigger,
@@ -28,10 +28,9 @@ type Props = {
   label: string
 }
 
-export default function LocaleSwitcherSelect({ defaultValue, label }: Props) {
+export default function LocaleSwitcherSelect({ defaultValue }: Props) {
   const router = useRouter()
   const pathname = usePathname()
-  const params = useParams()
 
   function onSelectChange(nextLocale: string) {
     router.replace({ pathname }, { locale: nextLocale as Locale })
