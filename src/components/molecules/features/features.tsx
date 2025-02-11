@@ -11,19 +11,21 @@ export default async function Features() {
       subtitle: 'features.feature_1.subtitle',
     },
     {
-      image: 'images/features/image_1.avif',
-      title: 'features.feature_1.title',
-      subtitle: 'features.feature_1.subtitle',
+      image: 'images/features/image_2.avif',
+      title: 'features.feature_2.title',
+      subtitle: 'features.feature_2.subtitle',
     },
     {
-      image: 'images/features/image_1.avif',
-      title: 'features.feature_1.title',
-      subtitle: 'features.feature_1.subtitle',
+      image: 'images/features/image_3.avif',
+      title: 'features.feature_3.title',
+      subtitle: 'features.feature_3.subtitle',
     },
   ]
 
   return (
     <section className="flex w-screen flex-col items-center pt-32">
+      {/* Feature Section */}
+      {/* Feature array loop */}
       {features.map((feature, index) => (
         <div
           key={index}
@@ -43,15 +45,16 @@ export default async function Features() {
             <PoppinsText fontSize="44px" style="bold">
               {t(feature.title)}
             </PoppinsText>
-            <div className="bg-dark_orange mx-auto h-1 w-1/2 rounded-full" />
-            <PoppinsText fontSize="16px" style="bold">
+            <div className="mx-auto h-1 w-1/2 rounded-full bg-dark_orange" />
+            <PoppinsText fontSize="16px">
               <span
                 dangerouslySetInnerHTML={{
                   __html: t(feature.subtitle),
                 }}
               />
             </PoppinsText>
-            <button className="bg-darker_orange mt-4 rounded-full px-10 py-4 font-bold">
+            {/* Button */}
+            <button className="hover:bg-hover_orange mt-4 rounded-full bg-darker_orange px-10 py-4 transition-all duration-300 ease-in-out hover:scale-105">
               <PoppinsText fontSize="16px" style="bold" className="text-white">
                 {t('header.button')}
               </PoppinsText>
