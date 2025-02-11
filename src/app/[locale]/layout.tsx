@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import './globals.css'
 import Navbar from '@/components/molecules/navbar/navbar'
 import { Barlow, Geist_Mono } from 'next/font/google'
+import Footer from '@/components/molecules/footer/footer'
 
 const BarlowText = Barlow({
   subsets: ['latin'],
@@ -43,6 +44,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
