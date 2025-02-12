@@ -6,17 +6,17 @@ export default async function Features() {
 
   const features = [
     {
-      image: 'images/features/image_1.avif',
+      image: '/images/features/image_1.avif',
       title: 'features.feature_1.title',
       subtitle: 'features.feature_1.subtitle',
     },
     {
-      image: 'images/features/image_2.avif',
+      image: '/images/features/image_2.avif',
       title: 'features.feature_2.title',
       subtitle: 'features.feature_2.subtitle',
     },
     {
-      image: 'images/features/image_3.avif',
+      image: '/images/features/image_3.avif',
       title: 'features.feature_3.title',
       subtitle: 'features.feature_3.subtitle',
     },
@@ -46,7 +46,7 @@ export default async function Features() {
               {t(feature.title)}
             </PoppinsText>
             <div className="mx-auto h-1 w-1/2 rounded-full bg-dark_orange" />
-            <PoppinsText fontSize="16px">
+            <PoppinsText fontSize="16px" className="mx-10">
               <span
                 dangerouslySetInnerHTML={{
                   __html: t(feature.subtitle),
@@ -54,7 +54,7 @@ export default async function Features() {
               />
             </PoppinsText>
             {/* Button */}
-            <button className="hover:bg-hover_orange mt-4 rounded-full bg-darker_orange px-10 py-4 transition-all duration-300 ease-in-out hover:scale-105">
+            <button className="mt-4 rounded-full bg-darker_orange px-10 py-4 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-hover_orange">
               <PoppinsText fontSize="16px" style="bold" className="text-white">
                 {t('header.button')}
               </PoppinsText>

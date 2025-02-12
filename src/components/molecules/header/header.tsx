@@ -6,8 +6,8 @@ export default async function Header() {
   return (
     <section className="relative flex h-full w-full items-center justify-center">
       <img
-        src="images/header.avif"
-        alt=""
+        src="/images/header.avif"
+        alt="2 wine glasses on a table with grapes and a bottle of wine"
         className="h-full max-h-[650px] w-full object-cover"
       />
       {/* Overlay Div */}
@@ -25,7 +25,7 @@ export default async function Header() {
         <PoppinsText fontSize="16px" style="bold" className="pt-4">
           {t('header.subtitle')}
         </PoppinsText>
-        <button className="hover:bg-hover_orange mt-8 rounded-full bg-darker_orange px-10 py-4 font-bold text-white transition-all duration-300 ease-in-out hover:scale-105">
+        <button className="mt-8 rounded-full bg-darker_orange px-10 py-4 font-bold text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-hover_orange">
           {t('header.button')}
         </button>
       </div>
