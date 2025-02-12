@@ -6,15 +6,15 @@ export default async function TopSellingProducts() {
 
   const products = [
     {
-      image: 'images/top_selling/image1.avif',
+      image: '/images/top_selling/image1.avif',
       title: 'top_selling_products.dark_wine',
     },
     {
-      image: 'images/top_selling/image2.avif',
+      image: '/images/top_selling/image2.avif',
       title: 'top_selling_products.exotic_wine',
     },
     {
-      image: 'images/top_selling/image3.avif',
+      image: '/images/top_selling/image3.avif',
       title: 'top_selling_products.white_wine',
     },
   ]
