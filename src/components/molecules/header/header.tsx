@@ -11,12 +11,12 @@ export default async function Header() {
         className="h-full max-h-[650px] w-full object-cover"
       />
       {/* Overlay Div */}
-      <div className="absolute right-72 rounded-lg bg-light_orange p-10">
+      <div className="bg-light_gold absolute right-72 rounded-lg p-10">
         <PoppinsText fontSize="16px" style="bold">
           {t('header.header_title')}
         </PoppinsText>
         <PoppinsText
-          className="pt-2 font-bold text-dark_orange"
+          className="text-hover_gold pt-2 font-bold"
           fontSize="32px"
           style="bold"
         >
@@ -25,7 +25,7 @@ export default async function Header() {
         <PoppinsText fontSize="16px" style="bold" className="pt-4">
           {t('header.subtitle')}
         </PoppinsText>
-        <button className="mt-8 rounded-full bg-darker_orange px-10 py-4 font-bold text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-hover_orange">
+        <button className="hover:bg-hover_gold bg-gold mt-8 rounded-full px-10 py-4 font-bold text-white transition-all duration-300 ease-in-out hover:scale-105">
           {t('header.button')}
         </button>
       </div>
