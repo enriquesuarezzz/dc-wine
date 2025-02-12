@@ -45,7 +45,7 @@ export default async function Features() {
             <PoppinsText fontSize="44px" style="bold">
               {t(feature.title)}
             </PoppinsText>
-            <div className="mx-auto h-1 w-1/2 rounded-full bg-dark_orange" />
+            <div className="bg-gold mx-auto h-1 w-1/2 rounded-full" />
             <PoppinsText fontSize="16px" className="mx-10">
               <span
                 dangerouslySetInnerHTML={{
@@ -54,7 +54,7 @@ export default async function Features() {
               />
             </PoppinsText>
             {/* Button */}
-            <button className="mt-4 rounded-full bg-darker_orange px-10 py-4 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-hover_orange">
+            <button className="bg-gold hover:bg-hover_gold mt-4 rounded-full px-10 py-4 transition-all duration-300 ease-in-out hover:scale-105">
               <PoppinsText fontSize="16px" style="bold" className="text-white">
                 {t('header.button')}
               </PoppinsText>

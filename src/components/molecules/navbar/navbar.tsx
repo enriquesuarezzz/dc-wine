@@ -20,7 +20,7 @@ export default async function NavBar() {
             tag="h1"
             fontSize="16px"
             style="bold"
-            className="relative block w-fit pl-2 text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-hover_orange after:transition after:duration-300 after:content-[''] hover:text-hover_orange after:hover:scale-x-100"
+            className="after:bg-hover_gold hover:text-hover_gold relative block w-fit pl-2 text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {t('home')}
           </PoppinsText>
@@ -31,7 +31,7 @@ export default async function NavBar() {
             tag="h1"
             fontSize="16px"
             style="bold"
-            className="relative block w-fit pl-2 text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-hover_orange after:transition after:duration-300 after:content-[''] hover:text-hover_orange after:hover:scale-x-100"
+            className="after:bg-hover_gold hover:text-hover_gold relative block w-fit pl-2 text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {t('about_us')}
           </PoppinsText>
@@ -42,7 +42,7 @@ export default async function NavBar() {
             tag="h1"
             fontSize="16px"
             style="bold"
-            className="relative block w-fit pl-2 text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-hover_orange after:transition after:duration-300 after:content-[''] hover:text-hover_orange after:hover:scale-x-100"
+            className="after:bg-hover_gold hover:text-hover_gold relative block w-fit pl-2 text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {t('products')}
           </PoppinsText>
