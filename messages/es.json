@@ -16,17 +16,24 @@
     "features": {
       "feature_1": {
         "title": "DCWine, la Pasión",
-        "subtitle": "El vino se define como un producto cultural y histórico, algo que siempre ha estado presente en todas las áreas de nuestra vida, ya sea a través de la gastronomía, la agricultura o simplemente en los eventos más lúdicos. El origen del vino es muy antiguo y estrechamente ligado al desarrollo del hombre. Presente en todas las civilizaciones. El vino también está conectado a la idea de celebrar; un evento, un momento, una fecha especial, un logro obtenido, un reencuentro, un amor. Todo esto viene amplificado cuando se aprecia lo que hay dentro de cada botella, y conociendo su historia."
+        "subtitle": "El vino se define como un producto cultural y histórico, algo que siempre ha estado presente en todas las áreas de nuestra vida, ya sea a través de la gastronomía, la agricultura o simplemente en los eventos más lúdicos. El origen del vino es muy antiguo y estrechamente ligado al desarrollo del hombre."
       },
       "feature_2": {
         "title": "El Prosecco",
-        "subtitle": "Las colinas de Prosecco di Conegliano y Valdobbiadene han sido declaradas Patrimonio de la Humanidad por la UNESCO (7 de julio 2018) debido al excepcional valor universal del paisaje del Véneto, estas colinas representan el mundo del prosecco italiano: treinta kilómetros de pendientes empinadas cubiertas de viñedos, gracias al clima y al terreno que facilitan su producción. Aquí nace el Prosecco DeGiusti, un producto de calidad, disponible en tres variantes, variedad de uva “Glera” realizado con un metodo exclusivo de doble fermentaciòn a presiòn en unos barriles que toman el nombre de «Autoclavi», unico al mundo y reconocido a nivel mundial, para una experiencia única y inigualable."
+        "subtitle": "Las colinas de Prosecco di Conegliano y Valdobbiadene han sido declaradas Patrimonio de la Humanidad por la UNESCO (7 de julio 2018) debido al excepcional valor universal del paisaje del Véneto, estas colinas representan el mundo del prosecco italiano: treinta kilómetros de pendientes empinadas cubiertas de viñedose."
       },
       "feature_3": {
         "title": "El Biológico",
-        "subtitle": "La palabra BIO desde el Latin significa «Vida», Vida que genera Vida. Un vino biológico, es aquel cuya producción está libre de productos químicos artificiales o dañinos para los viñedos o las personas que trabajan en ellos. Para obtener un vino certificado como biológico, se deben cuidar la vid y el campo por un periodo de más de cuatro años, Quien produce vino biológico merece un aplauso, porqué no está pensando solo en sí mismo o al momento presente; está pensando en el planeta, en las generaciones futuras y está también finalmente pensando en nosotros que en la copa servimos un vino cada vez más cuidadoso del planeta. Azienda Agricola La Fontursia lleva años con estas certificaciónes ya que sus viñedos respetan el proceso Biológico desde hace generaciones. Variedades de uvas únicas como el “Passerina” o el “Pecorino” hacen que estos vinos Biológicos, certificados por la UE, sean un referente internacional del saber hacer, en el respecto total de el medioambiente."
+        "subtitle": "La palabra BIO desde el Latin significa «Vida», Vida que genera Vida. Un vino biológico, es aquel cuya producción está libre de productos químicos artificiales o dañinos para los viñedos o las personas que trabajan en ellos. Para obtener un vino certificado como biológico, se deben cuidar la vid y el campo por un periodo de más de cuatro años."
       }
     }
+  },
+  "about_us_page": {
+    "title": "La mejor tienda de vinos que existe",
+    "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit",
+    "first_paragraph": "Nacida en el año 2018, con sede en Lanzarote, desarrollando un proyecto estudiado y preparado para satisfacer el cliente de nivel superior. Fue así que empezamos, buscando referencias cualificadas y bodegas que tuvieran el mismo objetivos que nosotros. <br/> <br/> Todos estamos relacionados con el vino de alguna o otra manera, comentamos de él, celebramos en su nombre, lo bebemos, brindamos y por último disfrutamos de cada copa con la que maridamos distintos tipos de alimentos que lo acompañan. A su alrededor, construimos y celebramos ocasiones que se convierten en experiencias únicas y recuerdos inolvidables que quedan grabados en nuestra memoria, pero ¿sabemos qué es el vino?.",
+    "second_paragraph": "Definamos al vino como el resultado de la fermentación del mosto de la uva. Llamamos mosto al jugo que se obtiene como resultado del estrujado de las uvas, es decir cuando estas son aplastadas y se obtiene el jugo que reposa en grandes tanques, regularmente de acero inoxidable y que tienen una temperatura controlada, lo que permite que comience el proceso de fermentado donde se transforma el azúcar en alcohol. <br/> <br/> Para conocer las diferentes clasificaciones y tipos de vino se tienen muchos criterios, más les recomiendo usar nuestros sentidos para poder clasificarlos de manera intuitiva y naturales.",
+    "why_drink_it": "Y porque tomamos vino?!"
   },
   "navbar": {
     "home": "Home",

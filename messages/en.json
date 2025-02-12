@@ -16,17 +16,24 @@
     "features": {
       "feature_1": {
         "title": "DCWine, the Passion",
-        "subtitle": "Wine is defined as a cultural and historical product, something that has always been present in all areas of our lives, whether through gastronomy, agriculture or simply in the most recreational events. The origin of wine is very ancient and closely linked to the development of man. Present in all civilizations. Wine is also connected to the idea of ​​celebrating; an event, a moment, a special date, an achievement, a reunion, a love. All of this is amplified when you appreciate what is inside each bottle, and knowing its history."
+        "subtitle": "Wine is defined as a cultural and historical product, something that has always been present in all areas of our lives, whether through gastronomy, agriculture or simply in the most recreational events. The origin of wine is very ancient and closely linked to the development of man. Present in all civilizations. Wine is also connected to the idea of ​​celebrating; an event, a moment, a special date, an achievement, a reunion, a love. "
       },
       "feature_2": {
         "title": "El Prosecco",
-        "subtitle": "The hills of Prosecco di Conegliano and Valdobbiadene have been declared a World Heritage Site by UNESCO (July 7, 2018) due to the exceptional universal value of the Veneto landscape, these hills represent the world of Italian prosecco: thirty kilometers of steep slopes covered with vineyards, thanks to the climate and terrain that facilitate their production. Here Prosecco DeGiusti is born, a quality product, available in three variants, “Glera” grape variety, made with an exclusive method of double pressure fermentation in barrels that take the name “Autoclavi”, unique in the world and recognized worldwide, for a unique and unparalleled experience."
+        "subtitle": "The hills of Prosecco di Conegliano and Valdobbiadene have been declared a World Heritage Site by UNESCO (July 7, 2018) due to the exceptional universal value of the Veneto landscape, these hills represent the world of Italian prosecco: thirty kilometers of steep slopes covered with vineyards, thanks to the climate and terrain that facilitate their production. Here Prosecco DeGiusti is born, a quality product, available in three variants."
       },
       "feature_3": {
         "title": "El Biológico",
-        "subtitle": "The word BIO from Latin means 'Life', Life that generates Life. An organic wine is one whose production is free of artificial or harmful chemicals for the vineyards or the people who work in them. To obtain a wine certified as organic, the vine and the field must be cared for for a period of more than four years. Anyone who produces organic wine deserves applause, because they are not thinking only of themselves or the present moment; He is thinking about the planet, about future generations and he is also finally thinking about us who in the glass serve an increasingly careful wine from the planet. Azienda Agricola La Fontursia has had these certifications for years since its vineyards have respected the Biological process for generations. Unique grape varieties such as “Passerina” or “Pecorino” make these Organic wines, certified by the EU, an international benchmark of know-how, in total respect for the environment."
+        "subtitle": "The word BIO from Latin means 'Life', Life that generates Life. An organic wine is one whose production is free of artificial or harmful chemicals for the vineyards or the people who work in them. To obtain a wine certified as organic, the vine and the field must be cared for for a period of more than four years. Anyone who produces organic wine deserves applause, because they are not thinking only of themselves or the present moment; ."
       }
     }
+  },
+  "about_us_page": {
+    "title": "The best wine shop ever created",
+    "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit",
+    "first_paragraph": "Born in 2018, based in Lanzarote, developing a project studied and prepared to satisfy the highest level client. That's how we started, looking for qualified references and wineries that had the same objectives as us. <br/> <br/> We are all related to wine in some way or another, we comment on it, we celebrate in its name, we drink it, we toast it and finally we enjoy each glass with which we pair different types of foods that accompany it. Around it, we build and celebrate occasions that become unique experiences and unforgettable memories that remain engraved in our memory, but do we know what wine is?",
+    "second_paragraph": "Let's define wine as the result of the fermentation of grape must. We call must the juice that is obtained as a result of crushing the grapes, that is, when they are crushed and the juice is obtained that rests in large tanks, usually made of stainless steel and that have a controlled temperature, which allows the fermentation process to begin where the sugar is transformed into alcohol. <br/> <br/> To know the different classifications and types of wine there are many criteria, but I recommend using our senses to be able to classify them in an intuitive and natural way.",
+    "why_drink_it": "Why we drink wine?!"
   },
   "navbar": {
     "home": "Home",
