@@ -4,7 +4,7 @@ export default async function AboutUs() {
   const t = await getTranslations('about_us_page')
   return (
     <section className="flex w-full flex-col items-center justify-center">
-      <div className="flex w-full items-center justify-center gap-44 pb-20 pt-36">
+      <div className="flex w-full items-center justify-center gap-44 pb-16 pt-36">
         <PoppinsText fontSize="56px" style="bold" className="max-w-[600px]">
           {t('title')}
         </PoppinsText>
@@ -43,7 +43,7 @@ export default async function AboutUs() {
       <PoppinsText
         fontSize="32px"
         style="bold"
-        className="items-center pt-8 text-darker_orange"
+        className="text-gold items-center pt-8"
       >
         {t('why_drink_it')}
       </PoppinsText>
@@ -51,17 +51,31 @@ export default async function AboutUs() {
         <PoppinsText fontSize="16px" className="">
           <span
             dangerouslySetInnerHTML={{
-              __html: t('first_paragraph'),
+              __html: t('third_paragraph'),
             }}
           />
         </PoppinsText>
         <PoppinsText fontSize="16px" className="">
           <span
             dangerouslySetInnerHTML={{
-              __html: t('second_paragraph'),
+              __html: t('fourth_paragraph'),
             }}
           />
         </PoppinsText>
+      </div>
+      <div className="mx-20 flex flex-col items-center justify-center gap-6 pt-4">
+        <PoppinsText fontSize="16px" className="items-center pt-8">
+          {t('last_paragraph')}
+        </PoppinsText>
+        <img
+          src="/images/signature.avif"
+          alt="wine italy tuscany"
+          className="h-full max-h-[200px] w-full max-w-[200px] object-cover"
+        />
+        <PoppinsText fontSize="16px" style="bold">
+          Iris de Cesero
+        </PoppinsText>
+        <PoppinsText fontSize="16px">CEO DcWine</PoppinsText>
       </div>
     </section>
   )
