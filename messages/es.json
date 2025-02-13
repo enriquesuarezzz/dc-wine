@@ -41,7 +41,8 @@
   "navbar": {
     "home": "Home",
     "about_us": "Sobre Nosotros",
-    "products": "Productos"
+    "products": "Productos",
+    "select_language": "Selecciona un idioma"
   },
   "footer": {
     "home": "Home",
