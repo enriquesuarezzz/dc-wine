@@ -20,7 +20,7 @@ export default async function TopSellingProducts() {
   ]
 
   return (
-    <section className="flex flex-col items-center justify-center gap-10 pt-10">
+    <section className="mx-6 flex flex-col items-center justify-center gap-10 pt-4 md:mx-0 md:pt-10">
       <div>
         <PoppinsText fontSize="28px" style="bold" className="pt-4">
           {t('top_selling_products.title')}
@@ -30,16 +30,16 @@ export default async function TopSellingProducts() {
         </PoppinsText>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-10">
+      <div className="flex flex-col justify-center gap-4 md:flex-row md:gap-10">
         {products.map((product, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center gap-4"
+            className="flex flex-col items-center justify-center gap-2 md:gap-4"
           >
             <img
               src={product.image}
               alt={t(product.title)}
-              className="h-full max-h-[500px] w-full rounded-xl object-cover transition-all duration-300 ease-in-out hover:scale-105"
+              className="h-full max-h-[350px] w-full rounded-xl object-cover transition-all duration-300 ease-in-out hover:scale-105 md:max-h-[500px]"
             />
             <PoppinsText fontSize="20px" className="pt-2" style="bold">
               {t(product.title)}
