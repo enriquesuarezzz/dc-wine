@@ -23,16 +23,16 @@ export default async function Features() {
   ]
 
   return (
-    <section className="flex w-screen flex-col items-center pt-32">
+    <section className="flex w-screen flex-col items-center pt-10 md:pt-12 lg:pt-32">
       {/* Feature Section */}
       {/* Feature array loop */}
       {features.map((feature, index) => (
         <div
           key={index}
-          className={`flex w-full ${index % 2 === 0 ? '' : 'flex-row-reverse'}`}
+          className={`flex w-full flex-col md:flex-row ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}
         >
           {/* Image Section */}
-          <div className="h-[450px] w-1/2">
+          <div className="h-[300px] w-full md:h-[450px] md:w-1/2">
             <img
               src={feature.image}
               alt={feature.title}
@@ -41,12 +41,16 @@ export default async function Features() {
           </div>
 
           {/* Text Section */}
-          <div className="flex h-[450px] w-1/2 flex-col items-center justify-center gap-4 bg-gray-200 p-10 text-center">
-            <PoppinsText fontSize="44px" style="bold">
+          <div className="flex h-auto w-full flex-col items-center justify-center gap-4 bg-gray-200 p-6 text-center md:h-[450px] md:w-1/2">
+            <PoppinsText
+              fontSize="32px"
+              style="bold"
+              className="md:text-[44px]"
+            >
               {t(feature.title)}
             </PoppinsText>
-            <div className="bg-gold mx-auto h-1 w-1/2 rounded-full" />
-            <PoppinsText fontSize="16px" className="mx-10">
+            <div className="mx-auto h-1 w-1/2 rounded-full bg-gold" />
+            <PoppinsText fontSize="14px" className="mx-5 md:text-[16px]">
               <span
                 dangerouslySetInnerHTML={{
                   __html: t(feature.subtitle),
@@ -54,8 +58,12 @@ export default async function Features() {
               />
             </PoppinsText>
             {/* Button */}
-            <button className="bg-gold hover:bg-hover_gold mt-4 rounded-full px-10 py-4 transition-all duration-300 ease-in-out hover:scale-105">
-              <PoppinsText fontSize="16px" style="bold" className="text-white">
+            <button className="mt-4 rounded-full bg-gold px-6 py-3 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-hover_gold md:px-10 md:py-4">
+              <PoppinsText
+                fontSize="14px"
+                style="bold"
+                className="text-white md:text-[16px]"
+              >
                 {t('header.button')}
               </PoppinsText>
             </button>
