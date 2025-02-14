@@ -8,25 +8,37 @@ export default async function Header() {
       <img
         src="/images/header.avif"
         alt="2 wine glasses on a table with grapes and a bottle of wine"
-        className="h-full max-h-[650px] w-full object-cover"
+        className="h-[450px] w-full object-cover md:h-full md:max-h-[650px]"
       />
+      {/* Blur Overlay */}
+      <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px] md:backdrop-blur-[3px]" />
       {/* Overlay Div */}
-      <div className="bg-light_gold absolute right-72 rounded-lg p-10">
-        <PoppinsText fontSize="16px" style="bold">
+      <div className="absolute rounded-lg p-3 md:right-72 md:bg-light_gold md:p-10">
+        <PoppinsText
+          fontSize="16px"
+          style="bold"
+          className="text-white md:text-black"
+        >
           {t('header.header_title')}
         </PoppinsText>
         <PoppinsText
-          className="text-hover_gold pt-2 font-bold"
+          className="pt-2 font-bold text-hover_gold"
           fontSize="32px"
           style="bold"
         >
           <span dangerouslySetInnerHTML={{ __html: t('header.title') }} />
         </PoppinsText>
-        <PoppinsText fontSize="16px" style="bold" className="pt-4">
+        <PoppinsText
+          fontSize="16px"
+          style="bold"
+          className="pt-2 text-white md:pt-4 md:text-black"
+        >
           {t('header.subtitle')}
         </PoppinsText>
-        <button className="hover:bg-hover_gold bg-gold mt-8 rounded-full px-10 py-4 font-bold text-white transition-all duration-300 ease-in-out hover:scale-105">
-          {t('header.button')}
+        <button className="mt-4 rounded-full bg-gold px-6 py-2 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-hover_gold md:mt-8 md:px-10 md:py-4">
+          <PoppinsText fontSize="16px" style="bold" className="text-white">
+            {t('header.button')}
+          </PoppinsText>
         </button>
       </div>
     </section>

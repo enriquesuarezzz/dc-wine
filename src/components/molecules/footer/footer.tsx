@@ -9,27 +9,27 @@ import Whatsapp from '@/components/atoms/svg/whatsapp'
 export default async function Footer() {
   const t = await getTranslations('footer')
   return (
-    <footer className="bg-gold bottom-0 mt-20 w-full items-center">
+    <footer className="bottom-0 mt-10 w-full items-center bg-gold md:mt-12 lg:mt-20">
       <div className="mx-auto max-w-screen-xl items-center p-4 md:py-8">
         {/* Navigation Links */}
-        <div className="flex items-center justify-between">
-          <div className="mb-2 mt-2 flex w-full items-center justify-center gap-10 font-medium sm:mb-0 md:mt-0">
+        <div className="flex flex-col items-center justify-center">
+          <div className="mb-2 mt-2 grid w-full grid-cols-2 items-center justify-center gap-3 text-center md:mt-0 md:flex md:gap-10">
             {/* Home Link */}
             <Link href="/">
               <PoppinsText
                 fontSize="16px"
                 style="bold"
-                className="relative block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
+                className="relative mx-auto block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
               >
-                {t('home')}{' '}
+                {t('home')}
               </PoppinsText>
             </Link>
-            {/* About us Link */}
+            {/* About Us Link */}
             <Link href="/about_us">
               <PoppinsText
                 fontSize="16px"
                 style="bold"
-                className="relative block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
+                className="relative mx-auto block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
               >
                 {t('about_us')}
               </PoppinsText>
@@ -39,7 +39,7 @@ export default async function Footer() {
               <PoppinsText
                 fontSize="16px"
                 style="bold"
-                className="relative block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
+                className="relative mx-auto block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
               >
                 {t('products')}
               </PoppinsText>
@@ -49,7 +49,7 @@ export default async function Footer() {
               <PoppinsText
                 fontSize="16px"
                 style="bold"
-                className="relative block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
+                className="relative mx-auto block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
               >
                 {t('cookies')}
               </PoppinsText>
@@ -59,7 +59,7 @@ export default async function Footer() {
               <PoppinsText
                 fontSize="16px"
                 style="bold"
-                className="relative block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
+                className="relative mx-auto block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
               >
                 {t('privacy')}
               </PoppinsText>
@@ -68,25 +68,10 @@ export default async function Footer() {
         </div>
 
         {/* Divider */}
-        <hr className="my-4 border-white sm:mx-auto lg:my-8" />
-
+        <hr className="my-3 border-white lg:my-8" />
         {/* Social Media Links */}
-        <div className="flex items-center justify-center gap-2 pt-0">
-          {/* Facebook Link */}
-          <a
-            href="https://www.facebook.com/dcwinecanarias?eid=ARCiLm_76uwbT789OTJKO48fu5eH51VEiYHJn_R2Ifi2RZ09y8UqBEQR1OpbQAvxHcQmjeQMsO7yOkVS#"
-            className="my-auto flex h-6 items-start md:h-5 md:items-center"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {/* Facebook Icon */}
-            <Facebook
-              color="white"
-              className="my-auto h-5 w-5 transition-all duration-300 ease-in-out hover:scale-110"
-            />
-          </a>
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-2 md:gap-6 md:pt-4">
           {/* Phone Link */}
-
           <a
             href="tel:+34828042420"
             target="_blank"
@@ -106,6 +91,32 @@ export default async function Footer() {
             >
               +34 828042420
             </PoppinsText>
+          </a>
+          {/* Facebook Link */}
+          <a
+            href="https://www.facebook.com/dcwinecanarias?eid=ARCiLm_76uwbT789OTJKO48fu5eH51VEiYHJn_R2Ifi2RZ09y8UqBEQR1OpbQAvxHcQmjeQMsO7yOkVS#"
+            className="my-auto h-6 items-start md:h-5 md:items-center"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {/* Facebook Icon */}
+            <Facebook
+              color="white"
+              className="my-auto h-5 w-5 transition-all duration-300 ease-in-out hover:scale-110"
+            />
+          </a>
+          {/* Instagram Link */}
+          <a
+            href="https://www.instagram.com/dcwinelanzarote/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="my-auto h-6 items-start md:h-5 md:items-center"
+          >
+            {/* Instagram Icon */}
+            <Instagram
+              color="white"
+              className="my-auto h-5 w-5 transition-all duration-300 ease-in-out hover:scale-110"
+            />
           </a>
           {/* Whatsapp Link */}
           <a
@@ -128,22 +139,13 @@ export default async function Footer() {
               672652638
             </PoppinsText>
           </a>
-          {/* Instagram Link */}
-          <a
-            href="https://www.instagram.com/dcwinelanzarote/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="my-auto flex h-6 items-start md:h-5 md:items-center"
-          >
-            {/* Instagram Icon */}
-            <Instagram
-              color="white"
-              className="my-auto h-5 w-5 transition-all duration-300 ease-in-out hover:scale-110"
-            />
-          </a>
         </div>
-        {/* Divider */}
-        <hr className="mt-8 w-24 border-white sm:mx-auto" />
+
+        {/* Second Divider */}
+        <div className="flex justify-center">
+          <hr className="mt-4 w-24 border-white md:mt-8" />
+        </div>
+
         <div className="flex items-center justify-center gap-2 pt-4">
           <PoppinsText fontSize="16px" className="text-white" style="bold">
             DC Wine © 2025
