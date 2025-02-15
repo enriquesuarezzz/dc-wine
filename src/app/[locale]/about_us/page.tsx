@@ -4,8 +4,8 @@ export default async function AboutUs() {
   const t = await getTranslations('about_us_page')
   return (
     <section className="flex w-full flex-col items-center justify-center">
-      <div className="flex w-full items-center justify-center gap-44 pb-16 pt-36">
-        <PoppinsText fontSize="56px" style="bold" className="max-w-[600px]">
+      <div className="flex w-full flex-col items-center justify-center gap-8 pb-16 pt-24 md:pt-36 lg:flex-row">
+        <PoppinsText fontSize="56px" style="bold" className="max-w-[500px]">
           {t('title')}
         </PoppinsText>
         <PoppinsText fontSize="14px" className="max-w-[500px] text-center">
@@ -19,7 +19,7 @@ export default async function AboutUs() {
           className="h-full max-h-[650px] w-full object-cover"
         />
       </div>
-      <div className="mx-20 flex gap-10 pt-16">
+      <div className="mx-4 flex flex-col gap-10 pt-16 md:mx-20 md:flex-row">
         <PoppinsText fontSize="16px" className="">
           <span
             dangerouslySetInnerHTML={{
@@ -38,16 +38,16 @@ export default async function AboutUs() {
       <img
         src="/images/about_us_image_1.avif"
         alt="wine italy tuscany"
-        className="h-full max-h-[600px] w-full object-cover px-20 pt-16"
+        className="h-full max-h-[600px] w-full object-cover px-0 pt-16 md:px-20"
       />
       <PoppinsText
         fontSize="32px"
         style="bold"
-        className="text-gold items-center pt-8"
+        className="items-center pt-8 text-gold"
       >
         {t('why_drink_it')}
       </PoppinsText>
-      <div className="mx-20 flex gap-10 pt-8">
+      <div className="mx-4 flex gap-10 pt-8 md:mx-20">
         <PoppinsText fontSize="16px" className="">
           <span
             dangerouslySetInnerHTML={{
