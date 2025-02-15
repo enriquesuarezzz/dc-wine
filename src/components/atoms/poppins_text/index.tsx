@@ -59,7 +59,7 @@ export const PoppinsText = forwardRef<
         case '44px':
           return 'text-[22px]  md:text-[44px]'
         case '56px':
-          return 'text-[22px] md:text-[56px]'
+          return 'text-[26px] md:text-[42px] lg:text-[56px]'
       }
     }
 
