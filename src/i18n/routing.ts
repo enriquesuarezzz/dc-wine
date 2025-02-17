@@ -20,6 +20,14 @@ export const routing = defineRouting({
       en: '/products',
       es: '/productos',
     },
+    '/privacy_policy': {
+      en: '/privacy_policy',
+      es: '/politica_de_privacidad',
+    },
+    '/cookies_policy': {
+      en: '/cookies_policy',
+      es: '/politica_de_cookies',
+    },
   },
 })
 
