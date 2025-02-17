@@ -53,5 +53,8 @@
   },
   "contact_page": {
     "title": "This is the contact page"
+  },
+  "products": {
+    "title": "Products"
   }
 }
