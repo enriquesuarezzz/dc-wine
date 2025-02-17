@@ -12,6 +12,7 @@ export interface PoppinsTextProps {
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
   style?: 'light' | 'normal' | 'semibold' | 'bold'
   fontSize?:
+    | '12px'
     | '14px'
     | '16px'
     | '19px'
@@ -42,6 +43,8 @@ export const PoppinsText = forwardRef<
   ) => {
     function getSize() {
       switch (fontSize) {
+        case '12px':
+          return 'text-[12px]'
         case '14px':
           return 'text-[14px]'
         case '16px':
