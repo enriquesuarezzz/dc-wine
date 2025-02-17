@@ -1,5 +1,7 @@
 {
   "home_page": {
+    "meta_title": "Home - DcWine",
+    "meta_description": "Welcome to DcWine, your trusted platform to discover and purchase the finest wines, directly from the best wineries.",
     "header": {
       "header_title": "New arrivals",
       "title": "DCWine <br/> the Passion",
@@ -29,6 +31,8 @@
     }
   },
   "about_us_page": {
+    "meta_title": "About Us - DcWine",
+    "meta_description": "Discover the story behind DcWine, our passion for quality wines, and why we believe in bringing the best wine experience to you.",
     "title": "The best wine shop",
     "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit",
     "first_paragraph": "Born in 2018, based in Lanzarote, developing a project studied and prepared to satisfy the highest level client. That's how we started, looking for qualified references and wineries that had the same objectives as us. <br/> <br/> We are all related to wine in some way or another, we comment on it, we celebrate in its name, we drink it, we toast it and finally we enjoy each glass with which we pair different types of foods that accompany it. Around it, we build and celebrate occasions that become unique experiences and unforgettable memories that remain engraved in our memory, but do we know what wine is?",
@@ -54,7 +58,19 @@
   "contact_page": {
     "title": "This is the contact page"
   },
-  "products": {
+  "products_page": {
+    "meta_title": "Products - DcWine",
+    "meta_description": "Explore our wide selection of premium wines, including red, white, and sparkling wines, sourced from the finest wineries.",
     "title": "Products"
+  },
+  "privacy_policy_page": {
+    "meta_title": "Privacy Policy - DcWine",
+    "meta_description": "Read our Privacy Policy to understand how we collect, use, and protect your personal data when using DcWine.",
+    "title": "Privacy Policy"
+  },
+  "cookies_policy_page": {
+    "meta_title": "Cookies Policy - DcWine",
+    "meta_description": "Learn about how we use cookies to enhance your experience on DcWine and how you can control them.",
+    "title": "Cookies Policy"
   }
 }

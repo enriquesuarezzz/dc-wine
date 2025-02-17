@@ -1,5 +1,7 @@
 {
   "home_page": {
+    "meta_title": "Inicio - DcWine",
+    "meta_description": "Bienvenido a DcWine, tu plataforma de confianza para descubrir y comprar los mejores vinos, directamente desde las mejores bodegas.",
     "header": {
       "header_title": "Nueva cosecha",
       "title": "DCWine <br/> the Passion",
@@ -29,6 +31,8 @@
     }
   },
   "about_us_page": {
+    "meta_title": "Sobre Nosotros - DcWine",
+    "meta_description": "Descubre la historia detrás de DcWine, nuestra pasión por los vinos de calidad y por qué creemos en brindarte la mejor experiencia vinícola.",
     "title": "La mejor tienda de vinos",
     "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit",
     "first_paragraph": "Nacida en el año 2018, con sede en Lanzarote, desarrollando un proyecto estudiado y preparado para satisfacer el cliente de nivel superior. Fue así que empezamos, buscando referencias cualificadas y bodegas que tuvieran el mismo objetivos que nosotros. <br/> <br/> Todos estamos relacionados con el vino de alguna o otra manera, comentamos de él, celebramos en su nombre, lo bebemos, brindamos y por último disfrutamos de cada copa con la que maridamos distintos tipos de alimentos que lo acompañan. A su alrededor, construimos y celebramos ocasiones que se convierten en experiencias únicas y recuerdos inolvidables que quedan grabados en nuestra memoria, pero ¿sabemos qué es el vino?.",
@@ -54,7 +58,19 @@
   "contact_page": {
     "title": "Esta es la pagina de contacto"
   },
-  "products": {
-    "title": "Products"
+  "products_page": {
+    "meta_title": "Productos - DcWine",
+    "meta_description": "Explora nuestra amplia selección de vinos premium, incluyendo vinos tintos, blancos y espumosos, provenientes de las mejores bodegas.",
+    "title": "Productos"
+  },
+  "privacy_policy_page": {
+    "meta_title": "Política de Privacidad - DcWine",
+    "meta_description": "Lee nuestra Política de Privacidad para entender cómo recopilamos, usamos y protegemos tus datos personales al utilizar DcWine.",
+    "title": "Política de Privacidad"
+  },
+  "cookies_policy_page": {
+    "meta_title": "Política de Cookies - DcWine",
+    "meta_description": "Descubre cómo utilizamos cookies para mejorar tu experiencia en DcWine y cómo puedes controlarlas.",
+    "title": "Política de cookies"
   }
 }
