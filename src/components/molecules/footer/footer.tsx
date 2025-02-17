@@ -35,7 +35,7 @@ export default async function Footer() {
               </PoppinsText>
             </Link>
             {/* Products Link */}
-            <Link href="/">
+            <Link href="/products">
               <PoppinsText
                 fontSize="16px"
                 style="bold"
@@ -45,7 +45,7 @@ export default async function Footer() {
               </PoppinsText>
             </Link>
             {/* Cookies Link */}
-            <Link href="/">
+            <Link href="/cookies_policy">
               <PoppinsText
                 fontSize="16px"
                 style="bold"
@@ -55,7 +55,7 @@ export default async function Footer() {
               </PoppinsText>
             </Link>
             {/* Privacy Policy Link */}
-            <Link href="/">
+            <Link href="/privacy_policy">
               <PoppinsText
                 fontSize="16px"
                 style="bold"
