@@ -53,5 +53,8 @@
   },
   "contact_page": {
     "title": "Esta es la pagina de contacto"
+  },
+  "products": {
+    "title": "Products"
   }
 }
