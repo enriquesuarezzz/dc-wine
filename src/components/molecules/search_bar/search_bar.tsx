@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { db } from '../../../../lib/firebaseConfig'
 import { collection, query, where, getDocs, orderBy } from 'firebase/firestore'
-import { useLocale } from 'next-intl' // For detecting the current locale
+import { useLocale } from 'next-intl'
 import SearchIcon from '@/components/atoms/svg/search'
 import Close from '@/components/atoms/svg/close'
 
@@ -27,59 +27,40 @@ const useDebounce = (value: string, delay: number) => {
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [isSearchActive, setIsSearchActive] = useState(false)
-  const [products, setProducts] = useState<any[]>([]) // Store search results
+  const [products, setProducts] = useState<any[]>([])
   const router = useRouter()
-  const locale = useLocale() // Get the current locale
+  const locale = useLocale()
 
-  const debouncedQuery = useDebounce(searchQuery, 500) // Debounce the search query
+  const debouncedQuery = useDebounce(searchQuery, 500)
 
   const searchRef = useRef<HTMLDivElement | null>(null)
   const backgroundRef = useRef<HTMLDivElement | null>(null)
 
-  const handleSearch = () => {
-    if (searchQuery.trim()) {
-      router.push(`/search?query=${searchQuery}`)
-    }
-  }
-
   useEffect(() => {
     if (debouncedQuery.trim() === '') {
-      console.log('Debounced query is empty, clearing products')
-      setProducts([]) // Clear products if search query is empty
+      setProducts([])
       return
     }
 
     const fetchProducts = async () => {
-      console.log(`Searching for products with query: "${debouncedQuery}"`)
-
       try {
         const collectionName = locale === 'en' ? 'products_en' : 'products_es'
         const uppercaseQuery = debouncedQuery.toUpperCase()
 
-        console.log(`Using collection: ${collectionName}`)
-        console.log(
-          `Querying products where name >= "${uppercaseQuery}" and <= "${uppercaseQuery}\uf8ff"`,
-        )
-
         const q = query(
           collection(db, collectionName),
-          orderBy('name'), // Required for range queries
+          orderBy('name'),
           where('name', '>=', uppercaseQuery),
           where('name', '<=', uppercaseQuery + '\uf8ff'),
         )
 
         const querySnapshot = await getDocs(q)
 
-        if (querySnapshot.empty) {
-          console.log('No products found for this search')
-        }
-
         const productList = querySnapshot.docs.map((doc) => ({
-          id: doc.id, // Include product ID
+          id: doc.id,
           ...doc.data(),
         }))
 
-        console.log('Fetched products:', productList)
         setProducts(productList)
       } catch (error) {
         console.error('Error fetching products:', error)
@@ -108,9 +89,6 @@ const SearchBar = () => {
     }
   }, [])
 
-  console.log('Current search query:', searchQuery)
-  console.log('Debounced search query:', debouncedQuery)
-
   return (
     <div className="relative">
       {isSearchActive && (
@@ -123,61 +101,73 @@ const SearchBar = () => {
       {isSearchActive && (
         <div
           ref={searchRef}
-          className="fixed left-0 right-0 top-0 z-20 flex items-center justify-center p-4"
+          className="fixed left-0 right-0 top-0 z-20 mx-20 flex items-center justify-center p-4"
         >
-          <div className="relative w-full">
-            <input
-              type="text"
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="h-12 w-full rounded border-2 border-gray-300 bg-white px-20 py-2 text-xl"
-            />
-            <button
-              onClick={() => setIsSearchActive(false)} // Close the search bar
-              className="absolute right-2 top-1/2 -translate-y-1/2 transform rounded-full bg-gray-200 p-2"
-            >
-              <Close />
-            </button>
+          <div className="relative w-full rounded-lg bg-white p-4 shadow-lg">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="h-6 w-full rounded bg-white px-20 py-2 text-xl text-black focus:border-none focus:outline-none"
+              />
+              <button
+                onClick={() => setIsSearchActive(false)}
+                className="absolute right-2 top-1/2 -translate-y-1/2 transform rounded-full p-2"
+              >
+                <Close />
+              </button>
 
-            <div className="absolute left-5 top-1/2 -translate-y-1/2 transform">
-              <SearchIcon />
+              <div className="absolute left-5 top-1/2 -translate-y-1/2 transform">
+                <SearchIcon />
+              </div>
             </div>
+
+            {/* Search Results */}
+            {debouncedQuery && (
+              <div className="absolute left-0 right-0 top-full mt-2 max-h-60 overflow-y-auto rounded-lg bg-white shadow-lg">
+                {products.length > 0 ? (
+                  <ul>
+                    {products.map((product) => (
+                      <li
+                        key={product.id}
+                        className="flex cursor-pointer items-center gap-4 px-4 py-2 text-black hover:bg-gray-100"
+                        onClick={() => {
+                          setIsSearchActive(false) // Close search bar
+                          router.push(`/${locale}/products/${product.id}`) // Navigate to product page with locale
+                        }}
+                      >
+                        {/* Debugging: Show text if no image */}
+                        {product.imageUrl ? (
+                          <img
+                            src={product.imageUrl}
+                            alt={product.name}
+                            className="h-12 w-12 rounded-md object-cover"
+                          />
+                        ) : (
+                          <span className="text-red-500">No image</span>
+                        )}
+                        <span>{product.name}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="px-4 py-2 text-black">No products found</p>
+                )}
+              </div>
+            )}
           </div>
         </div>
       )}
 
       {!isSearchActive && (
         <button
-          onClick={() => setIsSearchActive(true)} // Show the search input when clicked
-          className="rounded-full bg-gray-200 p-2"
+          onClick={() => setIsSearchActive(true)}
+          className="rounded-full p-2"
         >
           <SearchIcon />
         </button>
-      )}
-
-      {/* Display search results */}
-      {debouncedQuery && products.length > 0 && (
-        <div className="absolute left-0 right-0 top-full z-30 mt-2 max-h-60 overflow-y-auto bg-white shadow-lg">
-          <ul>
-            {products.map((product) => (
-              <li
-                key={product.id}
-                className="cursor-pointer px-4 py-2 hover:bg-gray-100"
-                onClick={() => router.push(`/product/${product.id}`)} // Navigate to product details
-              >
-                {product.name}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* If no products found, show message */}
-      {debouncedQuery && products.length === 0 && (
-        <div className="absolute left-0 right-0 top-full z-30 mt-2 max-h-60 overflow-y-auto bg-white shadow-lg">
-          <p className="px-4 py-2 text-gray-500">No products found</p>
-        </div>
       )}
     </div>
   )
