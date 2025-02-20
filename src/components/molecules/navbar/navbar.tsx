@@ -5,7 +5,7 @@ import { PoppinsText } from '@/components/atoms/poppins_text'
 import LocaleSwitcher from '../locale_switcher/locale_switcher'
 import { MobileMenu } from './mobile_navbar'
 import Cart from '@/components/atoms/svg/cart'
-import Search from '@/components/atoms/svg/search'
+import SearchBar from '../search_bar/search_bar'
 
 export default async function NavBar() {
   const t = await getTranslations('navbar')
@@ -52,7 +52,7 @@ export default async function NavBar() {
             {t('products')}
           </PoppinsText>
         </Link>
-        <Search />
+        <SearchBar />
         <Cart />
         <LocaleSwitcher />
       </div>
