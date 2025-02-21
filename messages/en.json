@@ -46,7 +46,11 @@
     "home": "Home",
     "about_us": "About Us",
     "products": "Products",
-    "select_language": "Select a language"
+    "select_language": "Select a language",
+    "search_bar": {
+      "search_placeholder": "Search a product...",
+      "no_results": "No products found"
+    }
   },
   "footer": {
     "home": "Home",

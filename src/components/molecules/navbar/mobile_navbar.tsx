@@ -3,17 +3,19 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Link } from '@/i18n/routing'
 import { PoppinsText } from '@/components/atoms/poppins_text'
-import Search from '@/components/atoms/svg/search'
 import Cart from '@/components/atoms/svg/cart'
 import Spanish from '@/components/atoms/svg/spanish'
 import English from '@/components/atoms/svg/english'
 import { Menu, X } from 'lucide-react'
+import SearchBar from '../search_bar/search_bar'
 
 type Translations = {
   home: string
   about_us: string
   products: string
   select_language: string
+  search_placeholder: string
+  no_results: string
 }
 
 export function MobileMenu({ translations }: { translations: Translations }) {
@@ -31,7 +33,10 @@ export function MobileMenu({ translations }: { translations: Translations }) {
 
   return (
     <div className="flex items-center gap-4 md:hidden">
-      <Search />
+      <SearchBar
+        searchPlaceholder={translations.search_placeholder}
+        noResults={translations.no_results}
+      />
       <Cart />
       <button onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <X size={28} /> : <Menu size={28} />}

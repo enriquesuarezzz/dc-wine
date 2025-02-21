@@ -46,7 +46,11 @@
     "home": "Home",
     "about_us": "Sobre Nosotros",
     "products": "Productos",
-    "select_language": "Selecciona un idioma"
+    "select_language": "Selecciona un idioma",
+    "search_bar": {
+      "search_placeholder": "Buscar un producto...",
+      "no_results": "No se han encontrado productos"
+    }
   },
   "footer": {
     "home": "Home",

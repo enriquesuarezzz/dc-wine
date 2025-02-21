@@ -14,8 +14,8 @@ import Spanish from '@/components/atoms/svg/spanish'
 import { JSX } from 'react'
 
 const localeIcons: Record<string, JSX.Element> = {
-  es: <Spanish className="h-6 w-6" />,
-  en: <English className="h-6 w-6" />,
+  es: <Spanish className="h-5 w-5" />,
+  en: <English className="h-5 w-5" />,
 }
 
 const localeNames: Record<string, string> = {
@@ -48,7 +48,7 @@ export default function LocaleSwitcherSelect({ defaultValue }: Props) {
             value={locale}
             className="bg-gray flex rounded-md p-2 transition"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               {localeIcons[locale]}
               <span>{localeNames[locale]}</span>
             </div>
