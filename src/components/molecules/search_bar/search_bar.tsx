@@ -29,7 +29,13 @@ const useDebounce = (value: string, delay: number) => {
   return debouncedValue
 }
 
-const SearchBar = () => {
+const SearchBar = ({
+  searchPlaceholder,
+  noResults,
+}: {
+  searchPlaceholder: string
+  noResults: string
+}) => {
   const [searchQuery, setSearchQuery] = useState('')
   const [isSearchActive, setIsSearchActive] = useState(false)
   const [products, setProducts] = useState<Product[]>([])
@@ -107,25 +113,25 @@ const SearchBar = () => {
       {isSearchActive && (
         <div
           ref={searchRef}
-          className="fixed left-0 right-0 top-0 z-20 mx-20 flex items-center justify-center p-4"
+          className="fixed left-0 right-0 top-0 z-20 mx-1 flex items-center justify-center p-4 md:mx-20"
         >
           <div className="relative w-full rounded-lg bg-white p-4 shadow-lg">
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search products..."
+                placeholder={searchPlaceholder}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="h-6 w-full rounded bg-white px-20 py-2 text-xl text-black focus:border-none focus:outline-none"
+                className="h-6 w-full rounded bg-white px-8 py-2 text-xl text-black focus:border-none focus:outline-none md:px-20"
               />
               <button
                 onClick={() => setIsSearchActive(false)}
-                className="absolute right-2 top-1/2 -translate-y-1/2 transform rounded-full p-2"
+                className="absolute right-1 top-1/2 -translate-y-1/2 transform rounded-full p-2"
               >
                 <Close />
               </button>
 
-              <div className="absolute left-5 top-1/2 -translate-y-1/2 transform">
+              <div className="absolute left-1 top-1/2 -translate-y-1/2 transform md:left-5">
                 <SearchIcon />
               </div>
             </div>
@@ -144,22 +150,17 @@ const SearchBar = () => {
                           router.push(`/${locale}/products/${product.id}`) // Navigate to product page with locale
                         }}
                       >
-                        {/* Debugging: Show text if no image */}
-                        {product.imageUrl ? (
-                          <img
-                            src={product.imageUrl}
-                            alt={product.name}
-                            className="h-12 w-12 rounded-md object-cover"
-                          />
-                        ) : (
-                          <span className="text-red-500">No image</span>
-                        )}
+                        <img
+                          src={product.imageUrl}
+                          alt={product.name}
+                          className="h-12 w-12 rounded-md object-cover"
+                        />
                         <span>{product.name}</span>
                       </li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="px-4 py-2 text-black">No products found</p>
+                  <p className="px-4 py-2 text-black">{noResults}</p>
                 )}
               </div>
             )}
