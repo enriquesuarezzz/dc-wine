@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { PoppinsText } from '@/components/atoms/poppins_text'
+import { Link } from '@/i18n/routing'
 
 export default async function Header() {
   const t = await getTranslations('home_page')
@@ -35,11 +36,13 @@ export default async function Header() {
         >
           {t('header.subtitle')}
         </PoppinsText>
-        <button className="mt-4 rounded-full bg-gold px-6 py-2 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-hover_gold md:mt-8 md:px-10 md:py-4">
-          <PoppinsText fontSize="16px" style="bold" className="text-white">
-            {t('header.button')}
-          </PoppinsText>
-        </button>
+        <Link href="/products">
+          <button className="mt-4 rounded-full bg-gold px-6 py-2 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-hover_gold md:mt-8 md:px-10 md:py-4">
+            <PoppinsText fontSize="16px" style="bold" className="text-white">
+              {t('header.button')}
+            </PoppinsText>
+          </button>
+        </Link>
       </div>
     </section>
   )
