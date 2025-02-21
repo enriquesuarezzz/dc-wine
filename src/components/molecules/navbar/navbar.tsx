@@ -19,6 +19,8 @@ export default async function NavBar() {
           about_us: t('about_us'),
           products: t('products'),
           select_language: t('select_language'),
+          search_placeholder: t('search_bar.search_placeholder'),
+          no_results: t('search_bar.no_results'),
         }}
       />
       <div className="hidden items-center gap-10 md:flex">
@@ -52,7 +54,10 @@ export default async function NavBar() {
             {t('products')}
           </PoppinsText>
         </Link>
-        <SearchBar />
+        <SearchBar
+          searchPlaceholder={t('search_bar.search_placeholder')}
+          noResults={t('search_bar.no_results')}
+        />
         <Cart />
         <LocaleSwitcher />
       </div>
