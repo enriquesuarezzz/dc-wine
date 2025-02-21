@@ -8,6 +8,11 @@ import { useLocale } from 'next-intl'
 import SearchIcon from '@/components/atoms/svg/search'
 import Close from '@/components/atoms/svg/close'
 
+interface Product {
+  id: string
+  name: string
+  imageUrl: string
+}
 const useDebounce = (value: string, delay: number) => {
   const [debouncedValue, setDebouncedValue] = useState(value)
 
@@ -27,7 +32,7 @@ const useDebounce = (value: string, delay: number) => {
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [isSearchActive, setIsSearchActive] = useState(false)
-  const [products, setProducts] = useState<any[]>([])
+  const [products, setProducts] = useState<Product[]>([])
   const router = useRouter()
   const locale = useLocale()
 
@@ -58,7 +63,8 @@ const SearchBar = () => {
 
         const productList = querySnapshot.docs.map((doc) => ({
           id: doc.id,
-          ...doc.data(),
+          name: doc.data().name || '',
+          imageUrl: doc.data().imageUrl || '',
         }))
 
         setProducts(productList)
