@@ -6,17 +6,19 @@ import { useLocale } from 'next-intl'
 import { PoppinsText } from '@/components/atoms/poppins_text'
 import { getProductById } from '../../../../../lib/firestore'
 import { Product } from '../../../../../types/products'
+import { useCart } from '@/components/molecules/cart_context/cart_context'
 
 export default function ProductDetails() {
-  const pathname = usePathname() // Get the current URL path
+  const pathname = usePathname()
   const locale = useLocale()
+  const { addToCart } = useCart() // Get the addToCart function
   const [product, setProduct] = useState<Product | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchProduct() {
-      const pathParts = pathname.split('/') // Extract the product ID
-      const productId = pathParts[pathParts.length - 1] // Get last part of URL
+      const pathParts = pathname.split('/')
+      const productId = pathParts[pathParts.length - 1]
 
       if (productId && locale) {
         const fetchedProduct = await getProductById(productId, locale)
@@ -43,6 +45,20 @@ export default function ProductDetails() {
       </PoppinsText>
       <PoppinsText fontSize="16px">{product.category}</PoppinsText>
       <PoppinsText fontSize="16px">{product.price}€</PoppinsText>
+
+      {/* Add to Cart Button */}
+      <button
+        onClick={() =>
+          addToCart({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            imageUrl: product.imageUrl,
+          })
+        }
+      >
+        Add to Cart
+      </button>
     </div>
   )
 }

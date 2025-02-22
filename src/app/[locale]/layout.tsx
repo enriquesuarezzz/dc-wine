@@ -7,6 +7,7 @@ import './globals.css'
 import Navbar from '@/components/molecules/navbar/navbar'
 import { Barlow, Geist_Mono } from 'next/font/google'
 import Footer from '@/components/molecules/footer/footer'
+import { CartProvider } from '@/components/molecules/cart_context/cart_context'
 
 const BarlowText = Barlow({
   subsets: ['latin'],
@@ -35,15 +36,35 @@ export default async function RootLayout({
   if (!routing.locales.includes(locale as Locale)) {
     notFound()
   }
-  // Providing all messages to the client
-  // side is the easiest way to get started
+
+  // Get all translations (messages)
   const messages = await getMessages()
+
+  // Fetch translations for the navbar specifically
+  const navbarTranslations = messages.navbar as {
+    home: string
+    about_us: string
+    products: string
+    select_language: string
+    search_bar: {
+      search_placeholder: string
+      no_results: string
+    }
+    cart: {
+      title: string
+      empty: string
+      remove: string
+    }
+  }
+
   return (
     <html lang={locale}>
       <body className={`${BarlowText.variable} ${geistMono.variable}`}>
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          {children}
+          <CartProvider>
+            <Navbar translations={navbarTranslations} />
+            {children}
+          </CartProvider>
           <Footer />
         </NextIntlClientProvider>
       </body>
