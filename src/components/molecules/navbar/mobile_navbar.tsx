@@ -9,16 +9,28 @@ import English from '@/components/atoms/svg/english'
 import { Menu, X } from 'lucide-react'
 import SearchBar from '../search_bar/search_bar'
 
-type Translations = {
-  home: string
-  about_us: string
-  products: string
-  select_language: string
-  search_placeholder: string
-  no_results: string
+interface MobileMenuProps {
+  translations: {
+    home: string
+    about_us: string
+    products: string
+    select_language: string
+    search_placeholder: string
+    no_results: string
+    title: string
+    empty: string
+    remove: string
+    quantity: string
+  }
+  isCartOpen: boolean
+  setIsCartOpen: (open: boolean) => void
 }
 
-export function MobileMenu({ translations }: { translations: Translations }) {
+export function MobileMenu({
+  translations,
+  isCartOpen,
+  setIsCartOpen,
+}: MobileMenuProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const router = useRouter()
 
@@ -37,10 +49,16 @@ export function MobileMenu({ translations }: { translations: Translations }) {
         searchPlaceholder={translations.search_placeholder}
         noResults={translations.no_results}
       />
-      <Cart />
+
+      {/* Fix: Open the cart summary when clicking the cart icon */}
+      <button onClick={() => setIsCartOpen(true)}>
+        <Cart />
+      </button>
+
       <button onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
+
       {menuOpen && (
         <div className="fixed inset-0 z-50 m-2 flex flex-col items-center justify-center rounded-3xl bg-gray-800/70 shadow-xl backdrop-blur-lg">
           <button
