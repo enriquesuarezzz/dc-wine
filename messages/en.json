@@ -50,6 +50,12 @@
     "search_bar": {
       "search_placeholder": "Search a product...",
       "no_results": "No products found"
+    },
+    "cart": {
+      "title": "Products added to the cart",
+      "empty": "Your cart is empty",
+      "remove": "remove",
+      "quantity": "Quantity: "
     }
   },
   "footer": {

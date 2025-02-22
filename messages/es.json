@@ -50,6 +50,12 @@
     "search_bar": {
       "search_placeholder": "Buscar un producto...",
       "no_results": "No se han encontrado productos"
+    },
+    "cart": {
+      "title": "Productos añadidos al carrito",
+      "empty": "Tu carrito está vacio",
+      "remove": "remove",
+      "quantity": "Cantidad: "
     }
   },
   "footer": {
