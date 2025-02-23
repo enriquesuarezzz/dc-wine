@@ -55,7 +55,9 @@
       "title": "Products added to the cart",
       "empty": "Your cart is empty",
       "remove": "remove",
-      "quantity": "Quantity: "
+      "quantity": "Quantity: ",
+      "subtotal": "Subtotal: ",
+      "clear_cart": "Clear Cart"
     }
   },
   "footer": {
@@ -64,6 +66,18 @@
     "products": "Products",
     "cookies": "Cookies Policy",
     "privacy": "Privacy Policy"
+  },
+  "cart_page": {
+    "title": "Summary of your purchase",
+    "empty": "Your cart is empty",
+    "product": "Product",
+    "quantity": "Quantity",
+    "price": "Price",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "clear_cart": "Clear Cart",
+    "shipping": "Shipping"
   },
   "contact_page": {
     "title": "This is the contact page"

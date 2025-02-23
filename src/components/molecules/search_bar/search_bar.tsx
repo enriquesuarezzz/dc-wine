@@ -6,7 +6,7 @@ import { db } from '../../../../lib/firebaseConfig'
 import { collection, query, where, getDocs, orderBy } from 'firebase/firestore'
 import { useLocale } from 'next-intl'
 import SearchIcon from '@/components/atoms/svg/search'
-import Close from '@/components/atoms/svg/close'
+import { Close } from '@/components/atoms/svg/close'
 
 interface Product {
   id: string
@@ -128,7 +128,7 @@ const SearchBar = ({
                 onClick={() => setIsSearchActive(false)}
                 className="absolute right-1 top-1/2 -translate-y-1/2 transform rounded-full p-2"
               >
-                <Close />
+                <Close color="black" />
               </button>
 
               <div className="absolute left-1 top-1/2 -translate-y-1/2 transform md:left-5">
