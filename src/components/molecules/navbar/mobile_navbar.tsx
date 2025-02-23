@@ -6,8 +6,9 @@ import { PoppinsText } from '@/components/atoms/poppins_text'
 import Cart from '@/components/atoms/svg/cart'
 import Spanish from '@/components/atoms/svg/spanish'
 import English from '@/components/atoms/svg/english'
-import { Menu, X } from 'lucide-react'
 import SearchBar from '../search_bar/search_bar'
+import Menu from '@/components/atoms/svg/menu'
+import { Close } from '@/components/atoms/svg/close'
 
 interface MobileMenuProps {
   translations: {
@@ -26,11 +27,7 @@ interface MobileMenuProps {
   setIsCartOpen: (open: boolean) => void
 }
 
-export function MobileMenu({
-  translations,
-  isCartOpen,
-  setIsCartOpen,
-}: MobileMenuProps) {
+export function MobileMenu({ translations, setIsCartOpen }: MobileMenuProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const router = useRouter()
 
@@ -56,7 +53,7 @@ export function MobileMenu({
       </button>
 
       <button onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        {menuOpen ? <Close color="white" /> : <Menu />}
       </button>
 
       {menuOpen && (
@@ -65,7 +62,7 @@ export function MobileMenu({
             className="absolute right-4 top-4"
             onClick={() => setMenuOpen(false)}
           >
-            <X size={32} />
+            <Close color="white" />
           </button>
           <nav className="flex flex-col items-center gap-6">
             <Link href="/" onClick={() => handleNavigation('/')}>
