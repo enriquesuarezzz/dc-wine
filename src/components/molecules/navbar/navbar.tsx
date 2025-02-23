@@ -1,5 +1,4 @@
 'use client'
-
 import { PoppinsText } from '@/components/atoms/poppins_text'
 import { Link } from '@/i18n/routing'
 import LocaleSwitcher from '../locale_switcher/locale_switcher'
@@ -25,6 +24,7 @@ interface NavBarProps {
       empty: string
       remove: string
       quantity: string
+      subtotal: string
     }
   }
 }
@@ -33,14 +33,13 @@ export default function NavBar({ translations }: NavBarProps) {
   const [isCartOpen, setIsCartOpen] = useState(false)
   const { cartItems, removeFromCart } = useCart()
   const totalPrice = cartItems.reduce((total, item) => {
-    console.log(item.price, item.quantity) // Log to see the values
-    const price = isNaN(item.price) ? 0 : item.price
-    const quantity = isNaN(item.quantity) ? 1 : item.quantity
+    const price = Number(item.price) || 0 // Ensure it's a number
+    const quantity = Number(item.quantity) || 1 // Ensure it's a number
+
     return total + price * quantity
   }, 0)
 
-  // Ensure that the total price is a number and round it properly
-  const formattedTotalPrice = isNaN(totalPrice) ? 0 : totalPrice.toFixed(2)
+  const formattedTotalPrice = totalPrice.toFixed(2) // Ensure 2 decimal places
 
   return (
     <div className="fixed left-0 top-0 z-50 flex w-full items-center justify-between rounded-b-3xl bg-[#f8f7f7] px-6 py-4 text-white md:px-20">
@@ -57,6 +56,7 @@ export default function NavBar({ translations }: NavBarProps) {
           empty: translations.cart.empty,
           remove: translations.cart.remove,
           quantity: translations.cart.quantity,
+          subtotal: translations.cart.subtotal,
         }}
         isCartOpen={isCartOpen}
         setIsCartOpen={setIsCartOpen}
@@ -111,7 +111,7 @@ export default function NavBar({ translations }: NavBarProps) {
           >
             ✖
           </button>
-          <div className="p-4">
+          <div className="flex h-full flex-col p-4">
             <PoppinsText
               tag="h1"
               fontSize="19px"
@@ -127,7 +127,7 @@ export default function NavBar({ translations }: NavBarProps) {
                 {translations.cart.empty}
               </PoppinsText>
             ) : (
-              <ul>
+              <ul className="flex-1 overflow-y-auto">
                 {cartItems.map((item) => (
                   <li
                     key={item.id}
@@ -141,15 +141,19 @@ export default function NavBar({ translations }: NavBarProps) {
                       height={25}
                       className="mr-4 rounded-md"
                     />
-                    <div className="flex flex-col items-center justify-center gap-2">
-                      <PoppinsText tag="h1" fontSize="16px">
+                    <div className="flex flex-col items-center justify-center gap-4">
+                      <PoppinsText
+                        tag="h1"
+                        fontSize="16px"
+                        className="text-center"
+                      >
                         {item.name}
                       </PoppinsText>
                       <PoppinsText tag="h1" fontSize="16px">
                         {translations.cart.quantity} {item.quantity}
                       </PoppinsText>
                     </div>
-                    <div className="gap- flex flex-col items-center justify-center gap-2">
+                    <div className="flex flex-col items-center justify-center gap-2">
                       <PoppinsText tag="h1" fontSize="16px">
                         {item.price}
                       </PoppinsText>
@@ -171,22 +175,27 @@ export default function NavBar({ translations }: NavBarProps) {
                 ))}
               </ul>
             )}
-            {/* Total Price */}
-            <div className="mt-4 flex justify-between">
-              <PoppinsText tag="h1" fontSize="16px" className="font-bold">
-                Total:
-              </PoppinsText>
-              <PoppinsText tag="h1" fontSize="16px" className="font-bold">
-                ${formattedTotalPrice}
-              </PoppinsText>
-            </div>
 
-            {/* Continue to Cart Button */}
-            <Link href="/cart">
-              <button className="mt-4 w-full rounded bg-[#ccb32b] py-2 text-white">
-                {translations.cart.title}
-              </button>
-            </Link>
+            {/* Total Price and Continue to Cart Button */}
+            <div className="mb-6 mt-4 border-t pt-4">
+              <div className="flex justify-between">
+                <PoppinsText tag="h1" fontSize="16px" className="font-bold">
+                  {translations.cart.subtotal}
+                </PoppinsText>
+                <PoppinsText tag="h1" fontSize="16px" className="font-bold">
+                  ${formattedTotalPrice}
+                </PoppinsText>
+              </div>
+
+              {/* Continue to Cart Button */}
+              <Link href="/cart">
+                <button className="mt-4 w-full rounded bg-gold py-2 hover:bg-hover_gold">
+                  <PoppinsText tag="h1" fontSize="16px" className="text-white">
+                    {translations.cart.title}
+                  </PoppinsText>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       )}
