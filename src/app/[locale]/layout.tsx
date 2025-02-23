@@ -54,6 +54,7 @@ export default async function RootLayout({
       title: string
       empty: string
       remove: string
+      quantity: string
     }
   }
 
