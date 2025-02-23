@@ -55,6 +55,7 @@ export default async function RootLayout({
       empty: string
       remove: string
       quantity: string
+      subtotal: string
     }
   }
 
