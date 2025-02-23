@@ -22,6 +22,7 @@ interface MobileMenuProps {
     empty: string
     remove: string
     quantity: string
+    subtotal: string
   }
   isCartOpen: boolean
   setIsCartOpen: (open: boolean) => void
