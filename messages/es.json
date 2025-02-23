@@ -53,10 +53,12 @@
     },
     "cart": {
       "title": "Productos añadidos al carrito",
+      "cart_page_title": "Resumen de tu compra",
       "empty": "Tu carrito está vacio",
       "remove": "remove",
       "quantity": "Cantidad: ",
       "subtotal": "Subtotal: ",
+      "total": "Total: ",
       "clear_cart": "Vaciar carrito"
     }
   },
@@ -66,6 +68,18 @@
     "products": "Productos",
     "cookies": "Política de Cookies",
     "privacy": "Política de Privacidad"
+  },
+  "cart_page": {
+    "title": "Resumen de tu compra",
+    "empty": "Tu carrito está vacio",
+    "product": "Producto",
+    "quantity": "Cantidad",
+    "price": "Precio",
+    "remove": "Eliminar",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "clear_cart": "Vaciar carrito",
+    "shipping": "Envío"
   },
   "contact_page": {
     "title": "Esta es la pagina de contacto"
