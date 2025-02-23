@@ -2,17 +2,20 @@ import CartContent from '@/components/molecules/cart_content/car_content'
 import { useTranslations } from 'next-intl'
 
 const CartPage = () => {
-  const t = useTranslations('navbar')
+  const t = useTranslations('cart_page')
 
   return (
     <CartContent
       translations={{
-        title: t('cart.title'),
-        empty: t('cart.empty'),
-        remove: t('cart.remove'),
-        quantity: t('cart.quantity'),
-        subtotal: t('cart.subtotal'),
-        clear_cart: t('cart.clear_cart'),
+        title: t('title'),
+        empty: t('empty'),
+        product: t('product'),
+        quantity: t('quantity'),
+        price: t('price'),
+        remove: t('remove'),
+        subtotal: t('subtotal'),
+        total: t('total'),
+        shipping: t('shipping'),
       }}
     />
   )
