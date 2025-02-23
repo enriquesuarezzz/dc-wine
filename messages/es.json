@@ -55,7 +55,9 @@
       "title": "Productos añadidos al carrito",
       "empty": "Tu carrito está vacio",
       "remove": "remove",
-      "quantity": "Cantidad: "
+      "quantity": "Cantidad: ",
+      "subtotal": "Subtotal: ",
+      "clear_cart": "Vaciar carrito"
     }
   },
   "footer": {

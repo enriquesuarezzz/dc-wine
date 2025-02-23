@@ -55,7 +55,9 @@
       "title": "Products added to the cart",
       "empty": "Your cart is empty",
       "remove": "remove",
-      "quantity": "Quantity: "
+      "quantity": "Quantity: ",
+      "subtotal": "Subtotal: ",
+      "clear_cart": "Clear Cart"
     }
   },
   "footer": {
