@@ -1,5 +1,4 @@
 'use client'
-
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLocale } from 'next-intl'
@@ -56,6 +55,7 @@ export default function ProductDetails() {
             imageUrl: product.imageUrl,
           })
         }
+        className="mt-4 rounded-md bg-gold/80 px-4 py-2 text-white hover:bg-gold"
       >
         Add to Cart
       </button>
