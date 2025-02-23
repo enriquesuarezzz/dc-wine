@@ -23,13 +23,25 @@ const CartContext = createContext<CartContextType | undefined>(undefined)
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
 
+  // Function to ensure the price is correctly formatted as a number
+  const parsePrice = (price: unknown): number | null => {
+    if (typeof price === 'number') {
+      return price
+    }
+    if (typeof price === 'string') {
+      const normalizedPrice = price.replace(',', '.')
+      const parsedPrice = parseFloat(normalizedPrice)
+      return isNaN(parsedPrice) ? null : parsedPrice
+    }
+    return null
+  }
+
   // Add item to cart or increase quantity if it already exists
   const addToCart = (item: Omit<CartItem, 'quantity'>) => {
-    const price = parseFloat(item.price.toString()) // Make sure price is a number
+    const price = parsePrice(item.price)
 
-    if (isNaN(price)) {
-      console.error('Invalid price:', item.price)
-      return // Exit if price is invalid
+    if (price === null) {
+      return
     }
 
     setCartItems((prevCart) => {
