@@ -52,7 +52,7 @@
       "no_results": "No products found"
     },
     "cart": {
-      "title": "Products added to the cart",
+      "title": "Go to summary",
       "empty": "Your cart is empty",
       "remove": "remove",
       "quantity": "Quantity: ",
@@ -77,7 +77,8 @@
     "subtotal": "Subtotal",
     "total": "Total",
     "clear_cart": "Clear Cart",
-    "shipping": "Shipping"
+    "shipping": "Shipping",
+    "checkout": "Checkout"
   },
   "contact_page": {
     "title": "This is the contact page"

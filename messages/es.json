@@ -79,7 +79,8 @@
     "subtotal": "Subtotal",
     "total": "Total",
     "clear_cart": "Vaciar carrito",
-    "shipping": "Envío"
+    "shipping": "Envío",
+    "checkout": "Pagar"
   },
   "contact_page": {
     "title": "Esta es la pagina de contacto"
