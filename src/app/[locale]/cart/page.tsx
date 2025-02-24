@@ -16,6 +16,7 @@ const CartPage = () => {
         subtotal: t('subtotal'),
         total: t('total'),
         shipping: t('shipping'),
+        checkout: t('checkout'),
       }}
     />
   )
