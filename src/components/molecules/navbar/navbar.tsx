@@ -43,7 +43,9 @@ export default function NavBar({ translations }: NavBarProps) {
 
   return (
     <div className="fixed left-0 top-0 z-50 flex w-full items-center justify-between rounded-b-3xl bg-[#f8f7f7] px-6 py-4 text-white md:px-20">
-      <img src="/images/logo.avif" alt="Logo" width={50} height={50} />
+      <Link href="/">
+        <img src="/images/logo.avif" alt="Logo" width={50} height={50} />
+      </Link>
       <MobileMenu
         translations={{
           home: translations.home,
@@ -189,7 +191,10 @@ export default function NavBar({ translations }: NavBarProps) {
 
               {/* Continue to Cart Button */}
               <Link href="/cart">
-                <button className="mt-4 w-full rounded bg-gold py-2 hover:bg-hover_gold">
+                <button
+                  className="mt-4 w-full rounded bg-gold py-2 hover:bg-hover_gold"
+                  onClick={() => setIsCartOpen(false)}
+                >
                   <PoppinsText tag="h1" fontSize="16px" className="text-white">
                     {translations.cart.title}
                   </PoppinsText>

@@ -8,6 +8,7 @@ import Navbar from '@/components/molecules/navbar/navbar'
 import { Barlow, Geist_Mono } from 'next/font/google'
 import Footer from '@/components/molecules/footer/footer'
 import { CartProvider } from '@/components/molecules/cart_context/cart_context'
+import CookiesPopup from '@/components/molecules/cookies_pop_up/cookies_pop_up'
 
 const BarlowText = Barlow({
   subsets: ['latin'],
@@ -67,6 +68,7 @@ export default async function RootLayout({
             <Navbar translations={navbarTranslations} />
             {children}
           </CartProvider>
+          <CookiesPopup />
           <Footer />
         </NextIntlClientProvider>
       </body>
