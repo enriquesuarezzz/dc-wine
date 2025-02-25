@@ -97,5 +97,17 @@
     "meta_title": "Cookies Policy - DcWine",
     "meta_description": "Learn about how we use cookies to enhance your experience on DcWine and how you can control them.",
     "title": "Cookies Policy"
+  },
+  "age_verification_pop_up": {
+    "title": "Welcome to DcWine",
+    "message": "You must be older than 18 years to access this site",
+    "accept": "Yes I'm over 18",
+    "exit": "Exit now"
+  },
+  "cookies_popup": {
+    "title": "Cookies",
+    "message": "On our website we use our own and third-party cookies for analytical purposes by analyzing web traffic.",
+    "accept": "Accept",
+    "reject": "Reject All"
   }
 }

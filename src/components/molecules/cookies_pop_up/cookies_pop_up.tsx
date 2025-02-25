@@ -3,7 +3,16 @@ import { useEffect, useState } from 'react'
 import CookiesModal from '../cookies_modal/cookies_modal'
 import { COOKIE_CONSENT } from '@/utils/cookie'
 
-export default function CookiesPopup() {
+interface CookiesPopupProps {
+  translations: {
+    title: string
+    message: string
+    accept: string
+    reject: string
+  }
+}
+
+export default function CookiesPopup({ translations }: CookiesPopupProps) {
   const [consent, setConsent] = useState(false)
 
   useEffect(() => {
@@ -16,5 +25,5 @@ export default function CookiesPopup() {
     }
   }, [])
 
-  return <CookiesModal checked={consent} />
+  return <CookiesModal checked={consent} translations={translations} />
 }

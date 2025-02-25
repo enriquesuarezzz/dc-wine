@@ -60,6 +60,13 @@ export default async function RootLayout({
     }
   }
 
+  const cookiesTranslations = messages.cookies_popup as {
+    title: string
+    message: string
+    accept: string
+    reject: string
+  }
+
   return (
     <html lang={locale}>
       <body className={`${BarlowText.variable} ${geistMono.variable}`}>
@@ -68,7 +75,7 @@ export default async function RootLayout({
             <Navbar translations={navbarTranslations} />
             {children}
           </CartProvider>
-          <CookiesPopup />
+          <CookiesPopup translations={cookiesTranslations} />
           <Footer />
         </NextIntlClientProvider>
       </body>
