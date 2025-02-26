@@ -27,3 +27,16 @@ export const getProductById = async (
     return null
   }
 }
+
+// Function to fetch unique origins
+export const getOrigins = async (locale: string): Promise<string[]> => {
+  const productsCollection = collection(db, `products_${locale}`)
+  const productsSnapshot = await getDocs(productsCollection)
+
+  // Extract and deduplicate origins
+  const originsSet = new Set(
+    productsSnapshot.docs.map((doc) => doc.data().origin).filter(Boolean),
+  )
+
+  return Array.from(originsSet)
+}
