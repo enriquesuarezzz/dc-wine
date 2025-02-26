@@ -3,7 +3,7 @@ export interface Product {
   name: string
   category: string
   price: number
-  grapes: string
+  grape_type: string
   origin: string
   winemaking_technique: string
   sparkling_wine_method: string

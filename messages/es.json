@@ -88,7 +88,21 @@
   "products_page": {
     "meta_title": "Productos - DcWine",
     "meta_description": "Explora nuestra amplia selección de vinos premium, incluyendo vinos tintos, blancos y espumosos, provenientes de las mejores bodegas.",
-    "title": "Productos"
+    "title": "Productos",
+    "filters": "Filtros",
+    "sort_by_price": "Ordenar por precio",
+    "default": "Por defecto",
+    "low_to_high": "De menor a mayor",
+    "high_to_low": "De mayor a menor",
+    "category": "Categoría",
+    "all_categories": "Todas las categorias",
+    "red_wine": "Vino tinto",
+    "white_wine": "Vino blanco",
+    "sparkling_wine": "Vino de espumas",
+    "grape_type": "Tipo de Uva",
+    "origin": "Denominación de origen",
+    "all_origins": "Denominaciones de origen",
+    "all_grape_types": "Tipos de uvas"
   },
   "privacy_policy_page": {
     "meta_title": "Política de Privacidad - DcWine",
@@ -103,7 +117,7 @@
   "age_verification_pop_up": {
     "title": "Bienvenido a DcWine",
     "message": "Debes tener más de 18 años para acceder a esta página",
-    "accept": "Si tengo más de 18",
+    "accept": "Si tengo más de 18 años",
     "exit": "Salir ahora"
   },
   "cookies_popup": {

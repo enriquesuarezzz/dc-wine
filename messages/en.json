@@ -86,7 +86,21 @@
   "products_page": {
     "meta_title": "Products - DcWine",
     "meta_description": "Explore our wide selection of premium wines, including red, white, and sparkling wines, sourced from the finest wineries.",
-    "title": "Products"
+    "title": "Products",
+    "filters": "Filters",
+    "sort_by_price": "Sort By Price",
+    "default": "Default",
+    "low_to_high": "Low to high",
+    "high_to_low": "High to low",
+    "category": "Category",
+    "all_categories": "All categories",
+    "red_wine": "Red wine",
+    "white_wine": "White wine",
+    "sparkling_wine": "Sparkling Wine",
+    "grape_type": "Grape type",
+    "origin": "Designation of origin",
+    "all_origins": "Designations of origin",
+    "all_grape_types": "Grape types"
   },
   "privacy_policy_page": {
     "meta_title": "Privacy Policy - DcWine",
