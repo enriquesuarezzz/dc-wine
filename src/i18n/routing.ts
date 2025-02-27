@@ -28,6 +28,10 @@ export const routing = defineRouting({
       en: '/cookies_policy',
       es: '/politica_de_cookies',
     },
+    '/shipping_and_return_policy': {
+      en: '/shipping_and_return_policy',
+      es: '/politica_de_envios_y_devoluciones',
+    },
     '/cart': {
       en: '/cart',
       es: '/carrito',

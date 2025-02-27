@@ -28,7 +28,8 @@
         "title": "El Biológico",
         "subtitle": "The word BIO from Latin means 'Life', Life that generates Life. An organic wine is one whose production is free of artificial or harmful chemicals for the vineyards or the people who work in them. To obtain a wine certified as organic, the vine and the field must be cared for for a period of more than four years. Anyone who produces organic wine deserves applause, because they are not thinking only of themselves or the present moment; ."
       }
-    }
+    },
+    "free_order_message": "🚚 Free Shipping on All Orders!"
   },
   "about_us_page": {
     "meta_title": "About Us - DcWine",
@@ -65,7 +66,8 @@
     "about_us": "About Us",
     "products": "Products",
     "cookies": "Cookies Policy",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "shipping_and_return_policy": "Shipping and return policy"
   },
   "cart_page": {
     "title": "Summary of your purchase",
@@ -111,6 +113,11 @@
     "meta_title": "Cookies Policy - DcWine",
     "meta_description": "Learn about how we use cookies to enhance your experience on DcWine and how you can control them.",
     "title": "Cookies Policy"
+  },
+  "shipping_and_return_policy_page": {
+    "meta_title": "Shipping and return Policy - DcWine",
+    "meta_description": "Learn about our shipping methods, delivery times, and hassle-free returns. Find detailed information on our policies regarding product returns, exchanges, and shipping to ensure a smooth shopping experience.",
+    "title": "Shipping and return Policy"
   },
   "age_verification_pop_up": {
     "title": "Welcome to DcWine",

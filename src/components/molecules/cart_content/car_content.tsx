@@ -26,7 +26,7 @@ const CartContent = ({ translations }: CartContentProps) => {
     (acc, item) => acc + item.price * item.quantity,
     0,
   )
-  const shippingCost = 10 // Modify this as needed
+  const shippingCost = 0
   const total = subtotal + shippingCost
 
   return (
@@ -110,7 +110,7 @@ const CartContent = ({ translations }: CartContentProps) => {
                 {/* Price */}
                 <div className="col-span-2 text-center">
                   <PoppinsText fontSize="19px">
-                    ${item.price.toFixed(2)}
+                    {item.price.toFixed(2)} €
                   </PoppinsText>
                 </div>
               </div>
@@ -128,19 +128,19 @@ const CartContent = ({ translations }: CartContentProps) => {
 
           <div className="mt-4 flex justify-between">
             <PoppinsText fontSize="16px">{translations.subtotal}</PoppinsText>
-            <PoppinsText fontSize="16px">${subtotal.toFixed(2)}</PoppinsText>
+            <PoppinsText fontSize="16px">{subtotal.toFixed(2)} €</PoppinsText>
           </div>
 
           <div className="mt-2 flex justify-between">
             <PoppinsText fontSize="16px">{translations.shipping}</PoppinsText>
             <PoppinsText fontSize="16px">
-              ${shippingCost.toFixed(2)}
+              {shippingCost.toFixed(2)} €
             </PoppinsText>
           </div>
 
           <div className="mt-4 flex justify-between border-t pt-4 font-bold">
             <PoppinsText fontSize="16px">{translations.total}</PoppinsText>
-            <PoppinsText fontSize="16px">${total.toFixed(2)}</PoppinsText>
+            <PoppinsText fontSize="16px">{total.toFixed(2)} €</PoppinsText>
           </div>
 
           <button className="mt-6 w-full rounded bg-gray-800 py-2 text-white hover:bg-gray-900">

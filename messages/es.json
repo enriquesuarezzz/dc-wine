@@ -28,7 +28,8 @@
         "title": "El Biológico",
         "subtitle": "La palabra BIO desde el Latin significa «Vida», Vida que genera Vida. Un vino biológico, es aquel cuya producción está libre de productos químicos artificiales o dañinos para los viñedos o las personas que trabajan en ellos. Para obtener un vino certificado como biológico, se deben cuidar la vid y el campo por un periodo de más de cuatro años."
       }
-    }
+    },
+    "free_order_message": "🚚 Envíos gratis en todos los pedidos!"
   },
   "about_us_page": {
     "meta_title": "Sobre Nosotros - DcWine",
@@ -67,7 +68,8 @@
     "about_us": "Sobre Nosotros",
     "products": "Productos",
     "cookies": "Política de Cookies",
-    "privacy": "Política de Privacidad"
+    "privacy": "Política de Privacidad",
+    "shipping_and_return_policy": "Política de envios y devoluciones"
   },
   "cart_page": {
     "title": "Resumen de tu compra",
@@ -113,6 +115,11 @@
     "meta_title": "Política de Cookies - DcWine",
     "meta_description": "Descubre cómo utilizamos cookies para mejorar tu experiencia en DcWine y cómo puedes controlarlas.",
     "title": "Política de cookies"
+  },
+  "shipping_and_return_policy_page": {
+    "meta_title": "Política de envíos y devoluciones - DcWine",
+    "meta_description": "Conozca nuestros métodos de envío, tiempos de entrega y devoluciones sin complicaciones. Encuentre información detallada sobre nuestras políticas de devolución, cambios y envío para garantizar una experiencia de compra fluida.",
+    "title": "Política de envíos y devoluciones"
   },
   "age_verification_pop_up": {
     "title": "Bienvenido a DcWine",
