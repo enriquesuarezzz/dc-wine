@@ -9,7 +9,7 @@ import Whatsapp from '@/components/atoms/svg/whatsapp'
 export default async function Footer() {
   const t = await getTranslations('footer')
   return (
-    <footer className="bottom-0 mt-10 w-full items-center bg-gold md:mt-12 lg:mt-20">
+    <footer className="bg-mate_black bottom-0 mt-10 w-full items-center md:mt-12 lg:mt-20">
       <div className="mx-auto max-w-screen-xl items-center p-4 md:py-8">
         {/* Navigation Links */}
         <div className="flex flex-col items-center justify-center">
@@ -62,6 +62,16 @@ export default async function Footer() {
                 className="relative mx-auto block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
               >
                 {t('privacy')}
+              </PoppinsText>
+            </Link>
+            {/* Shipping and return Policy Link */}
+            <Link href="/shipping_and_return_policy">
+              <PoppinsText
+                fontSize="16px"
+                style="bold"
+                className="relative mx-auto block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
+              >
+                {t('shipping_and_return_policy')}
               </PoppinsText>
             </Link>
           </div>
