@@ -157,7 +157,7 @@ export default function NavBar({ translations }: NavBarProps) {
                     </div>
                     <div className="flex flex-col items-center justify-center gap-2">
                       <PoppinsText tag="h1" fontSize="16px">
-                        {item.price}
+                        {item.price} €
                       </PoppinsText>
                       <button
                         onClick={() => removeFromCart(item.id)}
@@ -185,7 +185,7 @@ export default function NavBar({ translations }: NavBarProps) {
                   {translations.cart.subtotal}
                 </PoppinsText>
                 <PoppinsText tag="h1" fontSize="16px" className="font-bold">
-                  ${formattedTotalPrice}
+                  {formattedTotalPrice} €
                 </PoppinsText>
               </div>
 
