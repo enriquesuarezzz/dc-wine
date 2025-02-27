@@ -35,7 +35,7 @@ export default function CookiesModal({
 
   return (
     showModal && (
-      <div className="fixed bottom-0 left-0 z-40 flex h-fit w-fit flex-col justify-between gap-6 rounded-t-3xl bg-gold px-6 py-10 backdrop-blur-sm md:bottom-4 md:left-4 md:rounded-3xl">
+      <div className="bg-mate_black fixed bottom-0 left-0 z-40 flex h-fit w-fit flex-col justify-between gap-6 rounded-t-3xl px-6 py-10 backdrop-blur-sm md:bottom-4 md:left-4 md:rounded-3xl">
         <div className="flex h-fit w-full max-w-[300px] flex-col gap-10">
           {/* Title + description */}
           <div className="flex h-fit w-full flex-col gap-5 text-center">
@@ -44,7 +44,7 @@ export default function CookiesModal({
               <PoppinsText
                 fontSize="32px"
                 style="semibold"
-                className="max-w-[500px] text-center text-black"
+                className="max-w-[500px] text-center text-gold"
               >
                 {translations.title}
               </PoppinsText>
@@ -55,7 +55,7 @@ export default function CookiesModal({
               <PoppinsText
                 fontSize="14px"
                 style="semibold"
-                className="max-w-[500px] text-center text-black"
+                className="max-w-[500px] text-center text-gold"
               >
                 {translations.message}
               </PoppinsText>
@@ -65,7 +65,7 @@ export default function CookiesModal({
           <div className="flex h-fit w-full flex-row justify-center gap-5">
             {/* Decline */}
             <button
-              className="flex h-fit flex-col items-center justify-center border border-black px-3 py-2 text-black md:px-9 md:py-3"
+              className="flex h-fit flex-col items-center justify-center border border-white px-3 py-2 text-white hover:bg-gold md:px-9 md:py-3"
               onClick={handleCancelCookie}
             >
               <PoppinsText
@@ -77,7 +77,7 @@ export default function CookiesModal({
             </button>
             {/* Accept */}
             <button
-              className="flex h-fit flex-col items-center justify-center border border-white bg-black px-3 py-2 text-white md:px-9 md:py-3"
+              className="flex h-fit flex-col items-center justify-center border border-white bg-black px-3 py-2 text-white hover:bg-gold md:px-9 md:py-3"
               onClick={handleAcceptCookie}
             >
               <PoppinsText
