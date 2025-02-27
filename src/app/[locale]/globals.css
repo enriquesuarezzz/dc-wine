@@ -33,3 +33,32 @@ section::-webkit-scrollbar {
 ul {
   list-style: disc;
 }
+
+.marquee {
+  white-space: nowrap;
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+@media (min-width: 768px) {
+  /* md */
+  .marquee {
+    animation: marquee 30s linear infinite;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg */
+  .marquee {
+    animation: marquee 30s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
