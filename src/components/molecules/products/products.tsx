@@ -17,9 +17,9 @@ export default function Products({
   const [sortOrder, setSortOrder] = useState<string>('') // State for sorting products
   const [selectedCategory, setSelectedCategory] = useState<string>('') // State for category filter
   const [selectedOrigin, setSelectedOrigin] = useState<string>('') // State for origin filter
-  const [selectedGrapeType, setSelectedGrapeType] = useState<string>('') // State for grape type filter
+  const [selectedGrape, setSelectedGrape] = useState<string>('') // State for grape  filter
   const [origins, setOrigins] = useState<string[]>([]) // State to store unique origins
-  const [grapeTypes, setGrapeTypes] = useState<string[]>([]) // State to store unique grape types
+  const [grape, setGrape] = useState<string[]>([]) // State to store unique grape types
 
   useEffect(() => {
     async function fetchProducts() {
@@ -35,10 +35,8 @@ export default function Products({
         setOrigins(uniqueOrigins)
 
         // Extract unique grape types from the products and set them in the state
-        const uniqueGrapeTypes = [
-          ...new Set(data.map((product) => product.grape_type)),
-        ]
-        setGrapeTypes(uniqueGrapeTypes)
+        const uniquegrapes = [...new Set(data.map((product) => product.grape))]
+        setGrape(uniquegrapes)
       }
     }
     fetchProducts()
@@ -66,11 +64,11 @@ export default function Products({
     }
 
     // ✅ Filter by grape type
-    if (selectedGrapeType) {
+    if (selectedGrape) {
       updatedProducts = updatedProducts.filter(
         (product) =>
-          product.grape_type?.trim().toLowerCase() ===
-          selectedGrapeType.trim().toLowerCase(),
+          product.grape?.trim().toLowerCase() ===
+          selectedGrape.trim().toLowerCase(),
       )
     }
 
@@ -82,12 +80,12 @@ export default function Products({
     }
 
     setFilteredProducts(updatedProducts) // Update the filtered products state
-  }, [sortOrder, selectedCategory, selectedOrigin, selectedGrapeType, products])
+  }, [sortOrder, selectedCategory, selectedOrigin, selectedGrape, products])
 
   return (
-    <div className="mx-20 flex pt-24">
+    <div className="mx-0 flex flex-col pt-6 md:pt-24 lg:mx-20 lg:flex-row">
       {/* Sidebar */}
-      <aside className="w-1/4 pr-10">
+      <aside className="w-full pr-10 lg:w-1/4">
         <h2 className="mb-4 text-lg font-bold">{translations.filters}</h2>
 
         {/* Sort Dropdown */}
@@ -151,13 +149,13 @@ export default function Products({
           </label>
           <select
             className="mt-1 w-full rounded-md border p-2"
-            value={selectedGrapeType}
-            onChange={(e) => setSelectedGrapeType(e.target.value)}
+            value={selectedGrape}
+            onChange={(e) => setSelectedGrape(e.target.value)}
           >
             <option value="">{translations.all_grape_types}</option>
-            {grapeTypes.map((grapeType, index) => (
-              <option key={index} value={grapeType}>
-                {grapeType}
+            {grape.map((grape, index) => (
+              <option key={index} value={grape}>
+                {grape}
               </option>
             ))}
           </select>
@@ -165,10 +163,10 @@ export default function Products({
       </aside>
 
       {/* Product Listing */}
-      <div className="flex w-3/4 flex-wrap justify-center gap-10">
+      <div className="flex w-3/4 flex-wrap items-center justify-center gap-10">
         {filteredProducts.map((product) => (
           <div
-            className="flex max-w-[600px] flex-col transition-all duration-300 ease-in-out hover:scale-105"
+            className="flex max-w-[600px] transition-all duration-300 ease-in-out hover:scale-105"
             key={product.id}
           >
             <Link href={`/${locale}/products/${product.id}`} passHref>
@@ -194,7 +192,7 @@ export default function Products({
               <PoppinsText fontSize="14px">{product.name}</PoppinsText>
               <PoppinsText fontSize="14px">{product.price} €</PoppinsText>
               <PoppinsText fontSize="12px" className="text-gray-600">
-                {product.origin} - {product.grape_type}
+                {product.origin} - {product.grape}
               </PoppinsText>
             </Link>
           </div>

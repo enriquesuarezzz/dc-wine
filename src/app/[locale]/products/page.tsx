@@ -29,7 +29,7 @@ export default async function ProductsPage() {
     all_grape_types: t('all_grape_types'),
   }
   return (
-    <div className="mx-20 flex flex-col justify-center pt-24">
+    <div className="mx-6 flex flex-col justify-center pt-24 md:mx-20">
       {/* title */}
       <PoppinsText fontSize="56px" style="bold" className="max-w-[500px]">
         {t('title')}

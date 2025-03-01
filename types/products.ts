@@ -3,22 +3,11 @@ export interface Product {
   name: string
   category: string
   price: number
-  grape_type: string
+  grape: string
   origin: string
-  winemaking_technique: string
-  sparkling_wine_method: string
-  alcohol_content: string
-  residual_sugar: string
-  appearance: string
-  colour: string
-  bead: string
-  aroma: string
-  taste: string
-  storage: string
-  pairings: string
-  serving_temperature: string
+  alcohol: string
   size: string
-  packaging: string
   imageUrl: string
+  cellar: string
   stock: number
 }

@@ -1,4 +1,5 @@
 'use client'
+
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLocale } from 'next-intl'
@@ -13,7 +14,7 @@ export default function ProductDetails() {
   const { addToCart } = useCart()
   const [product, setProduct] = useState<Product | null>(null)
   const [loading, setLoading] = useState(true)
-  const [showToast, setShowToast] = useState(false)
+  const [quantity, setQuantity] = useState(1)
 
   useEffect(() => {
     async function fetchProduct() {
@@ -33,7 +34,6 @@ export default function ProductDetails() {
   if (loading) return <p>Loading...</p>
   if (!product) return <p>Product not found</p>
 
-  // Function to handle adding to cart and showing toast
   const handleAddToCart = () => {
     if (product) {
       addToCart({
@@ -42,57 +42,63 @@ export default function ProductDetails() {
         price: product.price,
         imageUrl: product.imageUrl,
       })
-
-      // Show toast notification
-      setShowToast(true)
-
-      // Hide toast after 3 seconds
-      setTimeout(() => {
-        setShowToast(false)
-      }, 3000)
     }
   }
 
   return (
-    <div className="relative flex flex-col items-center pt-24">
-      {/* Toast Notification */}
-      {showToast && (
-        <div className="fixed left-1/2 top-14 z-50 flex w-80 -translate-x-1/2 -translate-y-1/2 items-center rounded-lg bg-white p-4 shadow-lg transition-all duration-300 ease-in-out">
-          <img
-            src={product?.imageUrl}
-            alt={product?.name}
-            className="h-16 w-16 rounded-md object-contain"
-          />
-          <div className="ml-4 flex flex-col">
-            <p className="w-44 truncate text-sm font-semibold text-gray-900">
-              Product Added to cart
-            </p>
-            <p className="w-44 truncate text-sm font-semibold text-gray-900">
-              {product?.name}
-            </p>
+    <div className="flex flex-col items-center pt-24 lg:flex-row lg:justify-between lg:gap-10 lg:px-24">
+      {/* Left Section - Product Name & Characteristics */}
+      <div className="lg:w-1/3">
+        <PoppinsText fontSize="16px" className="font-bold">
+          {product.name}
+        </PoppinsText>
+        <PoppinsText fontSize="16px">Category: {product.category}</PoppinsText>
+        <PoppinsText fontSize="16px">Alcohol: {product.alcohol}%</PoppinsText>
+        <PoppinsText fontSize="16px">Cellar: {product.cellar}</PoppinsText>
+        <PoppinsText fontSize="16px">Grape: {product.grape}</PoppinsText>
+        <PoppinsText fontSize="16px">Origin: {product.origin}</PoppinsText>
+        <PoppinsText fontSize="16px">Size: {product.size}L</PoppinsText>
+      </div>
+
+      {/* Center Section - Product Image */}
+      <div className="flex justify-center lg:w-1/3">
+        <img
+          src={product.imageUrl}
+          alt={product.name}
+          className="h-64 w-64 rounded-md object-contain"
+        />
+      </div>
+
+      {/* Right Section - Price & Quantity Selector */}
+      <div className="flex flex-col items-center lg:w-1/3">
+        <PoppinsText fontSize="20px" className="font-bold">
+          {product.price}€
+        </PoppinsText>
+        {/* Quantity Selector */}
+        <div className="col-span-4 flex flex-col items-center gap-1 md:gap-2">
+          <div className="flex items-center gap-2">
+            <button
+              className="rounded bg-gray-300 px-2 py-1 text-black hover:bg-gray-400"
+              onClick={() => setQuantity((prev) => Math.max(1, prev - 1))}
+            >
+              -
+            </button>
+            <PoppinsText fontSize="16px">{quantity}</PoppinsText>
+            <button
+              className="rounded bg-gray-300 px-2 py-1 text-black hover:bg-gray-400"
+              onClick={() => setQuantity((prev) => prev + 1)}
+            >
+              +
+            </button>
           </div>
-          <p className="ml-auto font-bold text-gray-900">{product?.price}€</p>
         </div>
-      )}
-
-      <img
-        src={product.imageUrl}
-        alt={product.name}
-        className="mb-6 h-64 w-64 rounded-md object-contain"
-      />
-      <PoppinsText fontSize="16px" className="font-bold">
-        {product.name}
-      </PoppinsText>
-      <PoppinsText fontSize="16px">{product.category}</PoppinsText>
-      <PoppinsText fontSize="16px">{product.price}€</PoppinsText>
-
-      {/* Add to Cart Button */}
-      <button
-        onClick={handleAddToCart}
-        className="mt-4 rounded-md bg-gold/80 px-4 py-2 text-white hover:bg-gold"
-      >
-        Add to Cart
-      </button>
+        <button
+          onClick={handleAddToCart}
+          className="mt-4 w-full rounded-md bg-gold/80 px-4 py-2 text-white hover:bg-gold"
+        >
+          Add to Cart
+        </button>
+      </div>
     </div>
   )
 }
