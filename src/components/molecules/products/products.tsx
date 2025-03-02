@@ -83,7 +83,7 @@ export default function Products({
   }, [sortOrder, selectedCategory, selectedOrigin, selectedGrape, products])
 
   return (
-    <div className="mx-0 flex flex-col pt-6 md:pt-24 lg:mx-20 lg:flex-row">
+    <div className="mx-0 flex flex-col pt-6 lg:mx-20 lg:flex-row lg:pt-24">
       {/* Sidebar */}
       <aside className="w-full pr-10 lg:w-1/4">
         <h2 className="mb-4 text-lg font-bold">{translations.filters}</h2>
@@ -166,7 +166,7 @@ export default function Products({
       <div className="flex w-3/4 flex-wrap items-center justify-center gap-10">
         {filteredProducts.map((product) => (
           <div
-            className="flex max-w-[600px] transition-all duration-300 ease-in-out hover:scale-105"
+            className="flex max-w-[200px] transition-all duration-300 ease-in-out hover:scale-105"
             key={product.id}
           >
             <Link href={`/${locale}/products/${product.id}`} passHref>

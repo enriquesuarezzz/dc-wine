@@ -73,7 +73,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <CartProvider>
             <Navbar translations={navbarTranslations} />
-            {children}
+            <main className="flex-1">{children}</main>
           </CartProvider>
           <CookiesPopup translations={cookiesTranslations} />
           <Footer />

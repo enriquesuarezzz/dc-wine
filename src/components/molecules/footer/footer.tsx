@@ -9,7 +9,7 @@ import Whatsapp from '@/components/atoms/svg/whatsapp'
 export default async function Footer() {
   const t = await getTranslations('footer')
   return (
-    <footer className="bg-mate_black bottom-0 mt-10 w-full items-center md:mt-12 lg:mt-20">
+    <footer className="bottom-0 mt-10 w-full items-center bg-mate_black md:mt-12 lg:mt-20">
       <div className="mx-auto max-w-screen-xl items-center p-4 md:py-8">
         {/* Navigation Links */}
         <div className="flex flex-col items-center justify-center">
