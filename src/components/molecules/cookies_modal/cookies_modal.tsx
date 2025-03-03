@@ -17,10 +17,7 @@ export interface CookiesModalProps {
   }
 }
 
-export default function CookiesModal({
-  checked,
-  translations,
-}: CookiesModalProps) {
+export default function CookiesModal({ translations }: CookiesModalProps) {
   const [showModal, setShowModal] = useState(false)
 
   // Check the cookie when the component mounts
