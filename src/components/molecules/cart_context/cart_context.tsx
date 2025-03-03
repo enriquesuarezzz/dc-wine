@@ -1,5 +1,11 @@
 'use client'
-import { createContext, useContext, useState, ReactNode } from 'react'
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from 'react'
 
 interface CartItem {
   id: string
@@ -23,27 +29,21 @@ const CartContext = createContext<CartContextType | undefined>(undefined)
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
 
-  // Function to ensure the price is correctly formatted as a number
-  const parsePrice = (price: unknown): number | null => {
-    if (typeof price === 'number') {
-      return price
+  // Load cart from localStorage on mount
+  useEffect(() => {
+    const savedCart = localStorage.getItem('cart')
+    if (savedCart) {
+      setCartItems(JSON.parse(savedCart))
     }
-    if (typeof price === 'string') {
-      const normalizedPrice = price.replace(',', '.')
-      const parsedPrice = parseFloat(normalizedPrice)
-      return isNaN(parsedPrice) ? null : parsedPrice
-    }
-    return null
-  }
+  }, [])
+
+  // Save cart to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cartItems))
+  }, [cartItems])
 
   // Add item to cart or increase quantity if it already exists
   const addToCart = (item: Omit<CartItem, 'quantity'>) => {
-    const price = parsePrice(item.price)
-
-    if (price === null) {
-      return
-    }
-
     setCartItems((prevCart) => {
       const existingItem = prevCart.find((cartItem) => cartItem.id === item.id)
 
@@ -54,7 +54,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
             : cartItem,
         )
       } else {
-        return [...prevCart, { ...item, price, quantity: 1 }]
+        return [...prevCart, { ...item, quantity: 1 }]
       }
     })
   }

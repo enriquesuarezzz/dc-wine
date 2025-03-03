@@ -99,10 +99,10 @@
     "red_wine": "Red wine",
     "white_wine": "White wine",
     "sparkling_wine": "Sparkling Wine",
-    "grape_type": "Grape type",
+    "grape_type": "Grape types",
     "origin": "Designation of origin",
-    "all_origins": "Designations of origin",
-    "all_grape_types": "Grape types"
+    "all_origins": "All designations of origin",
+    "all_grape_types": "All grape types"
   },
   "privacy_policy_page": {
     "meta_title": "Privacy Policy - DcWine",

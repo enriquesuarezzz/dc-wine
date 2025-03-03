@@ -1,6 +1,6 @@
 'use client'
 import { COOKIE_CONSENT, CookieClient } from '@/utils/cookie'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Open_Sans } from 'next/font/google'
 import { PoppinsText } from '@/components/atoms/poppins_text'
 import Cookies from '@/components/atoms/svg/cookies'
@@ -17,25 +17,36 @@ export interface CookiesModalProps {
   }
 }
 
-export default function CookiesModal({
-  checked,
-  translations,
-}: CookiesModalProps) {
-  const [showModal, setShowModal] = useState(!checked)
+export default function CookiesModal({ translations }: CookiesModalProps) {
+  const [showModal, setShowModal] = useState(false)
+
+  // Check the cookie when the component mounts
+  useEffect(() => {
+    const cookieConsent = document.cookie
+      .split('; ')
+      .find((row) => row.startsWith(`${COOKIE_CONSENT}=`))
+
+    // If cookie exists, set showModal to false
+    if (cookieConsent) {
+      setShowModal(false)
+    } else {
+      setShowModal(true) // Show the modal if cookie doesn't exist
+    }
+  }, [])
 
   const handleAcceptCookie = () => {
-    CookieClient.setCookie(COOKIE_CONSENT, 'true')
-    setShowModal(false)
+    CookieClient.setCookie(COOKIE_CONSENT, 'true', 365) // Set the cookie for 1 year
+    setShowModal(false) // Hide the modal
   }
 
   const handleCancelCookie = () => {
-    CookieClient.deleteCookie(COOKIE_CONSENT)
-    setShowModal(false)
+    CookieClient.deleteCookie(COOKIE_CONSENT) // Delete the cookie if declined
+    setShowModal(false) // Hide the modal
   }
 
   return (
     showModal && (
-      <div className="bg-mate_black fixed bottom-0 left-0 z-40 flex h-fit w-fit flex-col justify-between gap-6 rounded-t-3xl px-6 py-10 backdrop-blur-sm md:bottom-4 md:left-4 md:rounded-3xl">
+      <div className="fixed bottom-0 left-0 z-40 flex h-fit w-fit flex-col justify-between gap-6 rounded-t-3xl bg-mate_black px-6 py-10 backdrop-blur-sm md:bottom-4 md:left-4 md:rounded-3xl">
         <div className="flex h-fit w-full max-w-[300px] flex-col gap-10">
           {/* Title + description */}
           <div className="flex h-fit w-full flex-col gap-5 text-center">
