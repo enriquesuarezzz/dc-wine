@@ -103,8 +103,8 @@
     "sparkling_wine": "Vino de espumas",
     "grape_type": "Tipo de Uva",
     "origin": "Denominación de origen",
-    "all_origins": "Denominaciones de origen",
-    "all_grape_types": "Tipos de uvas"
+    "all_origins": "Todas las denominaciones de origen",
+    "all_grape_types": "Todos los tipos de uvas"
   },
   "privacy_policy_page": {
     "meta_title": "Política de Privacidad - DcWine",
