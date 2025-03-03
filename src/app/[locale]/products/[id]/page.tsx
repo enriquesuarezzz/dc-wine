@@ -1,5 +1,4 @@
 'use client'
-
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLocale } from 'next-intl'
@@ -68,12 +67,17 @@ export default function ProductDetails() {
               className="h-16 w-16 rounded-md object-contain"
             />
             <div className="ml-4 flex flex-col">
-              <p className="w-44 truncate text-sm font-semibold text-gray-900">
-                Product Added to cart
-              </p>
-              <p className="w-44 truncate text-sm font-semibold text-gray-900">
+              <PoppinsText fontSize="14px" className="text-gray-900">
+                {locale === 'en'
+                  ? 'Product Added to cart'
+                  : 'Producto añadido al carrito'}
+              </PoppinsText>
+              <PoppinsText
+                fontSize="14px"
+                className="font-semibold text-gray-900"
+              >
                 {product?.name}
-              </p>
+              </PoppinsText>
             </div>
             <p className="ml-auto font-bold text-gray-900">{product?.price}€</p>
           </div>
@@ -101,10 +105,26 @@ export default function ProductDetails() {
             <PoppinsText fontSize="16px">
               Alcohol: {product.alcohol}
             </PoppinsText>
-            <PoppinsText fontSize="16px">Cellar: {product.cellar}</PoppinsText>
-            <PoppinsText fontSize="16px">Grape: {product.grape}</PoppinsText>
-            <PoppinsText fontSize="16px">Origin: {product.origin}</PoppinsText>
-            <PoppinsText fontSize="16px">Size: {product.size}</PoppinsText>
+            <PoppinsText fontSize="16px">
+              {locale === 'en'
+                ? `Cellar: ${product.cellar}`
+                : `Bodega: ${product.cellar}`}
+            </PoppinsText>
+            <PoppinsText fontSize="16px">
+              {locale === 'en'
+                ? `Grape: ${product.grape}`
+                : `Uva: ${product.grape}`}
+            </PoppinsText>
+            <PoppinsText fontSize="16px">
+              {locale === 'en'
+                ? `Origin: ${product.origin}`
+                : `Origen: ${product.origin}`}
+            </PoppinsText>
+            <PoppinsText fontSize="16px">
+              {locale === 'en'
+                ? `Size: ${product.size}`
+                : `Tamaño: ${product.size}`}
+            </PoppinsText>
           </div>
         </div>
 
@@ -122,7 +142,7 @@ export default function ProductDetails() {
           {/* Quantity Selector */}
           <div className="col-span-4 flex flex-col items-center gap-1 md:gap-2">
             <PoppinsText fontSize="16px" className="text-center">
-              Selecciona una cantidad
+              {locale === 'en' ? 'Select Quantity' : 'Selecciona una cantidad'}
             </PoppinsText>
             <div className="flex items-center gap-2">
               <button
@@ -145,9 +165,11 @@ export default function ProductDetails() {
           </div>
           <button
             onClick={handleAddToCart}
-            className="mt-4 w-full rounded-md bg-gray-800 px-4 py-2 text-white hover:bg-gray-900"
+            className="mt-4 w-full rounded-md bg-gray-800 px-4 py-2 hover:bg-gray-900"
           >
-            Add to Cart
+            <PoppinsText fontSize="16px" className="text-white">
+              {locale === 'en' ? 'Add to Cart' : 'Añadir al Carrito'}
+            </PoppinsText>
           </button>
         </div>
       </div>
@@ -155,7 +177,7 @@ export default function ProductDetails() {
       <div className="flex flex-col items-center gap-1 pt-10 md:hidden lg:w-1/3">
         <div className="col-span-4 flex flex-col items-center gap-1 md:gap-2">
           <PoppinsText fontSize="16px" className="text-center">
-            Selecciona una cantidad
+            {locale === 'en' ? 'Select Quantity' : 'Selecciona una cantidad'}
           </PoppinsText>
           <div className="flex items-center gap-2">
             <button
@@ -178,9 +200,11 @@ export default function ProductDetails() {
         </div>
         <button
           onClick={handleAddToCart}
-          className="mt-4 w-full rounded-md bg-gray-800 px-4 py-2 text-white hover:bg-gray-900"
+          className="mt-4 w-full rounded-md bg-gray-800 px-4 py-2 hover:bg-gray-900"
         >
-          Add to Cart
+          <PoppinsText fontSize="16px" className="text-white">
+            {locale === 'en' ? 'Add to Cart' : 'Añadir al Carrito'}
+          </PoppinsText>
         </button>
       </div>
     </div>
