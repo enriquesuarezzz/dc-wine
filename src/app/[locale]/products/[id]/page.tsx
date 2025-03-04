@@ -6,6 +6,7 @@ import { PoppinsText } from '@/components/atoms/poppins_text'
 import { getProductById } from '../../../../../lib/firestore'
 import { Product } from '../../../../../types/products'
 import { useCart } from '@/components/molecules/cart_context/cart_context'
+import { Link } from '@/i18n/routing'
 
 export default function ProductDetails() {
   const pathname = usePathname()
@@ -23,7 +24,11 @@ export default function ProductDetails() {
 
       if (productId && locale) {
         const fetchedProduct = await getProductById(productId, locale)
-        setProduct(fetchedProduct)
+        if (!fetchedProduct) {
+          setProduct(null) // Set product to null if not found
+        } else {
+          setProduct(fetchedProduct)
+        }
       }
       setLoading(false)
     }
@@ -32,7 +37,30 @@ export default function ProductDetails() {
   }, [pathname, locale])
 
   if (loading) return <p>Loading...</p>
-  if (!product) return <p>Product not found</p>
+
+  // Handle the product not found scenario
+  if (!product) {
+    return (
+      <div className="flex flex-col items-center justify-center pt-32 text-center">
+        <PoppinsText fontSize="28px" className="text-gray-900">
+          {locale === 'en'
+            ? 'The product you are looking for does not exist'
+            : 'El producto que buscas no existe'}
+        </PoppinsText>
+        <img
+          src="/images/404.avif"
+          alt="404"
+          className="max-w-[250px] md:max-w-[400px]"
+        />
+        <Link
+          href="/products"
+          className="mt-16 rounded bg-gray-800 px-6 py-2 text-white hover:bg-gray-900"
+        >
+          {locale === 'en' ? 'Go back to products' : 'Volver a los productos'}
+        </Link>
+      </div>
+    )
+  }
 
   const handleAddToCart = () => {
     if (product) {

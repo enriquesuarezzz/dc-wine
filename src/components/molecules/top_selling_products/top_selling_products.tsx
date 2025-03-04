@@ -39,7 +39,7 @@ export default async function TopSellingProducts() {
             <img
               src={product.image}
               alt={t(product.title)}
-              className="h-full max-h-[350px] w-full rounded-xl object-cover transition-all duration-300 ease-in-out hover:scale-105 md:max-h-[500px]"
+              className="h-full max-h-[300px] w-full rounded-xl object-cover transition-all duration-300 ease-in-out hover:scale-105 md:max-h-[500px]"
             />
             <PoppinsText fontSize="20px" className="pt-2" style="bold">
               {t(product.title)}
