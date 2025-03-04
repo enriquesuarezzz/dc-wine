@@ -153,13 +153,25 @@ export default async function Footer() {
 
         {/* Second Divider */}
         <div className="flex justify-center">
-          <hr className="mt-4 w-24 border-white md:mt-8" />
+          <hr className="mt-4 w-32 border-white md:mt-8" />
         </div>
 
-        <div className="flex items-center justify-center gap-2 pt-4">
+        <div className="flex items-center justify-center gap-6 pt-4">
           <PoppinsText fontSize="16px" className="text-white" style="bold">
             DC Wine © 2025
           </PoppinsText>
+          <div className="flex items-center gap-2">
+            <PoppinsText fontSize="16px" className="text-white" style="bold">
+              Created by{' '}
+            </PoppinsText>
+            <a
+              href="https://www.enriquesuarez.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/images/es.avif" alt="logo" className="h-6 w-6" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
