@@ -1,5 +1,4 @@
 import AgeVerificationPopup from '@/components/molecules/age_verification_pop_up/age_verification_pop_up'
-import FreeOrderBanner from '@/components/molecules/free_order_banner/free_order_banner'
 import Features from '@/components/molecules/features/features'
 import Header from '@/components/molecules/header/header'
 import TopSellingProducts from '@/components/molecules/top_selling_products/top_selling_products'
@@ -24,7 +23,6 @@ export default async function HomePage() {
         accept={t('accept')}
         exit={t('exit')}
       />
-      <FreeOrderBanner />
       <Header />
       <TopSellingProducts />
       <Features />
