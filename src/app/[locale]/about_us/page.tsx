@@ -56,7 +56,7 @@ export default async function AboutUs() {
       >
         {t('why_drink_it')}
       </PoppinsText>
-      <div className="mx-4 flex gap-10 pt-8 md:mx-20">
+      <div className="mx-4 flex flex-col gap-10 pt-8 md:mx-20">
         <PoppinsText fontSize="16px" className="">
           <span
             dangerouslySetInnerHTML={{
