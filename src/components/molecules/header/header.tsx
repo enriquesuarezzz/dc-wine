@@ -1,20 +1,25 @@
 import { getTranslations } from 'next-intl/server'
 import { PoppinsText } from '@/components/atoms/poppins_text'
 import { Link } from '@/i18n/routing'
+import Image from 'next/image'
 
 export default async function Header() {
   const t = await getTranslations('home_page')
   return (
     <section className="relative flex h-full w-full items-center justify-center">
-      <img
+      <Image
         src="/images/header.avif"
         alt="2 wine glasses on a table with grapes and a bottle of wine"
+        width={1920}
+        height={1080}
+        priority
+        quality={80}
         className="h-[450px] w-full object-cover md:h-full md:max-h-[650px]"
       />
       {/* Blur Overlay */}
       <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px] md:backdrop-blur-[3px]" />
       {/* Overlay Div */}
-      <div className="absolute rounded-lg p-3 md:right-72 md:bg-light_gold md:p-10">
+      <div className="absolute rounded-lg p-3 md:right-4 md:bg-light_gold md:p-10 lg:right-28">
         <PoppinsText
           fontSize="16px"
           style="bold"
