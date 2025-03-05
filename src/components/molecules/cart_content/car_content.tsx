@@ -2,6 +2,8 @@
 import { PoppinsText } from '@/components/atoms/poppins_text'
 import Delete from '@/components/atoms/svg/delete'
 import { useCart } from '@/components/molecules/cart_context/cart_context'
+import { useLocale } from 'next-intl'
+import { loadStripe } from '@stripe/stripe-js'
 
 interface CartContentProps {
   translations: {
@@ -28,6 +30,25 @@ const CartContent = ({ translations }: CartContentProps) => {
   )
   const shippingCost = 0
   const total = subtotal + shippingCost
+
+  const stripePromise = loadStripe(
+    process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!,
+  )
+
+  const locale = useLocale()
+  const handleCheckout = async (cartItems: any[]) => {
+    const stripe = await stripePromise
+    const res = await fetch('/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ products: cartItems, locale }),
+    })
+
+    const { sessionId } = await res.json()
+    if (stripe) {
+      await stripe.redirectToCheckout({ sessionId })
+    }
+  }
 
   return (
     <div className="mx-4 flex flex-col justify-between gap-4 pt-24 md:px-10 lg:mx-24 lg:flex-row lg:gap-20 lg:px-4 lg:pt-32">
@@ -143,8 +164,11 @@ const CartContent = ({ translations }: CartContentProps) => {
             <PoppinsText fontSize="16px">{total.toFixed(2)} €</PoppinsText>
           </div>
 
-          <button className="mt-6 w-full rounded bg-gray-800 py-2 text-white hover:bg-gray-900">
-            checkout
+          <button
+            className="mt-6 w-full rounded bg-gray-800 py-2 text-white hover:bg-gray-900"
+            onClick={() => handleCheckout(cartItems)}
+          >
+            {translations.checkout}
           </button>
         </div>
       )}
