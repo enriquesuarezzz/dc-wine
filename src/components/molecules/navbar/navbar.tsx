@@ -8,6 +8,7 @@ import { useCart } from '@/components/molecules/cart_context/cart_context'
 import { MobileMenu } from './mobile_navbar'
 import { useState } from 'react'
 import Delete from '@/components/atoms/svg/delete'
+import Image from 'next/image'
 
 interface NavBarProps {
   translations: {
@@ -44,7 +45,7 @@ export default function NavBar({ translations }: NavBarProps) {
   return (
     <div className="fixed left-0 top-0 z-50 flex w-full items-center justify-between rounded-b-3xl bg-[#f8f7f7] px-6 py-4 text-white md:px-20">
       <Link href="/">
-        <img src="/images/logo.avif" alt="Logo" width={50} height={50} />
+        <Image src="/images/logo.avif" alt="Logo" width={50} height={50} />
       </Link>
       <MobileMenu
         translations={{
@@ -98,7 +99,7 @@ export default function NavBar({ translations }: NavBarProps) {
           searchPlaceholder={translations.search_bar.search_placeholder}
           noResults={translations.search_bar.no_results}
         />
-        <button onClick={() => setIsCartOpen(true)}>
+        <button aria-label="Add to Cart" onClick={() => setIsCartOpen(true)}>
           <Cart />
         </button>
         <LocaleSwitcher />
@@ -108,6 +109,7 @@ export default function NavBar({ translations }: NavBarProps) {
       {isCartOpen && (
         <div className="fixed right-0 top-0 z-50 h-full w-full max-w-[500px] bg-white text-black shadow-lg transition-transform">
           <button
+            aria-label="Close Cart"
             onClick={() => setIsCartOpen(false)}
             className="absolute right-4 top-4 mt-2 text-lg"
           >
@@ -161,6 +163,7 @@ export default function NavBar({ translations }: NavBarProps) {
                       </PoppinsText>
                       <button
                         onClick={() => removeFromCart(item.id)}
+                        aria-label="Remove from Cart"
                         className="flex items-center justify-center space-x-2"
                       >
                         <Delete />
@@ -194,6 +197,7 @@ export default function NavBar({ translations }: NavBarProps) {
                 <button
                   className="mt-4 w-full rounded bg-gold py-2 hover:bg-hover_gold"
                   onClick={() => setIsCartOpen(false)}
+                  aria-label="Continue to Cart"
                 >
                   <PoppinsText tag="h1" fontSize="16px" className="text-white">
                     {translations.cart.title}

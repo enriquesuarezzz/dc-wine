@@ -1,5 +1,6 @@
 import { PoppinsText } from '@/components/atoms/poppins_text'
 import { getTranslations } from 'next-intl/server'
+import Image from 'next/image'
 
 export async function generateMetadata() {
   const t = await getTranslations('about_us_page')
@@ -22,9 +23,11 @@ export default async function AboutUs() {
         </PoppinsText>
       </div>
       <div className="w-full">
-        <img
+        <Image
           src="/images/about_us_header.avif"
           alt="wine italy tuscany"
+          width={1920}
+          height={1080}
           className="h-full max-h-[650px] w-full object-cover"
         />
       </div>
@@ -44,9 +47,11 @@ export default async function AboutUs() {
           />
         </PoppinsText>
       </div>
-      <img
+      <Image
         src="/images/about_us_image_1.avif"
-        alt="wine italy tuscany"
+        alt="bottle of wine glass of wine and grapes on a table"
+        width={1920}
+        height={600}
         className="h-full max-h-[600px] w-full object-cover px-0 pt-16 md:px-20"
       />
       <PoppinsText
@@ -76,9 +81,11 @@ export default async function AboutUs() {
         <PoppinsText fontSize="16px" className="items-center pt-8">
           {t('last_paragraph')}
         </PoppinsText>
-        <img
+        <Image
           src="/images/signature.avif"
           alt="wine italy tuscany"
+          width={200}
+          height={200}
           className="h-full max-h-[200px] w-full max-w-[200px] object-cover"
         />
         <PoppinsText fontSize="16px" style="bold">

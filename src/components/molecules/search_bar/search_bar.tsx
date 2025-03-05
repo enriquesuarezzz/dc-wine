@@ -126,6 +126,7 @@ const SearchBar = ({
               />
               <button
                 onClick={() => setIsSearchActive(false)}
+                aria-label="Close Search"
                 className="absolute right-1 top-1/2 -translate-y-1/2 transform rounded-full p-2"
               >
                 <Close color="black" />
@@ -172,6 +173,7 @@ const SearchBar = ({
         <button
           onClick={() => setIsSearchActive(true)}
           className="rounded-full p-2"
+          aria-label="Open Search"
         >
           <SearchIcon />
         </button>

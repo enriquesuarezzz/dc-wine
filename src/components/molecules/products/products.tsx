@@ -20,10 +20,12 @@ export default function Products({
   const [selectedGrape, setSelectedGrape] = useState<string>('') // State for grape  filter
   const [origins, setOrigins] = useState<string[]>([]) // State to store unique origins
   const [grape, setGrape] = useState<string[]>([]) // State to store unique grape types
+  const [loading, setLoading] = useState<boolean>(true) // State to store loading state
 
   useEffect(() => {
     async function fetchProducts() {
       if (locale) {
+        setLoading(true)
         const data = await getProducts(locale) // Fetch products from Firestore
         setProducts(data)
         setFilteredProducts(data)
@@ -37,6 +39,7 @@ export default function Products({
         // Extract unique grape types from the products and set them in the state
         const uniquegrapes = [...new Set(data.map((product) => product.grape))]
         setGrape(uniquegrapes)
+        setLoading(false)
       }
     }
     fetchProducts()
@@ -164,39 +167,46 @@ export default function Products({
 
       {/* Product Listing */}
       <div className="flex w-3/4 flex-wrap items-center justify-center gap-10">
-        {filteredProducts.map((product) => (
-          <div
-            className="flex max-w-[200px] transition-all duration-300 ease-in-out hover:scale-105"
-            key={product.id}
-          >
-            <Link href={`/${locale}/products/${product.id}`} passHref>
-              <img
-                src={product.imageUrl}
-                alt={product.name}
-                className="mb-4 h-48 w-full rounded-md object-contain"
-              />
-              <PoppinsText
-                fontSize="12px"
-                className={`w-fit rounded-full px-3 py-1 text-white ${
-                  product.category === 'red wine'
-                    ? 'bg-red-500'
-                    : product.category === 'white wine'
-                      ? 'border bg-gray-300 text-black'
-                      : product.category === 'sparkling wine'
-                        ? 'bg-yellow-500'
-                        : 'bg-gray-500'
-                }`}
-              >
-                {product.category}
-              </PoppinsText>
-              <PoppinsText fontSize="14px">{product.name}</PoppinsText>
-              <PoppinsText fontSize="14px">{product.price} €</PoppinsText>
-              <PoppinsText fontSize="12px" className="text-gray-600">
-                {product.origin} - {product.grape}
-              </PoppinsText>
-            </Link>
+        {loading ? (
+          // 🔄 Show spinner when loading
+          <div className="flex h-[300px] w-full items-center justify-center">
+            <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-300 border-t-gray-600"></div>
           </div>
-        ))}
+        ) : (
+          filteredProducts.map((product) => (
+            <div
+              className="flex max-w-[200px] transition-all duration-300 ease-in-out hover:scale-105"
+              key={product.id}
+            >
+              <Link href={`/${locale}/products/${product.id}`} passHref>
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className="mb-4 h-48 w-full rounded-md object-contain"
+                />
+                <PoppinsText
+                  fontSize="12px"
+                  className={`w-fit rounded-full px-3 py-1 text-white ${
+                    product.category === 'red wine'
+                      ? 'bg-red-500'
+                      : product.category === 'white wine'
+                        ? 'border bg-gray-300 text-black'
+                        : product.category === 'sparkling wine'
+                          ? 'bg-yellow-500'
+                          : 'bg-gray-500'
+                  }`}
+                >
+                  {product.category}
+                </PoppinsText>
+                <PoppinsText fontSize="14px">{product.name}</PoppinsText>
+                <PoppinsText fontSize="14px">{product.price} €</PoppinsText>
+                <PoppinsText fontSize="12px" className="text-gray-600">
+                  {product.origin} - {product.grape}
+                </PoppinsText>
+              </Link>
+            </div>
+          ))
+        )}
       </div>
     </div>
   )

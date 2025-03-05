@@ -1,6 +1,7 @@
 'use client'
 import { PoppinsText } from '@/components/atoms/poppins_text'
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 //props
 interface AgeVerificationPopupProps {
@@ -50,11 +51,13 @@ const AgeVerificationPopup = ({
       {/* Blur Overlay */}
       <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px] md:backdrop-blur-[3px]" />
       {/* Overlay Div */}
-      <div className="bg-mate_black relative mx-4 flex flex-col items-center justify-center gap-1 rounded-lg p-8 text-center shadow-lg md:mx-0 md:gap-4">
+      <div className="relative mx-4 flex flex-col items-center justify-center gap-1 rounded-lg bg-mate_black p-8 text-center shadow-lg md:mx-0 md:gap-4">
         {/* logo */}
-        <img
+        <Image
           src="/images/logo_gold.avif"
           alt="age verification"
+          width={70}
+          height={70}
           className="max-h-[70px]"
         />
         {/* title */}

@@ -5,6 +5,7 @@ import Instagram from '@/components/atoms/svg/instagram'
 import Facebook from '@/components/atoms/svg/facebook'
 import Phone from '@/components/atoms/svg/phone'
 import Whatsapp from '@/components/atoms/svg/whatsapp'
+import Image from 'next/image'
 
 export default async function Footer() {
   const t = await getTranslations('footer')
@@ -108,6 +109,7 @@ export default async function Footer() {
             className="my-auto h-6 items-start md:h-5 md:items-center"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="DC Wine Facebook"
           >
             {/* Facebook Icon */}
             <Facebook
@@ -121,6 +123,7 @@ export default async function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="my-auto h-6 items-start md:h-5 md:items-center"
+            aria-label="DC Wine Instagram"
           >
             {/* Instagram Icon */}
             <Instagram
@@ -169,7 +172,12 @@ export default async function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/images/es.avif" alt="logo" className="h-6 w-6" />
+              <Image
+                src="/images/es.avif"
+                alt="created by ES logo"
+                width={24}
+                height={24}
+              />
             </a>
           </div>
         </div>

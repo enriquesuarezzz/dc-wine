@@ -49,17 +49,21 @@ export function MobileMenu({ translations, setIsCartOpen }: MobileMenuProps) {
       />
 
       {/* Fix: Open the cart summary when clicking the cart icon */}
-      <button onClick={() => setIsCartOpen(true)}>
+      <button aria-label="Open Cart" onClick={() => setIsCartOpen(true)}>
         <Cart />
       </button>
 
-      <button onClick={() => setMenuOpen(!menuOpen)}>
+      <button
+        aria-label="Open menu / close menu"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
         {menuOpen ? <Close color="white" /> : <Menu />}
       </button>
 
       {menuOpen && (
         <div className="fixed inset-0 z-50 m-2 flex flex-col items-center justify-center rounded-3xl bg-gray-800/70 shadow-xl backdrop-blur-lg">
           <button
+            aria-label="Close Menu"
             className="absolute right-4 top-4"
             onClick={() => setMenuOpen(false)}
           >
@@ -111,10 +115,16 @@ export function MobileMenu({ translations, setIsCartOpen }: MobileMenuProps) {
               {translations.select_language}
             </PoppinsText>
             <div className="flex items-center space-x-4">
-              <button onClick={() => changeLanguage('es')}>
+              <button
+                aria-label="Change language to Spanish"
+                onClick={() => changeLanguage('es')}
+              >
                 <Spanish className="h-8 w-8 hover:scale-110" />
               </button>
-              <button onClick={() => changeLanguage('en')}>
+              <button
+                aria-label="Change language to English"
+                onClick={() => changeLanguage('en')}
+              >
                 <English className="h-8 w-8 hover:scale-110" />
               </button>
             </div>

@@ -7,6 +7,7 @@ import { getProductById } from '../../../../../lib/firestore'
 import { Product } from '../../../../../types/products'
 import { useCart } from '@/components/molecules/cart_context/cart_context'
 import { Link } from '@/i18n/routing'
+import Image from 'next/image'
 
 export default function ProductDetails() {
   const pathname = usePathname()
@@ -47,9 +48,11 @@ export default function ProductDetails() {
             ? 'The product you are looking for does not exist'
             : 'El producto que buscas no existe'}
         </PoppinsText>
-        <img
+        <Image
           src="/images/404.avif"
           alt="404"
+          width={400}
+          height={400}
           className="max-w-[250px] md:max-w-[400px]"
         />
         <Link
