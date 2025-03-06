@@ -195,7 +195,7 @@ export default function NavBar({ translations }: NavBarProps) {
               {/* Continue to Cart Button */}
               <Link href="/cart">
                 <button
-                  className="mt-4 w-full rounded bg-gold py-2 hover:bg-hover_gold"
+                  className="mt-4 w-full rounded-md bg-gray-800 px-4 py-2 hover:bg-gray-900"
                   onClick={() => setIsCartOpen(false)}
                   aria-label="Continue to Cart"
                 >
