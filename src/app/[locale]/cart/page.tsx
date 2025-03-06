@@ -1,4 +1,4 @@
-import CartContent from '@/components/molecules/cart_content/car_content'
+import CartContent from '@/components/molecules/cart_content/cart_content'
 import { useTranslations } from 'next-intl'
 
 const CartPage = () => {
