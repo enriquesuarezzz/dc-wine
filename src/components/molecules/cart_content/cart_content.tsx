@@ -1,9 +1,11 @@
 'use client'
+
+import { useState, useEffect } from 'react'
 import { PoppinsText } from '@/components/atoms/poppins_text'
 import Delete from '@/components/atoms/svg/delete'
 import { useCart } from '@/components/molecules/cart_context/cart_context'
 import { useLocale } from 'next-intl'
-import { loadStripe } from '@stripe/stripe-js'
+import { useRouter } from 'next/navigation'
 
 interface CartContentProps {
   translations: {
@@ -21,44 +23,38 @@ interface CartContentProps {
 }
 
 const CartContent = ({ translations }: CartContentProps) => {
+  const locale = useLocale() // Use locale from next-intl
+  const router = useRouter()
+
+  // Ensure cartItems is available on client-side only
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } =
     useCart()
+  const [clientCart, setClientCart] = useState<typeof cartItems>([])
 
-  const subtotal = cartItems.reduce(
+  useEffect(() => {
+    setClientCart(cartItems) // Sync cart data after mount
+  }, [cartItems])
+
+  const subtotal = clientCart.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0,
   )
   const shippingCost = 0
   const total = subtotal + shippingCost
 
-  const stripePromise = loadStripe(
-    process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!,
-  )
-
-  const locale = useLocale()
-  const handleCheckout = async (cartItems: any[]) => {
-    const stripe = await stripePromise
-    const res = await fetch('/api/checkout', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ products: cartItems, locale }),
-    })
-
-    const { sessionId } = await res.json()
-    if (stripe) {
-      await stripe.redirectToCheckout({ sessionId })
-    }
+  const handleCheckout = () => {
+    // Use the locale dynamically in routing
+    router.push(`/${locale}/checkout`)
   }
 
   return (
     <div className="mx-4 flex flex-col justify-between gap-4 pt-24 md:px-10 lg:mx-24 lg:flex-row lg:gap-20 lg:px-4 lg:pt-32">
-      {/* Cart Items Section */}
       <div className="w-full p-1 md:p-6 lg:w-2/3">
         <PoppinsText fontSize="28px" style="bold" className="pb-10">
           {translations.title}
         </PoppinsText>
 
-        {cartItems.length === 0 ? (
+        {clientCart.length === 0 ? (
           <div className="mt-10 flex justify-center">
             <PoppinsText fontSize="16px" style="bold">
               {translations.empty}
@@ -66,7 +62,6 @@ const CartContent = ({ translations }: CartContentProps) => {
           </div>
         ) : (
           <div className="w-full">
-            {/* Header Row */}
             <div className="grid grid-cols-12 border-b pb-2 text-center">
               <div className="col-span-6 text-left">
                 <PoppinsText fontSize="22px">
@@ -82,14 +77,11 @@ const CartContent = ({ translations }: CartContentProps) => {
                 <PoppinsText fontSize="22px">{translations.price}</PoppinsText>
               </div>
             </div>
-
-            {/* Cart Items */}
-            {cartItems.map((item) => (
+            {clientCart.map((item) => (
               <div
                 key={item.id}
                 className="grid grid-cols-12 items-center border-b py-4"
               >
-                {/* Product Name */}
                 <div className="col-span-6 flex items-center gap-4">
                   <img
                     src={item.imageUrl}
@@ -98,8 +90,6 @@ const CartContent = ({ translations }: CartContentProps) => {
                   />
                   <PoppinsText fontSize="19px">{item.name}</PoppinsText>
                 </div>
-
-                {/* Quantity + Remove */}
                 <div className="col-span-4 flex flex-col items-center gap-1 md:gap-2">
                   <div className="flex items-center gap-2">
                     <button
@@ -116,7 +106,6 @@ const CartContent = ({ translations }: CartContentProps) => {
                       +
                     </button>
                   </div>
-
                   <button
                     className="flex items-center gap-1"
                     onClick={() => removeFromCart(item.id)}
@@ -127,8 +116,6 @@ const CartContent = ({ translations }: CartContentProps) => {
                     </PoppinsText>
                   </button>
                 </div>
-
-                {/* Price */}
                 <div className="col-span-2 text-center">
                   <PoppinsText fontSize="19px">
                     {item.price.toFixed(2)} €
@@ -140,8 +127,7 @@ const CartContent = ({ translations }: CartContentProps) => {
         )}
       </div>
 
-      {/* Order Summary Section */}
-      {cartItems.length > 0 && (
+      {clientCart.length > 0 && (
         <div className="w-full rounded-lg bg-white p-2 pt-4 md:p-10 lg:w-1/3 lg:p-6 lg:pt-10">
           <PoppinsText fontSize="22px" style="bold">
             {translations.total}
@@ -166,7 +152,7 @@ const CartContent = ({ translations }: CartContentProps) => {
 
           <button
             className="mt-6 w-full rounded bg-gray-800 py-2 text-white hover:bg-gray-900"
-            onClick={() => handleCheckout(cartItems)}
+            onClick={handleCheckout}
           >
             {translations.checkout}
           </button>
