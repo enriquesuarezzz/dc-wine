@@ -6,17 +6,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
   apiVersion: '2025-02-24.acacia',
 })
 
-// Define a Type for the shippingDetails
-type ShippingDetails = {
-  name: string
-  email: string
-  companyName: string
-  dniNifCif: string
-  address: string
-  city: string
-  postalCode: string
-}
-
 // Define a Type for the CartItem
 type CartItem = {
   name: string
@@ -24,9 +13,6 @@ type CartItem = {
   price: number
   image: string
 }
-
-// Define a Type for the totalPrice (number)
-type TotalPrice = number
 
 export async function POST(req: NextRequest) {
   try {
@@ -162,8 +148,16 @@ export async function POST(req: NextRequest) {
     )
 
     return NextResponse.json({ sessionId: session.id })
-  } catch (error: any) {
+  } catch (error) {
     console.error('Checkout Error:', error)
-    return NextResponse.json({ error: error.message }, { status: 500 })
+
+    if (error instanceof Error) {
+      return NextResponse.json({ error: error.message }, { status: 500 })
+    }
+
+    return NextResponse.json(
+      { error: 'An unknown error occurred' },
+      { status: 500 },
+    )
   }
 }
