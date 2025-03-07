@@ -61,6 +61,7 @@ export async function POST(req: NextRequest) {
         : 'Thank you for your order! Here are the details:'
     const shippingInfoTitle =
       locale === 'es' ? 'Información de envío:' : 'Shipping Information:'
+    const phoneLabel = locale === 'es' ? 'Teléfono:' : 'Phone:'
     const companyNameLabel =
       locale === 'es' ? 'Nombre de la empresa:' : 'Company Name:'
     const dniNifCifLabel = locale === 'es' ? 'DNI/NIE/CIF:' : 'DNI/NIE/CIF:'
@@ -72,6 +73,7 @@ export async function POST(req: NextRequest) {
     const quantityHeader = locale === 'es' ? 'Cantidad' : 'Quantity'
     const priceHeader = locale === 'es' ? 'Precio' : 'Price'
     const totalHeader = locale === 'es' ? 'Total' : 'Total'
+
     const contactUsMessage =
       locale === 'es'
         ? 'Te notificaremos una vez que tu pedido haya sido enviado. Si tienes alguna pregunta, contáctanos.'
@@ -117,6 +119,7 @@ export async function POST(req: NextRequest) {
 
             <p><strong>${shippingInfoTitle}</strong></p>
             <ul>
+            <li><strong>${phoneLabel}</strong> ${shippingDetails.phone}</li>
               <li><strong>${companyNameLabel}</strong> ${shippingDetails.companyName}</li>
               <li><strong>${dniNifCifLabel}</strong> ${shippingDetails.dniNifCif}</li>
               <li><strong>${addressLabel}</strong> ${shippingDetails.address}</li>

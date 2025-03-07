@@ -40,6 +40,7 @@ const CheckoutPage = () => {
   const [shippingDetails, setShippingDetails] = useState({
     name: '',
     email: '',
+    phone: '',
     address: '',
     postalCode: '',
     city: '',
@@ -116,6 +117,17 @@ const CheckoutPage = () => {
               locale === 'es' ? 'Correo Electrónico' : 'Email Address'
             }
             required
+            onChange={handleChange}
+            className="rounded border p-2"
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder={
+              locale === 'es' ? 'Número de Teléfono' : 'Phone Number'
+            }
+            required
+            pattern="[0-9]{9}"
             onChange={handleChange}
             className="rounded border p-2"
           />

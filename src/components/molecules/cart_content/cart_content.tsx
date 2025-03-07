@@ -40,7 +40,8 @@ const CartContent = ({ translations }: CartContentProps) => {
     0,
   )
   const shippingCost = 0
-  const total = subtotal + shippingCost
+  const igic = subtotal * 0.07
+  const total = subtotal + shippingCost + igic
 
   const handleCheckout = () => {
     // Use the locale dynamically in routing
@@ -143,6 +144,11 @@ const CartContent = ({ translations }: CartContentProps) => {
             <PoppinsText fontSize="16px">
               {shippingCost.toFixed(2)} €
             </PoppinsText>
+          </div>
+
+          <div className="mt-2 flex justify-between">
+            <PoppinsText fontSize="16px">IGIC (7%)</PoppinsText>
+            <PoppinsText fontSize="16px">{igic.toFixed(2)} €</PoppinsText>
           </div>
 
           <div className="mt-4 flex justify-between border-t pt-4 font-bold">
