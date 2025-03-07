@@ -65,16 +65,6 @@ export default async function Footer() {
                 {t('privacy')}
               </PoppinsText>
             </Link>
-            {/* Shipping and return Policy Link */}
-            <Link href="/shipping_and_return_policy">
-              <PoppinsText
-                fontSize="16px"
-                style="bold"
-                className="relative mx-auto block w-fit text-white after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] hover:text-white after:hover:scale-x-100"
-              >
-                {t('shipping_and_return_policy')}
-              </PoppinsText>
-            </Link>
           </div>
         </div>
 
