@@ -88,7 +88,7 @@ const CheckoutPage = () => {
         await stripe.redirectToCheckout({ sessionId })
       }
     } catch (error) {
-      return
+      console.error('Error during checkout process:', error) // Log the error to the console
     }
   }
 
