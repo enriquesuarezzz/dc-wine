@@ -112,7 +112,72 @@
   "cookies_policy_page": {
     "meta_title": "Cookies Policy - DcWine",
     "meta_description": "Learn about how we use cookies to enhance your experience on DcWine and how you can control them.",
-    "title": "Cookies Policy"
+    "title": "Cookies Policy",
+    "description": "A cookie is a file that is downloaded to your computer when you access certain web pages. Cookies allow a website, among other things, to store and retrieve information about the browsing habits of a user or their equipment and, depending on the information they contain and the way in which they use their equipment, they can be used to recognise the user. Cookies are essential for the functioning of the Internet, providing countless advantages in the provision of interactive services, facilitating navigation and usability of our website. The information we provide below will help you understand the different types of cookies:",
+    "first_table": {
+      "headers": ["Types of cookies"],
+      "rows": [
+        {
+          "category": "According to the entity that manages them",
+          "type": "Own Cookies",
+          "description": "These are those collected by the publisher itself to provide the service requested by the user."
+        },
+        {
+          "category": "",
+          "type": "Own cookies",
+          "description": "These are those that are collected and managed by a third party; they cannot be considered as your own."
+        },
+        {
+          "category": "DEPENDING ON THE TIME PERIOD THEY REMAIN ACTIVATED",
+          "type": "Session cookies",
+          "description": "They collect data while the user browses the Internet in order to provide the requested service."
+        },
+        {
+          "category": "",
+          "type": "Persistent cookies",
+          "description": "They are stored on the terminal and the information obtained will be used by the person responsible for the cookie in order to provide the requested service."
+        },
+        {
+          "category": "ACCORDING TO ITS PURPOSE",
+          "type": "Technical cookies",
+          "description": "They are necessary for correct navigation on the website."
+        },
+        {
+          "category": "",
+          "type": "Personalization cookies",
+          "description": "They allow the user the characteristics (language) for browsing the website."
+        },
+        {
+          "category": "",
+          "type": "Analytics cookies",
+          "description": "They allow the provider to analyse the user's browsing, in order to monitor the use of the website and to compile statistics on the most visited content, number of visitors, etc."
+        },
+        {
+          "category": "",
+          "type": "Advertising cookies",
+          "description": "They allow the publisher to include advertising spaces on the website, depending on the content of the website itself."
+        },
+        {
+          "category": "",
+          "type": "Behavioural advertising cookies",
+          "description": "They allow the publisher to include advertising spaces on the website based on information obtained through the user's browsing habits."
+        }
+      ]
+    },
+    "after_table_1": "In accordance with the provisions of article 22.2 of Law 34/2002, of July 11, on Information Society Services and Electronic Commerce (LSSI-CE), DADI FOOD informs you of the cookies used on our website:",
+    "second_table": {
+      "title": "Types of Cookies",
+      "subtitle": "P <br /> U<br /> R<br /> P<br /> O<br /> S<br /> E<br /> ",
+      "own_cookies": "Own Cookies",
+      "third_party_cookies": "Third party cookies",
+      "session_cookies": "Session cookies",
+      "technical_cookies": "Technical cookies",
+      "personalization_cookies": "Personalization cookies",
+      "analysis_cookies": "Analytics cookies",
+      "advertising_cookies": "Advertising cookies",
+      "behavioural_advertising_cookies": "Behavioural advertising cookies"
+    },
+    "after_table_2": "DCWine also informs the user that they have the option of configuring their browser so that they are informed of the receipt of cookies, and may, if they wish, prevent them from being installed on their hard drive. Below we provide links to various browsers through which they can make this configuration:"
   },
   "age_verification_pop_up": {
     "title": "Welcome to DcWine",
