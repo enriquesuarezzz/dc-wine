@@ -13,8 +13,8 @@ export default async function CookiesPolicyPage() {
       {/* description */}
       <PoppinsText fontSize="14px">{t('description')}</PoppinsText>
       {/* first table of cookies */}
-      <div className="relative z-30 flex overflow-x-auto pt-0">
-        <table className="w-full border-collapse border border-gray-300 text-left text-sm">
+      <div className="w-full overflow-x-auto">
+        <table className="min-w-max border-collapse border border-gray-300 text-left">
           <thead>
             <tr className="bg-gray-100">
               <th className="border border-gray-300 px-4 py-2">
@@ -187,8 +187,8 @@ export default async function CookiesPolicyPage() {
       {/* After table 1 */}
       <PoppinsText fontSize="14px">{t('after_table_1')}</PoppinsText>
       {/* Table cookies 2 */}
-      <div className="relative z-30 flex overflow-x-auto pt-0">
-        <table className="w-full border border-black text-left">
+      <div className="w-full overflow-x-auto">
+        <table className="min-w-max border-collapse border border-gray-300 text-left">
           <tbody>
             <tr className="border border-black">
               <td
