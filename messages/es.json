@@ -109,8 +109,46 @@
   "privacy_policy_page": {
     "meta_title": "Política de Privacidad - DcWine",
     "meta_description": "Lee nuestra Política de Privacidad para entender cómo recopilamos, usamos y protegemos tus datos personales al utilizar DcWine.",
-    "title": "Política de Privacidad"
+    "title": "Política de Privacidad",
+    "description_start": "A continuación, le informamos sobre la política de privacidad que se aplicará en aquellos casos en los que el interesado, a través de la navegación por el sitio web",
+    "description_end": ", nos facilite sus datos de carácter personal. Esta política informará del destino de los datos personales que nos facilita, incluyendo aquellos que recabamos por el hecho de navegar en nuestro Sitio Web.",
+    "identification_title": "1. Identificación de Responsable",
+    "identification_list": {
+      "owner": "Titular: DCWine (en adelante el “Responsable”)",
+      "address": "Domicilio social: Calle Chabusquillo (el), 21 35500 - ARRECIFE (LAS PALMAS)",
+      "nif": "N.I.F: X67755528G",
+      "email": "E-mail: lanzarotedcwine@gmail.com",
+      "phone": "Teléfono: 828042420"
+    },
+    "information_and_consent_title": "2.Información y Consentimiento",
+    "information_and_consent_description": "De conformidad con lo dispuesto en el Reglamento General UE 679/2016 de Protección de Datos ( “RGPD”) y en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos y Garantía de los Derechos Digitales ( “LOPDGDD”) mediante la aceptación de la presente Política de Privacidad el interesado web (el “Interesado”) PRESTA SU CONSENTIMIENTO informado, expreso, libre e inequívoco para tratar los datos personales recabados a través del Sitio Web, ya sea través de formularios habilitados al efecto o bien a través de la información recabada por las cookies. Asimismo, el Interesado consiente que estos datos sean tratados por el Responsable para prestar sus servicios aplicando las medidas organizativas y de seguridad requeridas por el RGPD. Todos los datos personales solicitados al Interesado en el Sitio Web son obligatorios, no siendo posible prestar el servicio sin el correspondiente tratamiento de datos por parte del Responsable. Ello, no obstante, la navegación en el Sitio Web es gratuita. El Interesado garantiza que los datos personales facilitados al Responsable son ciertos y exactos, con lo que el Responsable no se hará responsable de cualquier incidencia derivada de la inexactitud o falsedad de la información proporcionada por los Interesados, más allá de la posibilidad que tiene el Interesado de ejercitar su derecho de rectificación. En el caso que el Interesado nos facilite datos de terceras personas, como responsable o encargado del tratamiento, será responsable de cumplir con toda la normativa de protección de datos aplicable. Además, el Interesado garantiza que ha obtenido todos los consentimientos, autorizaciones y/o aprobaciones legalmente necesarias antes de incluir datos personales de terceros en el Sitio Web.",
+    "table_data_activity": "ACTIVIDAD: CONTACTO O PEDIDOS",
+    "table_origin_title": "PROCEDENCIA",
+    "table_origin_description": "Del propio Interesado a través del envío de comunicaciones al correo electrónico indicado en el Sitio Web, así como a través de su línea de atención telefónica.",
+    "table_legal_title": "BASE JURÍDICA",
+    "table_legal_description": "Reglamento General de Protección de Datos, en particular: Art 6.1 b): petición de medidas precontractuales.",
+    "table_treatment_title": "FINES TRATAMIENTO",
+    "table_treatment_description": "Atender y responder las consultas solicitadas por el Interesado y a sus pedidos.",
+    "table_collective_title": "COLECTIVO",
+    "table_collective_description": "Personas físicas o jurídicas.",
+    "table_data_category_title": "CATEGORÍA DE DATOS",
+    "table_data_category_description": "Datos personales, datos de envío, datos de facturación.",
+    "table_recipients_title": "DESTINATARIOS",
+    "table_recipients_description": "No está prevista la cesión a terceros, salvo obligación legal.",
+    "table_international_title": "TRANSFERENCIA INTERNACIONAL",
+    "table_international_description": "No está prevista la transferencia internacional de datos.",
+    "table_storage_title": "PLAZOS DE CONSERVACIÓN",
+    "table_storage_description": "Los datos serán conservados hasta que el Interesado retire su consentimiento o haya acabado la finalidad para la que fueron recabados, salvo que los datos deban mantenerse por una obligación legal.",
+    "data_of_the_interested_party_title": "4. Datos del Interesado",
+    "data_of_the_interested_party_description": "El Interesado garantiza que es mayor de dieciocho (18) años y que los datos aportados son verdaderos, exactos, completos y actualizados, siendo este responsable de cualquier daño o perjuicio, directo o indirecto, que pudiera ocasionarse como consecuencia del incumplimiento de tal obligación, más allá de la posibilidad que tiene el Interesado de ejercitar su derecho de rectificación. En el caso de que los datos aportados pertenecieran a un tercero, el Interesado garantiza que ha informado a dicho tercero de los aspectos contenidos en este documento y obtenido su autorización para facilitar sus datos al responsable para los fines anteriormente señalados. El Responsable no puede garantizar la absoluta invulnerabilidad de los sistemas, por tanto, no asume ninguna responsabilidad por los daños y perjuicios derivados de alteraciones que terceros puedan causar en los sistemas informáticos, documentos electrónicos o ficheros.",
+    "cookies_policy_title": "5. Política de Cookies",
+    "cookies_policy_description": "De conformidad con lo dispuesto por el RGPD y la Ley 34/2002, de Servicios de la Sociedad de la Información, todos los datos de carácter personal obtenidos mediante las cookies durante la utilización del Sitio Web serán tratados de conformidad con los dispuesto en la Política de Cookies",
+    "exercise_of_rights_title": "6. Ejercicio de Derechos",
+    "exercise_of_rights_description": "De conformidad con lo dispuesto en el RGPD, le informamos que puede ejercer sus derechos de acceso, rectificación, supresión, oposición, portabilidad de los datos y limitación del tratamiento directamente ante el Responsable.Para el ejercicio de dichos derechos, el Interesado podrá enviar un mensaje al efecto, indicando nombre, apellidos, email, número de DNI o pasaporte, a la siguiente dirección de correo electrónico: lanzarotedcwine@gmail.com. El Interesado también podrá ejercer sus derechos mediante la presentación de una reclamación ante la",
+    "acceptance_of_the_privacy_policy_title": "7. Aceptación de la Política de Privacidad",
+    "acceptance_of_the_privacy_policy_description": "El Interesado RECONOCE Y ACEPTA HABER LEÍDO Y COMPRENDIDO la presente Política de Privacidad cuyo contenido constituye la totalidad del acuerdo entre el Interesado y el Responsable con respecto al uso y tratamiento de su información personal. El Interesado expresamente acepta obligarse en los términos de la presente Política de Privacidad, en toda su extensión y alcance, sin exceptuar cualquiera de sus disposiciones.Será indispensable la aceptación expresa del presente cuando el Interesado se registre a través del Sitio Web rellenando el correspondiente formulario de registro."
   },
+
   "cookies_policy_page": {
     "meta_title": "Política de Cookies - DcWine",
     "meta_description": "Descubre cómo utilizamos cookies para mejorar tu experiencia en DcWine y cómo puedes controlarlas.",
@@ -126,7 +164,7 @@
         },
         {
           "category": "",
-          "type": "Cookies de propias",
+          "type": "Cookies propias",
           "description": "Son aquellas que son recabadas y gestionadas por un tercero, estas no se pueden considerar propias."
         },
         {
