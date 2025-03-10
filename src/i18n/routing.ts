@@ -36,6 +36,10 @@ export const routing = defineRouting({
       en: '/cart',
       es: '/carrito',
     },
+    '/terms_and_conditions': {
+      en: '/terms_and_conditions',
+      es: '/terminos_y_condiciones',
+    },
   },
 })
 
