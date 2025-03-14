@@ -74,6 +74,7 @@ STRIPE_SECRET_KEY=your-secret-key
 
  Firebase Setup
 For Firestore, create a collection for storing wine products. Each product can have the following structure:
+```bash
 {
   "id": "unique-id",
   "name": "Wine Name",
@@ -82,6 +83,7 @@ For Firestore, create a collection for storing wine products. Each product can h
   "image_url": "https://example.com/wine-image.jpg",
   "type": "red | white | sparkling"
 }
+ ```
 
 ### Stripe Integration
 The Stripe integration allows users to complete their orders by securely entering their payment information.
