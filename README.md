@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wine eCommerce with Firebase and Stripe
 
-## Getting Started
+This is a Next.js eCommerce application designed for selling red wine, white wine, and sparkling wines. It uses Firebase as the database and Stripe for processing payments.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Product Management**: Manage and display wines (red, white, sparkling) stored in Firebase.
+- **Cart Functionality**: Add products to a cart, view cart items, and proceed to checkout.
+- **Stripe Payments**: Secure payment processing via Stripe.
+- **Firebase Authentication**: Optional Firebase Authentication for managing user accounts.
+- **Responsive Design**: Fully responsive UI for both desktop and mobile users.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: Next.js, React
+- **Database**: Firebase Firestore
+- **Payments**: Stripe API
+- **Styling**: Tailwind CSS (or your preferred CSS framework)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+### 1. Clone the repository
 
-To learn more about Next.js, take a look at the following resources:
+git clone https://github.com/enriquesuarezzz/dc-wine.git
+cd dc-wine
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. Install dependencies
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+###3. Set up Firebase
+Create a Firebase project and add Firebase configuration to your project.
 
-## Deploy on Vercel
+Go to the Firebase Console
+Create a new project and set up Firestore.
+Create a Firebase service account and add the credentials to the project.
+Install Firebase SDK:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+npm install firebase
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Add Firebase config in .env.local:
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+
+### 4. Set up Stripe
+Create a Stripe account: Stripe
+Get your Publishable Key and Secret Key from the Stripe dashboard.
+Install Stripe dependencies:
+npm install stripe
+
+Add your Stripe keys to .env.local:
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your-publishable-key
+STRIPE_SECRET_KEY=your-secret-key
+
+ ### 5. Run the Development Server
+ npm run dev
+ This will start the Next.js development server at http://localhost:3000.
+
+ Firebase Setup
+For Firestore, create a collection for storing wine products. Each product can have the following structure:
+{
+  "id": "unique-id",
+  "name": "Wine Name",
+  "description": "Wine Description",
+  "price": 100,
+  "image_url": "https://example.com/wine-image.jpg",
+  "type": "red | white | sparkling"
+}
+
+### Stripe Integration
+The Stripe integration allows users to complete their orders by securely entering their payment information.
+
+Frontend: The user adds wines to the cart, proceeds to checkout, and submits payment via Stripe.
+Backend: The payment is processed via the Stripe API. After successful payment, the order is confirmed.
+
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.
