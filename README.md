@@ -21,13 +21,17 @@ This is a Next.js eCommerce application designed for selling red wine, white win
 
 ### 1. Clone the repository
 
+```bash
 git clone https://github.com/enriquesuarezzz/dc-wine.git
 cd dc-wine
+```
 
 ### 2. Install dependencies
+```bash
 npm install
+```
 
-###3. Set up Firebase
+### 3. Set up Firebase
 Create a Firebase project and add Firebase configuration to your project.
 
 Go to the Firebase Console
@@ -35,28 +39,38 @@ Create a new project and set up Firestore.
 Create a Firebase service account and add the credentials to the project.
 Install Firebase SDK:
 
+```bash
 npm install firebase
+```
 
 Add Firebase config in .env.local:
+```bash
 NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
 NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
 NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+```
 
 ### 4. Set up Stripe
 Create a Stripe account: Stripe
 Get your Publishable Key and Secret Key from the Stripe dashboard.
 Install Stripe dependencies:
+```bash
 npm install stripe
+```
 
 Add your Stripe keys to .env.local:
+```bash
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your-publishable-key
 STRIPE_SECRET_KEY=your-secret-key
+```
 
  ### 5. Run the Development Server
+ ```bash
  npm run dev
+ ```
  This will start the Next.js development server at http://localhost:3000.
 
  Firebase Setup
