@@ -188,13 +188,15 @@ const CheckoutPage = () => {
             type="submit"
             className="mt-4 w-full rounded bg-gray-800 py-2 text-white hover:bg-gray-900"
           >
-            {locale === 'es' ? 'Proceder al Pago' : 'Proceed to Payment'}
+            <PoppinsText fontSize="16px" className="text-white">
+              {locale === 'es' ? 'Proceder al Pago' : 'Proceed to Payment'}
+            </PoppinsText>
           </button>
         </form>
       </div>
 
       {/* Right side - Cart Details */}
-      <div className="flex w-full max-w-[500px] flex-col border-l border-gray-300 pl-6">
+      <div className="flex w-full flex-col border-gray-300 pl-6 pr-3 md:max-w-[500px] md:border-l md:pr-0">
         <PoppinsText fontSize="20px" style="bold">
           {locale === 'es' ? 'Detalles del Carrito' : 'Cart Details'}
         </PoppinsText>
@@ -210,18 +212,18 @@ const CheckoutPage = () => {
             cartItems.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center justify-between border-b py-2"
+                className="mx-0 flex w-full items-center justify-between border-b py-2"
               >
                 <img
                   src={item.imageUrl}
                   alt={item.name}
-                  className="h-16 w-16 rounded object-cover"
+                  className="h-16 w-16 rounded object-contain"
                 />
                 <div className="flex flex-col pl-2">
-                  <p className="text-sm">{item.name}</p>
-                  <p className="text-xs">
+                  <PoppinsText fontSize="16px">{item.name}</PoppinsText>
+                  <PoppinsText fontSize="14px">
                     {item.quantity} x ${item.price}
-                  </p>
+                  </PoppinsText>
                 </div>
               </div>
             ))
