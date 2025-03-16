@@ -88,7 +88,7 @@ export default function Products({
   return (
     <div className="mx-0 flex flex-col pt-6 lg:mx-20 lg:flex-row lg:pt-24">
       {/* Sidebar */}
-      <aside className="w-full pr-10 lg:w-1/4">
+      <aside className="w-full pr-0 md:pr-10 lg:w-1/4">
         <h2 className="mb-4 text-lg font-bold">{translations.filters}</h2>
 
         {/* Sort Dropdown */}
@@ -166,7 +166,7 @@ export default function Products({
       </aside>
 
       {/* Product Listing */}
-      <div className="flex w-3/4 flex-wrap items-center justify-center gap-10">
+      <div className="flex w-full flex-wrap items-center justify-center gap-20 md:gap-10 lg:w-3/4">
         {loading ? (
           // 🔄 Show spinner when loading
           <div className="flex h-[300px] w-full items-center justify-center">
@@ -175,7 +175,7 @@ export default function Products({
         ) : (
           filteredProducts.map((product) => (
             <div
-              className="flex max-w-[200px] transition-all duration-300 ease-in-out hover:scale-105"
+              className="flex max-w-[100px] transition-all duration-300 ease-in-out hover:scale-105 md:max-w-[200px]"
               key={product.id}
             >
               <Link href={`/${locale}/products/${product.id}`} passHref>

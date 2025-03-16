@@ -66,7 +66,7 @@ export default function ProductDetails() {
   }
 
   const handleAddToCart = () => {
-    if (product) {
+    if (product && product.stock > 0) {
       for (let i = 0; i < quantity; i++) {
         addToCart({
           id: product.id,
@@ -114,7 +114,7 @@ export default function ProductDetails() {
           </div>
         )}
         {/* Left Section - Product Name & Characteristics */}
-        <div className="flex w-full flex-col pt-0 md:w-1/3 md:pt-20">
+        <div className="flex w-full flex-col gap-1 pt-0 md:w-1/3 md:pt-20">
           <PoppinsText
             fontSize="12px"
             className={`w-fit rounded-full px-3 py-1 text-white ${
@@ -132,7 +132,8 @@ export default function ProductDetails() {
           <PoppinsText fontSize="28px" className="mt-2 font-bold">
             {product.name}
           </PoppinsText>
-          <div className="flex flex-col gap-1">
+
+          <div className="flex flex-col gap-2">
             <PoppinsText fontSize="16px">
               Alcohol: {product.alcohol}
             </PoppinsText>
@@ -160,16 +161,57 @@ export default function ProductDetails() {
         </div>
 
         {/* Center Section - Product Image */}
-        <div className="flex items-center justify-center rounded-lg border border-gray-200 p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl lg:w-1/3">
-          <img
-            src={product.imageUrl}
-            alt={product.name}
-            className="max-h-[200px] rounded-md object-contain md:max-w-[250px] lg:max-h-[250px]"
-          />
+        <div className="flex w-full flex-col items-center lg:w-1/3">
+          <div className="flex w-full items-center justify-center p-6 transition-all duration-300 ease-in-out hover:scale-110">
+            <img
+              src={product.imageUrl}
+              alt={product.name}
+              className="max-h-[200px] rounded-md object-contain md:max-w-[250px] lg:max-h-[250px]"
+            />
+          </div>
+          {/* technical sheet button */}
+          <button
+            type="submit"
+            className="mx-2 mt-4 w-full rounded bg-gray-700 py-2 text-white hover:bg-gray-900"
+            onClick={() => {
+              if (product && product.id) {
+                const pdfUrl = `https://brgtigvjaxugtmbaaadp.supabase.co/storage/v1/object/public/technicalsheets/${product.id}.pdf`
+                window.open(pdfUrl, '_blank') // Open the technical sheet in a new tab
+              }
+            }}
+          >
+            <PoppinsText fontSize="14px" className="text-white">
+              {locale === 'es' ? 'Ficha técnica' : 'Technical sheet'}
+            </PoppinsText>
+          </button>
         </div>
 
         {/* Right Section - Price & Quantity Selector */}
         <div className="hidden flex-col items-center gap-1 md:flex lg:w-1/3">
+          {/* Stock Message */}
+          <div className="mt-4 flex flex-col items-center gap-1">
+            {product.stock > 0 ? (
+              <div className="flex flex-col items-center gap-2">
+                <span className="rounded-full bg-green-100 px-3 py-1 text-green-800">
+                  {locale === 'en' ? 'In Stock' : 'En stock'}: {product.stock}
+                </span>
+              </div>
+            ) : (
+              <div className="flex flex-col items-center gap-2">
+                <span className="rounded-full bg-red-100 px-3 py-1 text-red-800">
+                  {locale === 'en' ? 'Out of Stock' : 'Agotado'}
+                </span>
+                <PoppinsText
+                  fontSize="16px"
+                  className="text-center font-semibold text-red-700"
+                >
+                  {locale === 'en'
+                    ? 'Sorry, this product is currently unavailable.'
+                    : 'Lo sentimos, este producto no está disponible actualmente.'}
+                </PoppinsText>
+              </div>
+            )}
+          </div>
           {/* Quantity Selector */}
           <div className="col-span-4 flex flex-col items-center gap-1 md:gap-2">
             <PoppinsText fontSize="16px" className="text-center">
@@ -204,8 +246,32 @@ export default function ProductDetails() {
           </button>
         </div>
       </div>
+      {/* Stock Message */}
+      <div className="mt-4 flex flex-col items-center gap-1 md:hidden">
+        {product.stock > 0 ? (
+          <div className="flex flex-col items-center gap-2">
+            <span className="rounded-full bg-green-100 px-3 py-1 text-green-800">
+              {locale === 'en' ? 'In Stock' : 'En stock'}: {product.stock}
+            </span>
+          </div>
+        ) : (
+          <div className="flex flex-col items-center gap-2">
+            <span className="rounded-full bg-red-100 px-3 py-1 text-red-800">
+              {locale === 'en' ? 'Out of Stock' : 'Agotado'}
+            </span>
+            <PoppinsText
+              fontSize="16px"
+              className="text-center font-semibold text-red-700"
+            >
+              {locale === 'en'
+                ? 'Sorry, this product is currently unavailable.'
+                : 'Lo sentimos, este producto no está disponible actualmente.'}
+            </PoppinsText>
+          </div>
+        )}
+      </div>
       {/* Quantity Selector for mobile */}
-      <div className="flex flex-col items-center gap-1 pt-10 md:hidden lg:w-1/3">
+      <div className="flex flex-col items-center gap-1 pt-2 md:hidden md:pt-10 lg:w-1/3">
         <div className="col-span-4 flex flex-col items-center gap-1 md:gap-2">
           <PoppinsText fontSize="16px" className="text-center">
             {locale === 'en' ? 'Select Quantity' : 'Selecciona una cantidad'}
@@ -229,14 +295,22 @@ export default function ProductDetails() {
             {product.price}€
           </PoppinsText>
         </div>
-        <button
-          onClick={handleAddToCart}
-          className="mt-4 w-full rounded-md bg-gray-800 px-4 py-2 hover:bg-gray-900"
-        >
-          <PoppinsText fontSize="16px" className="text-white">
-            {locale === 'en' ? 'Add to Cart' : 'Añadir al Carrito'}
-          </PoppinsText>
-        </button>
+        {/* Add to Cart Button */}
+        <div className="hidden flex-col items-center gap-1 md:flex lg:w-1/3">
+          <button
+            onClick={handleAddToCart}
+            className={`mt-4 w-full rounded-md px-4 py-2 ${
+              product.stock > 0
+                ? 'bg-gray-800 text-white hover:bg-gray-900'
+                : 'cursor-not-allowed bg-gray-300 text-gray-500'
+            }`}
+            disabled={product.stock === 0}
+          >
+            <PoppinsText fontSize="16px">
+              {locale === 'en' ? 'Add to Cart' : 'Añadir al Carrito'}
+            </PoppinsText>
+          </button>
+        </div>
       </div>
     </div>
   )
