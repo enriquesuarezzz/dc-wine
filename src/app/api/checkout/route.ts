@@ -32,8 +32,8 @@ export async function POST(req: NextRequest) {
       quantity: product.quantity,
     }))
 
-    const successUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/success?session_id={CHECKOUT_SESSION_ID}`
-    const cancelUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/cart`
+    const successUrl = `${process.env.BASE_URL}/${locale}/success?session_id={CHECKOUT_SESSION_ID}`
+    const cancelUrl = `${process.env.BASE_URL}/${locale}/cart`
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
