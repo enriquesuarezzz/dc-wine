@@ -193,7 +193,7 @@ export default function ProductDetails() {
             {product.stock > 0 ? (
               <div className="flex flex-col items-center gap-2">
                 <span className="rounded-full bg-green-100 px-3 py-1 text-green-800">
-                  {locale === 'en' ? 'In Stock' : 'En stock'}: {product.stock}
+                  {locale === 'en' ? 'In Stock' : 'En stock'}
                 </span>
               </div>
             ) : (
@@ -251,7 +251,7 @@ export default function ProductDetails() {
         {product.stock > 0 ? (
           <div className="flex flex-col items-center gap-2">
             <span className="rounded-full bg-green-100 px-3 py-1 text-green-800">
-              {locale === 'en' ? 'In Stock' : 'En stock'}: {product.stock}
+              {locale === 'en' ? 'In Stock' : 'En stock'}
             </span>
           </div>
         ) : (
@@ -296,7 +296,7 @@ export default function ProductDetails() {
           </PoppinsText>
         </div>
         {/* Add to Cart Button */}
-        <div className="hidden flex-col items-center gap-1 md:flex lg:w-1/3">
+        <div className="flex flex-col items-center gap-1 md:flex lg:w-1/3">
           <button
             onClick={handleAddToCart}
             className={`mt-4 w-full rounded-md px-4 py-2 ${
@@ -306,7 +306,7 @@ export default function ProductDetails() {
             }`}
             disabled={product.stock === 0}
           >
-            <PoppinsText fontSize="16px">
+            <PoppinsText fontSize="16px" className="text-white">
               {locale === 'en' ? 'Add to Cart' : 'Añadir al Carrito'}
             </PoppinsText>
           </button>
