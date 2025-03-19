@@ -18,8 +18,6 @@ export async function POST(req: NextRequest) {
   try {
     const { products, locale, shippingDetails } = await req.json()
 
-    console.log('Shipping Details:', shippingDetails)
-
     const line_items = products.map((product: CartItem) => ({
       price_data: {
         currency: 'eur',
