@@ -85,10 +85,6 @@ export async function POST(req: NextRequest) {
           continue
         }
 
-        console.log(
-          `Updating stock for product ${productName}, quantity: ${quantityPurchased}`,
-        )
-
         // Search for product document by product name
         const productQuerySnapshot = await db
           .collection('products_en')
@@ -115,10 +111,6 @@ export async function POST(req: NextRequest) {
           const newStock = currentStock - quantityPurchased
 
           await productDoc.ref.update({ stock: newStock })
-
-          console.log(
-            `Stock updated for product ${productCode} (name: ${productName}): ${newStock} remaining`,
-          )
         } else {
           console.error(
             `Insufficient stock for product ${productCode} (name: ${productName})`,
@@ -140,8 +132,6 @@ export async function POST(req: NextRequest) {
         })),
         timestamp: admin.firestore.FieldValue.serverTimestamp(),
       })
-
-      console.log(`Order ${sessionId} marked as completed.`)
 
       // Successfully handled the webhook
       return NextResponse.json({ received: true })
