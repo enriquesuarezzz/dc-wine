@@ -66,23 +66,47 @@ export default function ProductDetails() {
   }
 
   const handleAddToCart = () => {
+    const { cartItems, addToCart } = useCart() // Access cart context
     if (product && product.stock > 0) {
-      for (let i = 0; i < quantity; i++) {
+      // Find the product in the cart, if it exists
+      const currentCartProduct = cartItems.find(
+        (item) => item.id === product.id,
+      )
+      const currentQuantity = currentCartProduct
+        ? currentCartProduct.quantity
+        : 0
+      const maxAddableQuantity = product.stock - currentQuantity // Remaining quantity that can be added
+
+      // Calculate the final quantity to add, ensuring it does not exceed available stock
+      const finalQuantity = Math.min(quantity, maxAddableQuantity)
+
+      if (finalQuantity > 0) {
         addToCart({
           id: product.id,
           name: product.name,
           price: product.price,
           imageUrl: product.imageUrl,
+          quantity: finalQuantity,
         })
+
+        // Optionally, show a toast notification or feedback here
+        setShowToast(true)
+        setTimeout(() => {
+          setShowToast(false)
+        }, 3000)
+      } else {
+        alert(
+          'No hay suficiente stock disponible para añadir más productos al carrito.',
+        )
       }
+    }
+  }
 
-      // Show toast notification
-      setShowToast(true)
-
-      // Hide toast after 3 seconds
-      setTimeout(() => {
-        setShowToast(false)
-      }, 3000)
+  const handleQuantityChange = (operation: 'increment' | 'decrement') => {
+    if (operation === 'increment' && quantity < product.stock) {
+      setQuantity((prev) => prev + 1)
+    } else if (operation === 'decrement' && quantity > 1) {
+      setQuantity((prev) => prev - 1)
     }
   }
 
@@ -220,25 +244,32 @@ export default function ProductDetails() {
             <div className="flex items-center gap-2">
               <button
                 className="rounded bg-gray-300 px-2 py-1 text-black hover:bg-gray-400"
-                onClick={() => setQuantity((prev) => Math.max(1, prev - 1))}
+                onClick={() => handleQuantityChange('decrement')}
               >
                 -
               </button>
               <PoppinsText fontSize="16px">{quantity}</PoppinsText>
               <button
                 className="rounded bg-gray-300 px-2 py-1 text-black hover:bg-gray-400"
-                onClick={() => setQuantity((prev) => prev + 1)}
+                onClick={() => handleQuantityChange('increment')}
+                disabled={quantity >= product.stock}
               >
                 +
               </button>
             </div>
+
             <PoppinsText fontSize="20px" className="font-bold">
               {product.price}€
             </PoppinsText>
           </div>
           <button
             onClick={handleAddToCart}
-            className="mt-4 w-full rounded-md bg-gray-800 px-4 py-2 hover:bg-gray-900"
+            className={`mt-4 w-full rounded-md bg-gray-800 px-4 py-2 ${
+              product.stock > 0 && quantity <= product.stock
+                ? 'hover:bg-gray-900'
+                : 'cursor-not-allowed bg-gray-300 text-gray-500'
+            }`}
+            disabled={product.stock === 0 || quantity > product.stock}
           >
             <PoppinsText fontSize="16px" className="text-white">
               {locale === 'en' ? 'Add to Cart' : 'Añadir al Carrito'}
