@@ -39,6 +39,11 @@ export async function POST(req: NextRequest) {
       mode: 'payment',
       success_url: successUrl,
       cancel_url: cancelUrl,
+      metadata: {
+        product_ids: products
+          .map((product: CartItem, index: number) => `${product.name}-${index}`)
+          .join(','),
+      },
     })
 
     // Calculate total price
