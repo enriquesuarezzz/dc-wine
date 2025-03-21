@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
-import { firestore } from 'firebase-admin'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
   apiVersion: '2025-02-24.acacia',
@@ -32,8 +31,8 @@ const db = admin.firestore()
 
 // Stripe Webhook Handler
 export async function POST(req: NextRequest) {
-  const sig = req.headers.get('stripe-signature') as string
-  const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET as string
+  const sig = req.headers.get('stripe-signature') ?? ''
+  const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET ?? ''
   const body = await req.text()
 
   let event
@@ -71,31 +70,37 @@ export async function POST(req: NextRequest) {
 
       // Loop through each purchased product and update stock
       for (const item of lineItems) {
-        const productId =
-          typeof item.price?.product === 'string'
-            ? item.price.product
-            : item.price?.product?.id
-        const quantityPurchased = item.quantity
+        let productName: string | undefined
 
-        if (!productId || !quantityPurchased) {
-          console.error('Invalid product ID or quantity:', {
-            productId,
+        // Use the description as the product name (assuming the product name is in the description)
+        productName = item.description ?? 'unknown-product' // Fallback to description or placeholder
+
+        const quantityPurchased = item.quantity ?? 0
+
+        if (!productName || quantityPurchased <= 0) {
+          console.error('Invalid product name or quantity:', {
+            productName,
             quantityPurchased,
           })
           continue
         }
 
-        console.log(
-          `Updating stock for product ${productId}, quantity: ${quantityPurchased}`,
-        )
+        // Search for product document by product name
+        const productQuerySnapshot = await db
+          .collection('products_en')
+          .where('name', '==', productName) // Assuming product name is stored in Firestore as 'name'
+          .get()
 
-        const productRef = db.collection('products_en').doc(productId)
-        const productDoc = await productRef.get()
-
-        if (!productDoc.exists) {
-          console.error(`Product with ID ${productId} not found in Firestore`)
+        if (productQuerySnapshot.empty) {
+          console.error(
+            `Product with name ${productName} not found in Firestore`,
+          )
           continue
         }
+
+        // Assuming there's only one product matching the name
+        const productDoc = productQuerySnapshot.docs[0]
+        const productCode = productDoc.id // Firestore document ID is the product code
 
         const productData = productDoc.data()
 
@@ -105,15 +110,28 @@ export async function POST(req: NextRequest) {
         if (currentStock >= quantityPurchased) {
           const newStock = currentStock - quantityPurchased
 
-          await productRef.update({ stock: newStock })
-
-          console.log(
-            `Stock updated for product ${productId}: ${newStock} remaining`,
-          )
+          await productDoc.ref.update({ stock: newStock })
         } else {
-          console.error(`Insufficient stock for product ${productId}`)
+          console.error(
+            `Insufficient stock for product ${productCode} (name: ${productName})`,
+          )
         }
       }
+
+      // Mark order as completed in Firestore
+      const orderRef = db.collection('orders').doc(sessionId)
+      await orderRef.set({
+        status: 'completed',
+        sessionId,
+        customerEmail: session.customer_email,
+        amountTotal: session.amount_total! / 100,
+        currency: session.currency,
+        lineItems: lineItems.map((item) => ({
+          description: item.description,
+          quantity: item.quantity,
+        })),
+        timestamp: admin.firestore.FieldValue.serverTimestamp(),
+      })
 
       // Successfully handled the webhook
       return NextResponse.json({ received: true })
