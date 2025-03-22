@@ -13,6 +13,7 @@ interface CartItem {
   price: number
   imageUrl: string
   quantity: number
+  stock: number
 }
 
 interface CartContextType {
@@ -48,13 +49,23 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       const existingItem = prevCart.find((cartItem) => cartItem.id === item.id)
 
       if (existingItem) {
-        return prevCart.map((cartItem) =>
-          cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem,
-        )
+        if (existingItem.quantity < existingItem.stock) {
+          return prevCart.map((cartItem) =>
+            cartItem.id === item.id
+              ? { ...cartItem, quantity: cartItem.quantity + 1 }
+              : cartItem,
+          )
+        } else {
+          alert('Not enough stock available!')
+          return prevCart
+        }
       } else {
-        return [...prevCart, { ...item, quantity: 1 }]
+        if (item.stock > 0) {
+          return [...prevCart, { ...item, quantity: 1 }] // Set initial quantity to 1 when adding a new item
+        } else {
+          alert('Not enough stock available!')
+          return prevCart
+        }
       }
     })
   }
@@ -62,15 +73,25 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   // Remove item from cart completely
   const removeFromCart = (id: string) => {
     setCartItems((prevCart) => prevCart.filter((item) => item.id !== id))
+
+    alert('Item removed from cart')
   }
 
   // Increase item quantity
   const increaseQuantity = (id: string) => {
-    setCartItems((prevCart) =>
-      prevCart.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item,
-      ),
-    )
+    setCartItems((prevCart) => {
+      return prevCart.map((item) => {
+        if (item.id === id) {
+          if (item.quantity < item.stock) {
+            return { ...item, quantity: item.quantity + 1 }
+          } else {
+            alert('Cannot increase quantity beyond stock')
+            return item
+          }
+        }
+        return item
+      })
+    })
   }
 
   // Decrease item quantity, remove if it reaches 0
