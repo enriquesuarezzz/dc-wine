@@ -17,6 +17,7 @@ export default function ProductDetails() {
   const [loading, setLoading] = useState(true)
   const [quantity, setQuantity] = useState(1)
   const [showToast, setShowToast] = useState(false)
+  const [toastMessage, setToastMessage] = useState('')
 
   useEffect(() => {
     async function fetchProduct() {
@@ -66,42 +67,57 @@ export default function ProductDetails() {
   }
 
   const handleAddToCart = () => {
-    const { cartItems, addToCart } = useCart() // Access cart context
     if (product && product.stock > 0) {
-      // Find the product in the cart, if it exists
-      const currentCartProduct = cartItems.find(
-        (item) => item.id === product.id,
-      )
-      const currentQuantity = currentCartProduct
-        ? currentCartProduct.quantity
-        : 0
-      const maxAddableQuantity = product.stock - currentQuantity // Remaining quantity that can be added
-
-      // Calculate the final quantity to add, ensuring it does not exceed available stock
-      const finalQuantity = Math.min(quantity, maxAddableQuantity)
+      // Ensure quantity doesn't exceed stock
+      const finalQuantity = Math.min(quantity, product.stock)
 
       if (finalQuantity > 0) {
-        addToCart({
-          id: product.id,
-          name: product.name,
-          price: product.price,
-          imageUrl: product.imageUrl,
-          quantity: finalQuantity,
-        })
+        for (let i = 0; i < finalQuantity; i++) {
+          addToCart({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            imageUrl: product.imageUrl,
+            stock: product.stock,
+          })
+        }
 
-        // Optionally, show a toast notification or feedback here
-        setShowToast(true)
-        setTimeout(() => {
-          setShowToast(false)
-        }, 3000)
-      } else {
-        alert(
-          'No hay suficiente stock disponible para añadir más productos al carrito.',
+        // Set success toast message and show it
+        setToastMessage(
+          locale === 'en'
+            ? 'Product Added to cart'
+            : 'Producto añadido al carrito',
         )
+        setShowToast(true)
+      } else {
+        // Set error toast message if stock is insufficient
+        setToastMessage(
+          locale === 'en'
+            ? 'Not enough stock available'
+            : 'No hay suficiente stock disponible',
+        )
+        setShowToast(true)
       }
+
+      // Hide toast after 3 seconds
+      setTimeout(() => {
+        setShowToast(false)
+      }, 3000)
+    } else {
+      // Set error toast message if there's no stock
+      setToastMessage(
+        locale === 'en'
+          ? 'Not enough stock available'
+          : 'No hay suficiente stock disponible',
+      )
+      setShowToast(true)
+
+      // Hide toast after 3 seconds
+      setTimeout(() => {
+        setShowToast(false)
+      }, 3000)
     }
   }
-
   const handleQuantityChange = (operation: 'increment' | 'decrement') => {
     if (operation === 'increment' && quantity < product.stock) {
       setQuantity((prev) => prev + 1)
@@ -123,9 +139,7 @@ export default function ProductDetails() {
             />
             <div className="ml-4 flex flex-col">
               <PoppinsText fontSize="14px" className="text-gray-900">
-                {locale === 'en'
-                  ? 'Product Added to cart'
-                  : 'Producto añadido al carrito'}
+                {toastMessage}
               </PoppinsText>
               <PoppinsText
                 fontSize="14px"
@@ -137,6 +151,7 @@ export default function ProductDetails() {
             <p className="ml-auto font-bold text-gray-900">{product?.price}€</p>
           </div>
         )}
+
         {/* Left Section - Product Name & Characteristics */}
         <div className="flex w-full flex-col gap-1 pt-0 md:w-1/3 md:pt-20">
           <PoppinsText
