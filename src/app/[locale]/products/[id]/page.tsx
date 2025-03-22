@@ -25,7 +25,7 @@ export default function ProductDetails() {
       const productId = pathParts[pathParts.length - 1]
 
       if (productId && locale) {
-        const fetchedProduct = await getProductById(productId, locale)
+        const fetchedProduct = await getProductById(productId)
         if (!fetchedProduct) {
           setProduct(null) // Set product to null if not found
         } else {
