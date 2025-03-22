@@ -1,12 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
+import admin from 'firebase-admin'
+import { ServiceAccount } from 'firebase-admin/app'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
   apiVersion: '2025-02-24.acacia',
 })
 
 // Ensure Firebase Admin SDK is initialized properly
-const admin = require('firebase-admin')
+
 if (!admin.apps.length) {
   const serviceAccount = {
     type: 'service_account',
@@ -19,7 +21,7 @@ if (!admin.apps.length) {
     token_uri: process.env.FIREBASE_TOKEN_URI!,
     auth_provider_x509_cert_url: process.env.FIREBASE_AUTH_PROVIDER_CERT_URL!,
     client_x509_cert_url: process.env.FIREBASE_CLIENT_CERT_URL!,
-  }
+  } as ServiceAccount
 
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -70,10 +72,7 @@ export async function POST(req: NextRequest) {
 
       // Loop through each purchased product and update stock
       for (const item of lineItems) {
-        let productName: string | undefined
-
-        // Use the description as the product name (assuming the product name is in the description)
-        productName = item.description ?? 'unknown-product' // Fallback to description or placeholder
+        const productName: string = item.description ?? 'unknown-product'
 
         const quantityPurchased = item.quantity ?? 0
 

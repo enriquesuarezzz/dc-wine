@@ -25,7 +25,7 @@ export default function ProductDetails() {
       const productId = pathParts[pathParts.length - 1]
 
       if (productId && locale) {
-        const fetchedProduct = await getProductById(productId, locale)
+        const fetchedProduct = await getProductById(productId)
         if (!fetchedProduct) {
           setProduct(null) // Set product to null if not found
         } else {
@@ -232,7 +232,8 @@ export default function ProductDetails() {
             {product.stock > 0 ? (
               <div className="flex flex-col items-center gap-2">
                 <span className="rounded-full bg-green-100 px-3 py-1 text-green-800">
-                  {locale === 'en' ? 'In Stock' : 'En stock'}
+                  {locale === 'en' ? 'In Stock: ' : 'En stock: '}{' '}
+                  {product.stock}
                 </span>
               </div>
             ) : (

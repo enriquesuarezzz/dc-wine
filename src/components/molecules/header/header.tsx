@@ -16,8 +16,8 @@ export default async function Header() {
         quality={80}
         className="h-[450px] w-full object-cover md:h-full md:max-h-[650px]"
       />
-      {/* Blur Overlay */}
-      <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px] md:backdrop-blur-[3px]" />
+      {/* Blur Overlay
+      <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px] md:backdrop-blur-[3px]" /> */}
       {/* Overlay Div */}
       <div className="absolute rounded-lg p-3 md:right-4 md:bg-light_gold md:p-10 lg:right-28">
         <PoppinsText

@@ -26,7 +26,7 @@ export default function Products({
     async function fetchProducts() {
       if (locale) {
         setLoading(true)
-        const data = await getProducts(locale) // Fetch products from Firestore
+        const data = await getProducts() // Fetch products from Firestore
         setProducts(data)
         setFilteredProducts(data)
 
