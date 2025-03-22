@@ -6,8 +6,6 @@ import {
   useState,
   ReactNode,
 } from 'react'
-import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 
 interface CartItem {
   id: string
@@ -58,16 +56,14 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
               : cartItem,
           )
         } else {
-          // Show toast if stock is insufficient
-          toast.error('Not enough stock available!')
+          alert('Not enough stock available!')
           return prevCart
         }
       } else {
         if (item.stock > 0) {
           return [...prevCart, { ...item, quantity: 1 }] // Set initial quantity to 1 when adding a new item
         } else {
-          // Show toast if stock is insufficient
-          toast.error('Not enough stock available!')
+          alert('Not enough stock available!')
           return prevCart
         }
       }
@@ -77,8 +73,8 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   // Remove item from cart completely
   const removeFromCart = (id: string) => {
     setCartItems((prevCart) => prevCart.filter((item) => item.id !== id))
-    // Show success toast for removing item
-    toast.success('Item removed from cart')
+
+    alert('Item removed from cart')
   }
 
   // Increase item quantity
@@ -89,8 +85,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
           if (item.quantity < item.stock) {
             return { ...item, quantity: item.quantity + 1 }
           } else {
-            // Show toast if stock is insufficient
-            toast.error('Cannot increase quantity beyond stock')
+            alert('Cannot increase quantity beyond stock')
             return item
           }
         }
@@ -108,15 +103,11 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         )
         .filter((item) => item.quantity > 0),
     )
-    // Show success toast for decreasing quantity
-    toast.success('Item quantity decreased')
   }
 
   // Clear the cart
   const clearCart = () => {
     setCartItems([])
-    // Show success toast for clearing cart
-    toast.success('Cart cleared')
   }
 
   return (
