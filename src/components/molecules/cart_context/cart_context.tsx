@@ -56,14 +56,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
               : cartItem,
           )
         } else {
-          alert('Not enough stock available!')
           return prevCart
         }
       } else {
         if (item.stock > 0) {
           return [...prevCart, { ...item, quantity: 1 }] // Set initial quantity to 1 when adding a new item
         } else {
-          alert('Not enough stock available!')
           return prevCart
         }
       }
@@ -73,8 +71,6 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   // Remove item from cart completely
   const removeFromCart = (id: string) => {
     setCartItems((prevCart) => prevCart.filter((item) => item.id !== id))
-
-    alert('Item removed from cart')
   }
 
   // Increase item quantity
@@ -85,7 +81,6 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
           if (item.quantity < item.stock) {
             return { ...item, quantity: item.quantity + 1 }
           } else {
-            alert('Cannot increase quantity beyond stock')
             return item
           }
         }
