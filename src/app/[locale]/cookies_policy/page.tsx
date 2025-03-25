@@ -14,7 +14,7 @@ export default async function CookiesPolicyPage() {
   const t = await getTranslations('cookies_policy_page')
 
   return (
-    <div className="mx-4 flex flex-col items-center justify-center gap-8 pt-24 md:mx-20">
+    <div className="mx-4 flex flex-col justify-center gap-8 pt-24 md:mx-20">
       {/* title */}
       <PoppinsText fontSize="56px" style="bold">
         {t('title')}

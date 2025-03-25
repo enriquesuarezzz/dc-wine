@@ -105,12 +105,21 @@ export default async function PrivacyPolicyPage() {
       <PoppinsText fontSize="16px">
         {t('data_of_the_interested_party_description')}
       </PoppinsText>
+      {/* Data of the interested party */}
+      <PoppinsText fontSize="20px" style="bold">
+        {t('cookies_policy_title')}
+      </PoppinsText>
+      <PoppinsText fontSize="16px">
+        {t('cookies_policy_description')}
+      </PoppinsText>
       {/* Exercise of Rights */}
       <PoppinsText fontSize="20px" style="bold">
         {t('exercise_of_rights_title')}
       </PoppinsText>
+      {/* Description */}
       <PoppinsText fontSize="16px">
         {t('exercise_of_rights_description')}
+        {/* Link */}
         <a
           href="https://www.aepd.es/"
           target="_blank"
@@ -120,9 +129,11 @@ export default async function PrivacyPolicyPage() {
         </a>
       </PoppinsText>
       {/* Acceptance of the Privacy Policy */}
+      {/* Title */}
       <PoppinsText fontSize="20px" style="bold">
         {t('acceptance_of_the_privacy_policy_title')}
       </PoppinsText>
+      {/* Description */}
       <PoppinsText fontSize="16px">
         {t('acceptance_of_the_privacy_policy_description')}
       </PoppinsText>

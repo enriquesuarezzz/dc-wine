@@ -17,24 +17,48 @@ export default async function TermsAndConditionsPage() {
       <PoppinsText fontSize="56px" style="bold">
         {t('title')}
       </PoppinsText>
-      <PoppinsText fontSize="14px" className="">
+      {/* First Paragraph */}
+      <PoppinsText fontSize="16px" className="">
         <span
           dangerouslySetInnerHTML={{
             __html: t('first_paragraph'),
           }}
         />
       </PoppinsText>
+      {/* First List */}
       <ul className="list-inside list-disc">
-        <li>{t('list_1.li_1')}</li>
-        <li>{t('list_1.li_2')}</li>
+        <li>
+          <PoppinsText fontSize="14px" className="inline">
+            {t('list_1.li_1')}
+          </PoppinsText>
+        </li>
+        <li>
+          <PoppinsText fontSize="14px" className="inline">
+            {t('list_1.li_2')}
+          </PoppinsText>
+        </li>
       </ul>
-      <PoppinsText fontSize="14px">{t('after_list')}</PoppinsText>
+      <PoppinsText fontSize="16px">{t('after_list')}</PoppinsText>
+      {/* Second List */}
       <ul className="list-inside list-disc">
-        <li>{t('list_2.li_1')}</li>
-        <li>{t('list_2.li_2')}</li>
-        <li>{t('list_2.li_3')}</li>
+        <li>
+          <PoppinsText fontSize="14px" className="inline">
+            {t('list_2.li_1')}
+          </PoppinsText>
+        </li>
+        <li>
+          <PoppinsText fontSize="14px" className="inline">
+            {t('list_2.li_2')}
+          </PoppinsText>
+        </li>
+        <li>
+          <PoppinsText fontSize="14px" className="inline">
+            {t('list_2.li_3')}
+          </PoppinsText>
+        </li>
       </ul>
-      <PoppinsText fontSize="14px" className="">
+      {/* Last Paragraph */}
+      <PoppinsText fontSize="16px" className="">
         <span
           dangerouslySetInnerHTML={{
             __html: t('last_paragraph'),
