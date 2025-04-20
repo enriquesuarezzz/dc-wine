@@ -11,9 +11,9 @@ export default async function Header() {
         src="/images/header.avif"
         alt="2 wine glasses on a table with grapes and a bottle of wine"
         width={1920}
-        height={1080}
+        height={650}
         priority
-        quality={80}
+        quality={30}
         className="h-[450px] w-full object-cover md:h-full md:max-h-[650px]"
       />
       {/* Blur Overlay
