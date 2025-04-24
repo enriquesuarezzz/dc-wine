@@ -14,8 +14,12 @@ export default async function AboutUs() {
   const t = await getTranslations('about_us_page')
   return (
     <section className="flex w-full flex-col items-center justify-center">
-      <div className="flex w-full flex-col items-center justify-center gap-8 pb-16 pt-24 md:pt-36 lg:flex-row">
-        <PoppinsText fontSize="56px" style="bold" className="max-w-[500px]">
+      <div className="flex w-full flex-col items-center justify-center gap-8 px-10 pb-16 pt-24 md:pt-36 lg:flex-row lg:gap-8">
+        <PoppinsText
+          fontSize="44px"
+          style="bold"
+          className="max-w-[900px] text-center lg:max-w-[700px]"
+        >
           {t('title')}
         </PoppinsText>
         <PoppinsText fontSize="14px" className="max-w-[500px] text-center">
