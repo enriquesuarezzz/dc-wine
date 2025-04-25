@@ -16,11 +16,6 @@ export default async function Features() {
       title: 'features.feature_2.title',
       subtitle: 'features.feature_2.subtitle',
     },
-    {
-      image: '/images/features/image_3.avif',
-      title: 'features.feature_3.title',
-      subtitle: 'features.feature_3.subtitle',
-    },
   ]
 
   return (
