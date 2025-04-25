@@ -87,7 +87,7 @@ export async function POST(req: NextRequest) {
       <html>
         <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333;">
           <div style="text-align: center; background-color: #000000; padding: 20px;">
-            <img src="https://i.postimg.cc/Qtd0505V/DCWine-Gold.png" alt="DC Wine Logo" style="width: 120px; height: auto;" />
+            <img src="https://brgtigvjaxugtmbaaadp.supabase.co/storage/v1/object/public/images//logo_gold.avif" alt="DC Wine Logo" style="width: 120px; height: auto;" />
           </div>
 
           <div style="padding: 20px; max-width: 800px; margin: auto; background-color: #ffffff; border-radius: 8px; color: #333; margin-top: 20px; margin-bottom: 20px;">

@@ -1,4 +1,5 @@
 import { PoppinsText } from '@/components/atoms/poppins_text'
+import { Link } from '@/i18n/routing'
 import { getTranslations } from 'next-intl/server'
 
 export default async function TopSellingProducts() {
@@ -25,9 +26,6 @@ export default async function TopSellingProducts() {
         <PoppinsText fontSize="28px" style="bold" className="pt-4">
           {t('top_selling_products.title')}
         </PoppinsText>
-        <PoppinsText fontSize="16px" className="pt-2">
-          {t('top_selling_products.subtitle')}
-        </PoppinsText>
       </div>
 
       <div className="flex flex-col justify-center gap-4 md:flex-row md:gap-10">
@@ -36,11 +34,13 @@ export default async function TopSellingProducts() {
             key={index}
             className="flex flex-col items-center justify-center gap-2 md:gap-4"
           >
-            <img
-              src={product.image}
-              alt={t(product.title)}
-              className="h-full max-h-[300px] w-full rounded-xl object-cover transition-all duration-300 ease-in-out hover:scale-105 md:max-h-[500px]"
-            />
+            <Link href="/products">
+              <img
+                src={product.image}
+                alt={t(product.title)}
+                className="h-full max-h-[300px] w-full rounded-xl object-cover transition-all duration-300 ease-in-out hover:scale-105 md:max-h-[500px]"
+              />
+            </Link>
             <PoppinsText fontSize="20px" className="pt-2" style="bold">
               {t(product.title)}
             </PoppinsText>

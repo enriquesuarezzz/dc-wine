@@ -3,9 +3,8 @@
     "meta_title": "Inicio - DcWine",
     "meta_description": "Bienvenido a DcWine, tu plataforma de confianza para descubrir y comprar los mejores vinos, directamente desde las mejores bodegas.",
     "header": {
-      "header_title": "Nueva cosecha",
-      "title": "DCWine <br/> the Passion",
-      "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
+      "title": "DCWine",
+      "subtitle": "Un gran vino es un gran arte, amigo mío. <br/> Y DCWine es en efecto, un pastor... cuya misión  es ofrecer <br/> al público  otra forma de gran arte y  orientar su apreciación.",
       "button": "Compra ahora"
     },
     "top_selling_products": {
@@ -13,7 +12,7 @@
       "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
       "dark_wine": "Vino tinto",
       "white_wine": "Vino blanco",
-      "exotic_wine": "Vinos Exóticos"
+      "exotic_wine": "Vinos Rosados"
     },
     "features": {
       "feature_1": {
@@ -23,10 +22,6 @@
       "feature_2": {
         "title": "El Prosecco",
         "subtitle": "Las colinas de Prosecco di Conegliano y Valdobbiadene han sido declaradas Patrimonio de la Humanidad por la UNESCO (7 de julio 2018) debido al excepcional valor universal del paisaje del Véneto, estas colinas representan el mundo del prosecco italiano: treinta kilómetros de pendientes empinadas cubiertas de viñedose."
-      },
-      "feature_3": {
-        "title": "El Biológico",
-        "subtitle": "La palabra BIO desde el Latin significa «Vida», Vida que genera Vida. Un vino biológico, es aquel cuya producción está libre de productos químicos artificiales o dañinos para los viñedos o las personas que trabajan en ellos. Para obtener un vino certificado como biológico, se deben cuidar la vid y el campo por un periodo de más de cuatro años."
       }
     },
     "free_order_message": "🚚 Envíos gratis en todos los pedidos!"
@@ -34,14 +29,11 @@
   "about_us_page": {
     "meta_title": "Sobre Nosotros - DcWine",
     "meta_description": "Descubre la historia detrás de DcWine, nuestra pasión por los vinos de calidad y por qué creemos en brindarte la mejor experiencia vinícola.",
-    "title": "La mejor tienda de vinos",
-    "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit",
+    "title": "Expertos en Vinos, Apasionados del Sabor",
+    "subtitle": "Con años de experiencia y una pasión inigualable por el buen gusto, nos hemos convertido en el lugar favorito de quienes buscan calidad, asesoría experta y una experiencia única. Desde vinos clásicos hasta joyas por descubrir, aquí el vino se disfruta desde la elección.",
     "first_paragraph": "Nacida en el año 2018, con sede en Lanzarote, desarrollando un proyecto estudiado y preparado para satisfacer el cliente de nivel superior. Fue así que empezamos, buscando referencias cualificadas y bodegas que tuvieran el mismo objetivos que nosotros. <br/> <br/> Todos estamos relacionados con el vino de alguna o otra manera, comentamos de él, celebramos en su nombre, lo bebemos, brindamos y por último disfrutamos de cada copa con la que maridamos distintos tipos de alimentos que lo acompañan. A su alrededor, construimos y celebramos ocasiones que se convierten en experiencias únicas y recuerdos inolvidables que quedan grabados en nuestra memoria, pero ¿sabemos qué es el vino?.",
     "second_paragraph": "Definamos al vino como el resultado de la fermentación del mosto de la uva. Llamamos mosto al jugo que se obtiene como resultado del estrujado de las uvas, es decir cuando estas son aplastadas y se obtiene el jugo que reposa en grandes tanques, regularmente de acero inoxidable y que tienen una temperatura controlada, lo que permite que comience el proceso de fermentado donde se transforma el azúcar en alcohol. <br/> <br/> Para conocer las diferentes clasificaciones y tipos de vino se tienen muchos criterios, más les recomiendo usar nuestros sentidos para poder clasificarlos de manera intuitiva y naturales.",
-    "why_drink_it": "Y porque tomamos vino?!",
-    "third_paragraph": "1.  Retarda el envejecimiento  <br/> Según la Escuela Médica de Harvard, el resveratrol, compuesto que se encuentra en la piel de las uvas tintas, retrasa el envejecimiento, siempre con un consumo moderado y parece ser que es una de las causas de longevidad en zonas con alto consumo de vino tinto, como el suroeste de Francia o Cerdeña. <br/> <br/> 2. Es un aliado para bajar peso <br/> El vino tinto activa un gen que impide la formación de nuevas células de grasa y además nos permite estimular las existentes para depurarlas e ir eliminándolas poco a poco Para ver reflejado este efecto en nuestra silueta, recuerda que no debes beber más de una copa al día y obviamente, los resultados serán más visibles si lo acompañamos con una dieta equilibrada <br/> <br/> 3. Potenciador para nuestro cerebro <br/> Son muchos los estudios que demuestran que beber vino tinto de forma moderada pero constante, hace que podamos prevenir demencias y enfermedades degenerativas de nuestro cerebro <br/> <br/> 4. Trata las infecciones de las encías <br/> Si eres de esas personas a las que les sangran las encías, no lo dudes y acompaña tus comidas con un vasito de vino tinto. Existen compuestos presentes en las uvas que, al ser fermentados en vino, tienen la virtud de evitar la aparición de los estreptococos y bacterias vinculadas a la caries además de ser muy eficaz contra la gingivitis <br/> <br/> 5. Protege contra las quemaduras solares graves <br/> Según científicos de la Universidad de Barcelona, los flavonoides, que se encuentran en las uvas y el vino, ayudan a reducir los efectos perjudiciales de los rayos ultravioleta en la piel <br/> <br/> 6. Combate el cansancio <br/> La investigación apareció en The Faseb Journal y nos dice que es precisamente el propio resveratrol presente en las uvas, el que mejora nuestra situación en esos días que estamos más apáticos o cansados <br/> <br/> 7. Aumenta nuestras endorfinas <br/> Según estudio llevado a cabo en la Universidad de California, al disfrutar de ese vino rico y sano, liberamos endorfinas en nuestro organismo, relajándonos y disfrutando más del momento <br/> <br/> 8. Limpia nuestro paladar <br/> Curioso pero cierto, tomar vino mientras comemos hace que, gracias a sus propiedades astringentes, el sabor de las comidas se perciba de modo más intenso. Reduce el sabor de las grasas y nos da una sensación gratificante al limpiar nuestra boca.",
-    "fourth_paragraph": "9. Bueno para reducir el colesterol <br/> El vino tinto es un tesoro natural rico en polifenoles, siendo uno de ellos el citado resveratrol, sustancia química rica en antioxidantes que, según la Clínica Mayo, nos ayuda a cuidar nuestros vasos sanguíneos ya que evita la formación de coágulos y la reducción del llamado colesterol malo <br/> <br/> 10. Reduce el riesgo de depresión <br/> Según un estudio realizado por un equipo de varias Universidades Españolas con más de 5.500 hombres y mujeres de entre 55 y 80 años y sus hábitos de consumo, encontraron que los que tomaban entre dos y siete copas de vino a la semana, eran menos propensos a ser diagnosticados de depresión <br/> <br/> 11. Excelente para nuestra salud cardíaca <br/> Además de los polifenoles mencionados con anterioridad, el vino tinto es rico en vitamina E que ayuda a limpiar nuestra sangre y los vasos sanguíneos, protegiendo nuestra salud cardiovascular <br/> <br/> 12. Reduce el riesgo de cáncer <br/> Como gran antioxidante que es, constituye un recurso natural capaz de bloquear el crecimiento de las células responsables del cáncer de mama o pulmón <br/> <br/> 13. Previene las enfermedades que causan ceguera <br/> Según científicos de la Escuela Universitaria de Medicina de Washington, el vino puede detener el proceso denominado angiogénesis (apertura de nuevos vasos sanguíneos en el área ocular) lo cual lleva al desarrollo de ceguera <br/> <br/> 14. Aumenta los niveles de ácidos grasos Omega3 <br/> Según estudio realizado por investigadores de varios países europeos con adultos y sus hábitos alimenticios, los bebedores moderados de vino tinto, tenían niveles mayores en sangre de ácidos grasos Omega3 <br/>",
-    "last_paragraph": "Ahora que ya conocéis la verdadera realidad de DCWine, brindamos juntos!"
+    "last_paragraph": "“El vino es agua cargada de sol”. La poética sabiduría del físico, filósofo y astrónomo Galileo Galilei. Todo empieza con el suelo, la viña, la uva. El olor del viñedo-como inhalar el principio de todo. Despierta algo ancestral, algo primordial…como decir, algo profundamente grabado, y probablemente subconsciente, en alguna parte de mi alma. <br/> <br/> Me gusta como el vino evoluciona, como, si abro una botella hoy, sabría diferente que si la abriera cualquier otro día. Por que una botella de vino está en realidad viva; está constantemente evolucionando y ganando complejidad. <br/> <br/> Mete la nariz. De verdad, no seas tímido y pon la nariz dentro. Un poco de cítrico, puede que algo de frambuesa, fruta de la pasión, y hay una fragancia de espárrago y como un aleteo de nuez de queso Edam."
   },
   "navbar": {
     "home": "Home",

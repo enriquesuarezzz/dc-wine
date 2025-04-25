@@ -184,7 +184,7 @@ export default function Products({
                   alt={product.name}
                   className="mb-4 h-48 w-full rounded-md object-contain"
                 />
-                <PoppinsText
+                {/* <PoppinsText
                   fontSize="12px"
                   className={`w-fit rounded-full px-3 py-1 text-white ${
                     product.category === 'red wine'
@@ -197,7 +197,7 @@ export default function Products({
                   }`}
                 >
                   {product.category}
-                </PoppinsText>
+                </PoppinsText> */}
                 <PoppinsText fontSize="14px">{product.name}</PoppinsText>
                 <PoppinsText fontSize="14px">{product.price} €</PoppinsText>
                 <PoppinsText fontSize="12px" className="text-gray-600">

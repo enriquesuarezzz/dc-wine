@@ -3,9 +3,8 @@
     "meta_title": "Home - DcWine",
     "meta_description": "Welcome to DcWine, your trusted platform to discover and purchase the finest wines, directly from the best wineries.",
     "header": {
-      "header_title": "New arrivals",
-      "title": "DCWine <br/> the Passion",
-      "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
+      "title": "DCWine",
+      "subtitle": "Great wine is great art, my friend. <br/> And DCWine is indeed a shepherd... whose mission is to offer <br/> the public another form of great art and guide their appreciation.",
       "button": "Shop Now"
     },
     "top_selling_products": {
@@ -23,10 +22,6 @@
       "feature_2": {
         "title": "El Prosecco",
         "subtitle": "The hills of Prosecco di Conegliano and Valdobbiadene have been declared a World Heritage Site by UNESCO (July 7, 2018) due to the exceptional universal value of the Veneto landscape, these hills represent the world of Italian prosecco: thirty kilometers of steep slopes covered with vineyards, thanks to the climate and terrain that facilitate their production. Here Prosecco DeGiusti is born, a quality product, available in three variants."
-      },
-      "feature_3": {
-        "title": "El Biológico",
-        "subtitle": "The word BIO from Latin means 'Life', Life that generates Life. An organic wine is one whose production is free of artificial or harmful chemicals for the vineyards or the people who work in them. To obtain a wine certified as organic, the vine and the field must be cared for for a period of more than four years. Anyone who produces organic wine deserves applause, because they are not thinking only of themselves or the present moment; ."
       }
     },
     "free_order_message": "🚚 Free Shipping on All Orders!"
@@ -34,14 +29,11 @@
   "about_us_page": {
     "meta_title": "About Us - DcWine",
     "meta_description": "Discover the story behind DcWine, our passion for quality wines, and why we believe in bringing the best wine experience to you.",
-    "title": "The best wine shop",
-    "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit",
+    "title": "Wine Experts, Passionate about Flavor",
+    "subtitle": "With years of experience and an unparalleled passion for good taste, we've become the go-to for those seeking quality, expert advice, and a unique experience. From classic wines to undiscovered gems, here, wine is enjoyed from the moment you choose it.",
     "first_paragraph": "Born in 2018, based in Lanzarote, developing a project studied and prepared to satisfy the highest level client. That's how we started, looking for qualified references and wineries that had the same objectives as us. <br/> <br/> We are all related to wine in some way or another, we comment on it, we celebrate in its name, we drink it, we toast it and finally we enjoy each glass with which we pair different types of foods that accompany it. Around it, we build and celebrate occasions that become unique experiences and unforgettable memories that remain engraved in our memory, but do we know what wine is?",
     "second_paragraph": "Let's define wine as the result of the fermentation of grape must. We call must the juice that is obtained as a result of crushing the grapes, that is, when they are crushed and the juice is obtained that rests in large tanks, usually made of stainless steel and that have a controlled temperature, which allows the fermentation process to begin where the sugar is transformed into alcohol. <br/> <br/> To know the different classifications and types of wine there are many criteria, but I recommend using our senses to be able to classify them in an intuitive and natural way.",
-    "why_drink_it": "Why we drink wine?!",
-    "third_paragraph": "1. Slows Aging <br/> According to Harvard Medical School, resveratrol, a compound found in the skin of red grapes, slows aging when consumed in moderation. It is believed to be one of the reasons for longevity in regions with high red wine consumption, such as southwest France or Sardinia. <br/> <br/> 2. Aids in Weight Loss <br/> Red wine activates a gene that prevents the formation of new fat cells while stimulating existing ones to cleanse and gradually eliminate them. To see this effect on your figure, remember not to drink more than one glass per day. Obviously, the results will be more visible if accompanied by a balanced diet. <br/> <br/> 3. Boosts Brain Function <br/> Many studies show that drinking red wine moderately but consistently helps prevent dementia and degenerative brain diseases. <br/> <br/> 4. Treats Gum Infections <br/> If you suffer from bleeding gums, don't hesitate to accompany your meals with a small glass of red wine. There are compounds present in grapes that, when fermented into wine, help prevent the appearance of streptococci and bacteria linked to cavities. It is also very effective against gingivitis. <br/> <br/> 5. Protects Against Severe Sunburn <br/> According to scientists from the University of Barcelona, flavonoids found in grapes and wine help reduce the harmful effects of ultraviolet rays on the skin. <br/> <br/> 6. Fights Fatigue <br/> A study published in The FASEB Journal states that resveratrol, present in grapes, improves our condition on days when we feel more apathetic or tired. <br/> <br/> 7. Increases Endorphins <br/> According to a study conducted by the University of California, enjoying a rich and healthy glass of wine releases endorphins in our body, helping us relax and enjoy the moment. <br/> <br/> 8. Cleanses the Palate <br/> It may seem curious, but drinking wine while eating enhances the intensity of flavors thanks to its astringent properties. It reduces the taste of fats and provides a gratifying sensation by cleansing the mouth.",
-    "fourth_paragraph": "9. Good for Lowering Cholesterol <br/> Red wine is a natural treasure rich in polyphenols, one of which is the well-known resveratrol. This antioxidant-rich chemical, according to the Mayo Clinic, helps protect blood vessels by preventing clot formation and reducing bad cholesterol. <br/> <br/> 10. Reduces the Risk of Depression <br/> A study conducted by several Spanish universities with over 5,500 men and women aged 55 to 80 analyzed their drinking habits and found that those who consumed between two and seven glasses of wine per week were less likely to be diagnosed with depression. <br/> <br/> 11. Excellent for Heart Health <br/> In addition to the polyphenols mentioned earlier, red wine is rich in vitamin E, which helps cleanse the blood and blood vessels, protecting cardiovascular health. <br/> <br/> 12. Reduces Cancer Risk <br/> As a powerful antioxidant, red wine is a natural resource capable of blocking the growth of cells responsible for breast or lung cancer. <br/> <br/> 13. Prevents Diseases That Cause Blindness <br/> According to scientists from Washington University School of Medicine, wine can stop the process known as angiogenesis (the formation of new blood vessels in the eye area), which leads to blindness. <br/> <br/> 14. Increases Omega-3 Fatty Acid Levels <br/> A study conducted by researchers from several European countries analyzing adult dietary habits found that moderate red wine drinkers had higher levels of Omega-3 fatty acids in their blood. <br/> <br/> 15. Fights Urinary Infections <br/> Thanks to its antioxidant and astringent properties, red wine prevents bacteria from adhering to the bladder or kidneys, optimizing the filtration and purification of these organs.",
-    "last_paragraph": "Now that you know the true story of DCWine, let's raise a glass together!"
+    "last_paragraph": " "
   },
   "navbar": {
     "home": "Home",
