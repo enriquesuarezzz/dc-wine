@@ -29,7 +29,6 @@ export default async function Header() {
         </PoppinsText>
         <PoppinsText
           fontSize="16px"
-          style="bold"
           className="pt-2 text-white md:pt-4 md:text-black"
         >
           <span dangerouslySetInnerHTML={{ __html: t('header.subtitle') }} />
