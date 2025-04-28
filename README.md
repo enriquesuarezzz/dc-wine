@@ -14,7 +14,7 @@ This is a Next.js eCommerce application designed for selling red wine, white win
 - **Frontend**: Next.js, React
 - **Database**: Firebase Firestore
 - **Payments**: Stripe API
-- **Styling**: Tailwind CSS (or your preferred CSS framework)
+- **Styling**: Tailwind CSS 
 
 ## Installation
 
