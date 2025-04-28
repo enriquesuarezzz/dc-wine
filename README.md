@@ -7,6 +7,9 @@ This is a Next.js eCommerce application designed for selling red wine, white win
 - **Product Management**: Manage and display wines (red, white, sparkling) stored in Firebase.
 - **Cart Functionality**: Add products to a cart, view cart items, and proceed to checkout.
 - **Stripe Payments**: Secure payment processing via Stripe.
+- **Order Email Notifications:**:
+   - Customers receive a confirmation email after purchasing.
+   - Store owner receives a notification email for each new order.
 - **Responsive Design**: Fully responsive UI for both desktop and mobile users.
 
 ## Tech Stack
@@ -66,7 +69,23 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your-publishable-key
 STRIPE_SECRET_KEY=your-secret-key
 ```
 
- ### 5. Run the Development Server
+ ### 5. Set up Nodemailer
+
+You will need an SMTP service (like Gmail, SendGrid, or any other) to send emails.
+Install Nodemailer:
+
+ ```bash
+npm install nodemailer
+ ```
+ Add email configuration to your .env.local:
+  ```bash
+BASE_URL=http://localhost:3000  (update for production)
+EMAIL_USER=your_email_user
+EMAIL_PASS=your_email_password
+ ```
+
+
+ ### 6. Run the Development Server
  ```bash
  npm run dev
  ```
