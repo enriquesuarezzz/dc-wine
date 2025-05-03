@@ -154,7 +154,7 @@ export default function ProductDetails() {
 
         {/* Left Section - Product Name & Characteristics */}
         <div className="flex w-full flex-col gap-1 pt-0 md:w-1/3 md:pt-20">
-          <PoppinsText
+          {/* <PoppinsText
             fontSize="12px"
             className={`w-fit rounded-full px-3 py-1 text-white ${
               product.category === 'red wine'
@@ -167,7 +167,7 @@ export default function ProductDetails() {
             }`}
           >
             {product.category}
-          </PoppinsText>
+          </PoppinsText> */}
           <PoppinsText fontSize="28px" className="mt-2 font-bold">
             {product.name}
           </PoppinsText>
