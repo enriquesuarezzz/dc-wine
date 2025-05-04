@@ -152,9 +152,13 @@ const SearchBar = ({
                         }}
                       >
                         <img
-                          src={product.imageUrl}
+                          src={
+                            product.imageUrl === 'no_image' || !product.imageUrl
+                              ? '/images/no_image.avif'
+                              : product.imageUrl
+                          }
                           alt={product.name}
-                          className="h-12 w-12 rounded-md object-cover"
+                          className="h-12 w-12 rounded-md object-contain"
                         />
                         <span>{product.name}</span>
                       </li>
