@@ -234,8 +234,12 @@ const CheckoutPage = () => {
           <div className="mt-4">
             <p className="text-right font-bold">
               {locale === 'es' ? 'Total: €' : 'Total: $'}
-              {cartItems
-                .reduce((total, item) => total + item.quantity * item.price, 0)
+              {(
+                cartItems.reduce(
+                  (total, item) => total + item.quantity * item.price,
+                  0,
+                ) * 1.07
+              ) // Adding 7% IGIC
                 .toFixed(2)}
             </p>
           </div>
