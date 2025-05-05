@@ -40,8 +40,8 @@ const CartContent = ({ translations }: CartContentProps) => {
     0,
   )
   const shippingCost = 0
-  const igic = subtotal * 0.07
-  const total = subtotal + shippingCost + igic
+  const igic = parseFloat((subtotal * 0.07).toFixed(2))
+  const total = parseFloat((subtotal + shippingCost + igic).toFixed(2))
 
   const handleCheckout = () => {
     // Use the locale dynamically in routing
