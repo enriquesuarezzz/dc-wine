@@ -141,9 +141,9 @@ export default function NavBar({ translations }: NavBarProps) {
                     <img
                       src={item.imageUrl}
                       alt={item.name}
-                      width={25}
-                      height={25}
-                      className="mr-4 rounded-md"
+                      width={50}
+                      height={50}
+                      className="mr-4 rounded-md object-contain"
                     />
                     <div className="flex flex-col items-center justify-center gap-4">
                       <PoppinsText

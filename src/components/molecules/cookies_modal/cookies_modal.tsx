@@ -47,7 +47,7 @@ export default function CookiesModal({ translations }: CookiesModalProps) {
   return (
     showModal && (
       <div className="fixed bottom-0 left-0 z-40 flex h-fit w-fit flex-col justify-between gap-6 rounded-t-3xl bg-mate_black px-6 py-10 backdrop-blur-sm md:bottom-4 md:left-4 md:rounded-3xl">
-        <div className="flex h-fit w-full max-w-[300px] flex-col gap-10">
+        <div className="flex h-fit w-full flex-col gap-10 md:max-w-[300px]">
           {/* Title + description */}
           <div className="flex h-fit w-full flex-col gap-5 text-center">
             <div className="flex items-center justify-center gap-4">
