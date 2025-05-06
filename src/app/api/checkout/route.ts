@@ -45,9 +45,18 @@ export async function POST(req: NextRequest) {
       success_url: successUrl,
       cancel_url: cancelUrl,
       metadata: {
-        shippingDetails: JSON.stringify(shippingDetails),
-        products: JSON.stringify(products),
+        shippingDetails: JSON.stringify({
+          name: shippingDetails.name,
+          email: shippingDetails.email,
+          phone: shippingDetails.phone,
+          city: shippingDetails.city,
+          postalCode: shippingDetails.postalCode,
+          companyName: shippingDetails.companyName,
+          dniNifCif: shippingDetails.dniNifCif,
+          address: shippingDetails.address,
+        }),
         locale,
+        products: JSON.stringify(products),
         product_ids: products
           .map((product: CartItem, index: number) => `${product.name}-${index}`)
           .join(','),
