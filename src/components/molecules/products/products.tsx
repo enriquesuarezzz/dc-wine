@@ -15,7 +15,7 @@ export default function Products({
   const [products, setProducts] = useState<Product[]>([])
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([])
   const [sortOrder, setSortOrder] = useState<string>('') // State for sorting products
-  const [selectedCategory, setSelectedCategory] = useState<string>('') // State for category filter
+  // const [selectedCategory, setSelectedCategory] = useState<string>('') // State for category filter
   const [selectedOrigin, setSelectedOrigin] = useState<string>('') // State for origin filter
   const [selectedGrape, setSelectedGrape] = useState<string>('') // State for grape  filter
   const [origins, setOrigins] = useState<string[]>([]) // State to store unique origins
@@ -48,14 +48,14 @@ export default function Products({
   useEffect(() => {
     let updatedProducts = [...products]
 
-    // ✅ Filter by category
-    if (selectedCategory) {
-      updatedProducts = updatedProducts.filter(
-        (product) =>
-          product.category?.trim().toLowerCase() ===
-          selectedCategory.trim().toLowerCase(),
-      )
-    }
+    // // ✅ Filter by category
+    // if (selectedCategory) {
+    //   updatedProducts = updatedProducts.filter(
+    //     (product) =>
+    //       product.category?.trim().toLowerCase() ===
+    //       selectedCategory.trim().toLowerCase(),
+    //   )
+    // }
 
     // ✅ Filter by origin
     if (selectedOrigin) {
@@ -83,7 +83,7 @@ export default function Products({
     }
 
     setFilteredProducts(updatedProducts) // Update the filtered products state
-  }, [sortOrder, selectedCategory, selectedOrigin, selectedGrape, products])
+  }, [sortOrder, selectedOrigin, selectedGrape, products])
 
   return (
     <div className="mx-0 flex flex-col pt-6 lg:mx-20 lg:flex-row lg:pt-24">
@@ -107,7 +107,7 @@ export default function Products({
           </select>
         </div>
 
-        {/* Category Dropdown */}
+        {/* Category Dropdown
         <div className="mb-4">
           <label className="block text-sm font-medium">
             {translations.category}
@@ -124,7 +124,7 @@ export default function Products({
               {translations.sparkling_wine}
             </option>
           </select>
-        </div>
+        </div> */}
 
         {/* Origin Dropdown */}
         <div className="mb-4">
