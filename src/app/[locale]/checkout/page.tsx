@@ -85,6 +85,7 @@ const CheckoutPage = () => {
       })
 
       const { sessionId } = await res.json()
+
       if (stripe) {
         await stripe.redirectToCheckout({ sessionId })
       }
