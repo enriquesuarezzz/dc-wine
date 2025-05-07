@@ -29,7 +29,7 @@ export default function ProductDetails() {
             { method: 'HEAD' },
           )
           setHasTechnicalSheet(response.ok)
-        } catch (error) {
+        } catch {
           setHasTechnicalSheet(false)
         }
       }
