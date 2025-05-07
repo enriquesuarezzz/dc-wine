@@ -15,8 +15,7 @@ type CartItem = {
   image: string
 }
 
-// Ensure Firebase Admin SDK is initialized properly
-
+// Initialize Firebase Admin SDK if not already initialized
 if (!admin.apps.length) {
   const serviceAccount = {
     type: 'service_account',
@@ -81,7 +80,6 @@ export async function POST(req: NextRequest) {
       // Loop through each purchased product and update stock
       for (const item of lineItems) {
         const productName: string = item.description ?? 'unknown-product'
-
         const quantityPurchased = item.quantity ?? 0
 
         if (!productName || quantityPurchased <= 0) {
@@ -108,7 +106,6 @@ export async function POST(req: NextRequest) {
         // Assuming there's only one product matching the name
         const productDoc = productQuerySnapshot.docs[0]
         const productCode = productDoc.id // Firestore document ID is the product code
-
         const productData = productDoc.data()
 
         // Ensure stock is valid
@@ -116,7 +113,6 @@ export async function POST(req: NextRequest) {
 
         if (currentStock >= quantityPurchased) {
           const newStock = currentStock - quantityPurchased
-
           await productDoc.ref.update({ stock: newStock })
         } else {
           console.error(
@@ -124,6 +120,20 @@ export async function POST(req: NextRequest) {
           )
         }
       }
+
+      const orderMetadata = sessionDetails.metadata || {}
+      const orderId = orderMetadata.orderId
+
+      // Retrieve the order details from Firebase using the orderId
+      const orderDoc = await db.collection('orders').doc(orderId).get()
+      const orderData = orderDoc.data()
+
+      if (!orderData) {
+        throw new Error('Order not found')
+      }
+
+      const products = orderData.products
+      const shippingDetails = orderData.shippingDetails
 
       // Mark order as completed in Firestore
       const orderRef = db.collection('orders').doc(sessionId)
@@ -142,17 +152,8 @@ export async function POST(req: NextRequest) {
 
       const metadata = sessionDetails.metadata || {}
       const locale = metadata.locale || 'en'
-      const shippingDetails = JSON.parse(metadata.shippingDetails || '{}')
-      const products: CartItem[] = JSON.parse(metadata.products || '[]')
 
-      // Calculate total price
-      const totalPrice = products.reduce(
-        (total: number, product: CartItem) =>
-          total + product.price * product.quantity,
-        0, // Initial total value
-      )
-
-      // Conditional content based on the locale
+      // Reuse `shippingDetails` and `products` for the email content
       const greeting =
         locale === 'es'
           ? `Estimado ${shippingDetails.name},`
@@ -161,26 +162,18 @@ export async function POST(req: NextRequest) {
         locale === 'es'
           ? '¡Gracias por tu pedido! Aquí están los detalles:'
           : 'Thank you for your order! Here are the details:'
-      const shippingInfoTitle =
-        locale === 'es' ? 'Información de envío:' : 'Shipping Information:'
-      const phoneLabel = locale === 'es' ? 'Teléfono:' : 'Phone:'
-      const companyNameLabel =
-        locale === 'es' ? 'Nombre de la empresa:' : 'Company Name:'
-      const dniNifCifLabel = locale === 'es' ? 'DNI/NIE/CIF:' : 'DNI/NIE/CIF:'
-      const addressLabel = locale === 'es' ? 'Dirección:' : 'Address:'
-      const cityLabel = locale === 'es' ? 'Ciudad:' : 'City:'
-      const postalCodeLabel =
-        locale === 'es' ? 'Código Postal:' : 'Postal Code:'
-      const totalPriceLabel = locale === 'es' ? 'Precio total:' : 'Total Price:'
-      const productHeader = locale === 'es' ? 'Producto' : 'Product'
-      const quantityHeader = locale === 'es' ? 'Cantidad' : 'Quantity'
-      const priceHeader = locale === 'es' ? 'Precio' : 'Price'
-      const totalHeader = locale === 'es' ? 'Total' : 'Total'
 
       const contactUsMessage =
         locale === 'es'
           ? 'Te notificaremos una vez que tu pedido haya sido enviado. Si tienes alguna pregunta, contáctanos.'
           : 'We will notify you once your order has been shipped. If you have any questions, please contact us.'
+
+      // Calculate total price
+      const totalPrice = products.reduce(
+        (total: number, product: CartItem) =>
+          total + product.price * product.quantity,
+        0,
+      )
 
       // Create HTML email content
       const htmlContent = `
@@ -197,16 +190,16 @@ export async function POST(req: NextRequest) {
             <table border="1" cellpadding="5" style="width: 100%; border-collapse: collapse; margin-top: 20px; color: #333;">
               <thead>
                 <tr>
-                  <th style="background-color: #000000; color: white; text-align: left; padding: 8px;">${productHeader}</th>
-                  <th style="background-color: #000000; color: white; text-align: left; padding: 8px;">${quantityHeader}</th>
-                  <th style="background-color: #000000; color: white; text-align: left; padding: 8px;">${priceHeader}</th>
-                  <th style="background-color: #000000; color: white; text-align: left; padding: 8px;">${totalHeader}</th>
+                  <th style="background-color: #000000; color: white; text-align: left; padding: 8px;">Product</th>
+                  <th style="background-color: #000000; color: white; text-align: left; padding: 8px;">Quantity</th>
+                  <th style="background-color: #000000; color: white; text-align: left; padding: 8px;">Price</th>
+                  <th style="background-color: #000000; color: white; text-align: left; padding: 8px;">Total</th>
                 </tr>
               </thead>
               <tbody>
                 ${products
                   .map(
-                    (product: CartItem) => `
+                    (product: CartItem) => `  
                       <tr>
                         <td>${product.name}</td>
                         <td>${product.quantity}</td>
@@ -218,16 +211,16 @@ export async function POST(req: NextRequest) {
               </tbody>
             </table>
 
-            <p><strong>${totalPriceLabel} €${totalPrice.toFixed(2)}</strong></p>
+            <p><strong>Total Price: €${totalPrice.toFixed(2)}</strong></p>
 
-            <p><strong>${shippingInfoTitle}</strong></p>
+            <p><strong>Shipping Information:</strong></p>
             <ul>
-            <li><strong>${phoneLabel}</strong> ${shippingDetails.phone}</li>
-              <li><strong>${companyNameLabel}</strong> ${shippingDetails.companyName}</li>
-              <li><strong>${dniNifCifLabel}</strong> ${shippingDetails.dniNifCif}</li>
-              <li><strong>${addressLabel}</strong> ${shippingDetails.address}</li>
-              <li><strong>${cityLabel}</strong> ${shippingDetails.city}</li>
-              <li><strong>${postalCodeLabel}</strong> ${shippingDetails.postalCode}</li>
+              <li><strong>Phone:</strong> ${shippingDetails.phone}</li>
+              <li><strong>Company Name:</strong> ${shippingDetails.companyName}</li>
+              <li><strong>DNI/NIE/CIF:</strong> ${shippingDetails.dniNifCif}</li>
+              <li><strong>Address:</strong> ${shippingDetails.address}</li>
+              <li><strong>City:</strong> ${shippingDetails.city}</li>
+              <li><strong>Postal Code:</strong> ${shippingDetails.postalCode}</li>
             </ul>
 
             <p>${contactUsMessage}</p>
@@ -257,12 +250,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ received: true })
     } catch (error) {
       console.error(
-        'Error updating stock:',
+        'Error handling webhook:',
         error instanceof Error ? error.message : error,
       )
-
       return NextResponse.json(
-        { error: 'Failed to update stock' },
+        { error: 'Failed to update stock or process order' },
         { status: 500 },
       )
     }
