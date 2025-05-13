@@ -129,11 +129,14 @@ const SearchBar = ({
                 aria-label="Close Search"
                 className="absolute right-1 top-1/2 -translate-y-1/2 transform rounded-full p-2"
               >
-                <Close color="black" />
+                <Close
+                  color="black"
+                  className="transition-all duration-300 hover:scale-110"
+                />
               </button>
 
               <div className="absolute left-1 top-1/2 -translate-y-1/2 transform md:left-5">
-                <SearchIcon />
+                <SearchIcon className="transition-all duration-300 hover:scale-110" />
               </div>
             </div>
 
@@ -179,7 +182,7 @@ const SearchBar = ({
           className="rounded-full p-2"
           aria-label="Open Search"
         >
-          <SearchIcon />
+          <SearchIcon className="transition-all duration-300 hover:scale-110" />
         </button>
       )}
     </div>
