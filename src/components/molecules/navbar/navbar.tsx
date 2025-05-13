@@ -100,7 +100,7 @@ export default function NavBar({ translations }: NavBarProps) {
           noResults={translations.search_bar.no_results}
         />
         <button aria-label="Add to Cart" onClick={() => setIsCartOpen(true)}>
-          <Cart />
+          <Cart className="transition-all duration-300 hover:scale-110" />
         </button>
         <LocaleSwitcher />
       </div>
