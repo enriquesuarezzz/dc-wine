@@ -91,7 +91,7 @@ EMAIL_PASS=your_email_password
  ```
  This will start the Next.js development server at http://localhost:3000.
 
- Firebase Setup
+🧠 Firebase Setup
 For Firestore, create a collection for storing wine products. Each product can have the following structure:
 ```bash
 {
@@ -104,11 +104,11 @@ For Firestore, create a collection for storing wine products. Each product can h
 }
  ```
 
-### Stripe Integration
+### 💸 Stripe Integration
 The Stripe integration allows users to complete their orders by securely entering their payment information.
 
 Frontend: The user adds wines to the cart, proceeds to checkout, and submits payment via Stripe.
 Backend: The payment is processed via the Stripe API. After successful payment, the order is confirmed.
 
-### License
+### 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
