@@ -2,7 +2,7 @@
 
 This is a Next.js eCommerce application designed for selling red wine, white wine, and sparkling wines. It uses Firebase as the database and Stripe for processing payments.
 
-## Features
+## 🚀 Features
 
 - **Product Management**: Manage and display wines (red, white, sparkling) stored in Firebase.
 - **Cart Functionality**: Add products to a cart, view cart items, and proceed to checkout.
@@ -12,14 +12,14 @@ This is a Next.js eCommerce application designed for selling red wine, white win
    - Store owner receives a notification email for each new order.
 - **Responsive Design**: Fully responsive UI for both desktop and mobile users.
 
-## Tech Stack
+## 📦 Tech Stack
 
 - **Frontend**: Next.js, React
 - **Database**: Firebase Firestore
 - **Payments**: Stripe API
 - **Styling**: Tailwind CSS 
 
-## Installation
+## 🛠️ Installation
 
 ### 1. Clone the repository
 
