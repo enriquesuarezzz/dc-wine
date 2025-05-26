@@ -179,11 +179,13 @@ export default function Products({
               key={product.id}
             >
               <Link href={`/${locale}/products/${product.id}`} passHref>
-                <img
-                  src={product.imageUrl}
-                  alt={product.name}
-                  className="mb-4 h-48 w-full rounded-md object-contain"
-                />
+                <div className="h-[200px] w-full overflow-hidden rounded-md">
+                  <img
+                    src={product.imageUrl}
+                    alt={product.name}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
                 {/* <PoppinsText
                   fontSize="12px"
                   className={`w-fit rounded-full px-3 py-1 text-white ${
@@ -198,11 +200,18 @@ export default function Products({
                 >
                   {product.category}
                 </PoppinsText> */}
-                <PoppinsText fontSize="14px">{product.name}</PoppinsText>
-                <PoppinsText fontSize="14px">{product.price} €</PoppinsText>
-                <PoppinsText fontSize="12px" className="text-gray-600">
-                  {product.origin} - {product.grape}
-                </PoppinsText>
+                <div className="mt-2 text-center">
+                  <PoppinsText
+                    fontSize="14px"
+                    className="line-clamp-2 pt-2 md:pt-6"
+                  >
+                    {product.name}
+                  </PoppinsText>
+                  <PoppinsText fontSize="14px">{product.price} €</PoppinsText>
+                  <PoppinsText fontSize="12px" className="text-gray-600">
+                    {product.origin} - {product.grape}
+                  </PoppinsText>
+                </div>
               </Link>
             </div>
           ))
