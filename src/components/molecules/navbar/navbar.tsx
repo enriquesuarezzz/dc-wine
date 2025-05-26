@@ -143,7 +143,7 @@ export default function NavBar({ translations }: NavBarProps) {
                       alt={item.name}
                       width={50}
                       height={50}
-                      className="mr-4 rounded-md object-contain"
+                      className="mr-4 max-h-[80px] max-w-[80px] rounded-md object-contain"
                     />
                     <div className="flex flex-col items-center justify-center gap-4">
                       <PoppinsText
