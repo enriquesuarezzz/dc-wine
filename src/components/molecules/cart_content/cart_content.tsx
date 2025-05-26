@@ -84,11 +84,14 @@ const CartContent = ({ translations }: CartContentProps) => {
                 className="grid grid-cols-12 items-center border-b py-4"
               >
                 <div className="col-span-6 flex items-center gap-4">
-                  <img
-                    src={item.imageUrl}
-                    alt={item.name}
-                    className="max-h-[50px] rounded-md object-cover md:max-h-[100px]"
-                  />
+                  <div className="h-[70px] w-[70px] overflow-hidden rounded-md">
+                    <img
+                      src={item.imageUrl}
+                      alt={item.name}
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+
                   <PoppinsText fontSize="19px">{item.name}</PoppinsText>
                 </div>
                 <div className="col-span-4 flex flex-col items-center gap-1 md:gap-2">
