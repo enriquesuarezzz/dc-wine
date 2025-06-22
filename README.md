@@ -111,12 +111,12 @@ Create a `products` collection in Firestore. Each document can include:
 
 ```json
 {
-  "id": "unique-id",
-  "name": "Mojo Picón Rojo",
-  "description": "Traditional spicy red Canarian sauce.",
-  "price": 8.99,
-  "image_url": "https://example.com/images/mojo-rojo.jpg",
-  "category": "sauces | gofio | cheese | wine | sweets"
+  "id": "Unique id",
+  "name": "Product Name",
+  "description": "Product Description",
+  "price": Product Price,
+  "image": "image Url",
+  "category": "Product category"
 }
 ```
 
