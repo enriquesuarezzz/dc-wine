@@ -1,5 +1,5 @@
 
-# abor Volcánico 🌋  
+# Sabor Volcánico 🌋  
 **Next.js + Tailwind CSS Ecommerce with Firebase and Stripe**
 
 **Sabor Volcánico** is a modern eCommerce platform built with Next.js for selling gourmet products from the Canary Islands — including mojo sauces, gofio, cheeses, wines, and more. It uses **Firebase** for product and order management and **Stripe** for secure payment processing.
