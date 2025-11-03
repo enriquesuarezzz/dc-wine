@@ -17,6 +17,19 @@ type CartItem = {
 
 export async function POST(req: NextRequest) {
   try {
+    const stripeSecret = process.env.STRIPE_SECRET_KEY
+    if (!stripeSecret) {
+      console.error('STRIPE_SECRET_KEY is not set')
+      return new NextResponse(
+        JSON.stringify({ error: 'Stripe not configured' }),
+        { status: 500 },
+      )
+    }
+
+    const stripe = new Stripe(stripeSecret, {
+      apiVersion: '2025-02-24.acacia',
+    })
+
     const { products, locale, shippingDetails } = await req.json()
 
     const igicRate = 0.07 // 7% IGIC
