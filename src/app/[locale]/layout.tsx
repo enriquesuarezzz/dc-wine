@@ -94,11 +94,11 @@ export default async function RootLayout({
       <body className={`${BarlowText.variable} ${geistMono.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <CartProvider>
-            <Navbar translations={navbarTranslations} />
+            {/* <Navbar translations={navbarTranslations} /> */}
             <main className="flex-1">{children}</main>
           </CartProvider>
           <CookiesPopup translations={cookiesTranslations} />
-          <Footer />
+          {/* <Footer /> */}
         </NextIntlClientProvider>
         <Analytics />
       </body>
