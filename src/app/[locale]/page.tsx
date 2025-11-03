@@ -1,8 +1,3 @@
-import AgeVerificationPopup from '@/components/molecules/age_verification_pop_up/age_verification_pop_up'
-import Features from '@/components/molecules/features/features'
-import FreeOrderBanner from '@/components/molecules/free_order_banner/free_order_banner'
-import Header from '@/components/molecules/header/header'
-import TopSellingProducts from '@/components/molecules/top_selling_products/top_selling_products'
 import { getTranslations } from 'next-intl/server'
 
 export async function generateMetadata() {
@@ -15,7 +10,7 @@ export async function generateMetadata() {
 }
 
 export default async function HomePage() {
-  const t = await getTranslations('age_verification_pop_up')
+  // const t = await getTranslations('age_verification_pop_up')
   return (
     <div className="flex h-screen w-full items-center justify-center bg-black">
       <div className="text-center">
