@@ -1,0 +1,244 @@
+{
+  "home_page": {
+    "meta_title": "Inicio - DcWine",
+    "meta_description": "Bienvenido a DcWine, tu plataforma de confianza para descubrir y comprar los mejores vinos, directamente desde las mejores bodegas.",
+    "header": {
+      "title": "DCWine",
+      "subtitle": "Un gran vino es un gran arte, amigo mío. Y DCWine es en efecto, un pastor... cuya misión  es ofrecer  al público  otra forma de gran arte y  orientar su apreciación.",
+      "button": "Compra ahora"
+    },
+    "top_selling_products": {
+      "title": "Descubre nuestros productos más vendidos",
+      "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
+      "dark_wine": "Vino tinto",
+      "white_wine": "Vino blanco",
+      "exotic_wine": "Vinos Rosados"
+    },
+    "features": {
+      "feature_1": {
+        "title": "DCWine, la Pasión",
+        "subtitle": "El vino se define como un producto cultural y histórico, algo que siempre ha estado presente en todas las áreas de nuestra vida, ya sea a través de la gastronomía, la agricultura o simplemente en los eventos más lúdicos. El origen del vino es muy antiguo y estrechamente ligado al desarrollo del hombre."
+      },
+      "feature_2": {
+        "title": "El Prosecco",
+        "subtitle": "Las colinas de Prosecco di Conegliano y Valdobbiadene han sido declaradas Patrimonio de la Humanidad por la UNESCO (7 de julio 2018) debido al excepcional valor universal del paisaje del Véneto, estas colinas representan el mundo del prosecco italiano: treinta kilómetros de pendientes empinadas cubiertas de viñedose."
+      }
+    },
+    "free_order_message": "🚚 Envíos gratis en todos los pedidos!"
+  },
+  "about_us_page": {
+    "meta_title": "Sobre Nosotros - DcWine",
+    "meta_description": "Descubre la historia detrás de DcWine, nuestra pasión por los vinos de calidad y por qué creemos en brindarte la mejor experiencia vinícola.",
+    "title": "Expertos en Vinos, Apasionados del Sabor",
+    "subtitle": "Con años de experiencia y una pasión inigualable por el buen gusto, nos hemos convertido en el lugar favorito de quienes buscan calidad, asesoría experta y una experiencia única. Desde vinos clásicos hasta joyas por descubrir, aquí el vino se disfruta desde la elección.",
+    "first_paragraph": "Nacida en el año 2018, con sede en Lanzarote, desarrollando un proyecto estudiado y preparado para satisfacer el cliente de nivel superior. Fue así que empezamos, buscando referencias cualificadas y bodegas que tuvieran el mismo objetivos que nosotros. <br/> <br/> Todos estamos relacionados con el vino de alguna o otra manera, comentamos de él, celebramos en su nombre, lo bebemos, brindamos y por último disfrutamos de cada copa con la que maridamos distintos tipos de alimentos que lo acompañan. A su alrededor, construimos y celebramos ocasiones que se convierten en experiencias únicas y recuerdos inolvidables que quedan grabados en nuestra memoria, pero ¿sabemos qué es el vino?.",
+    "second_paragraph": "Definamos al vino como el resultado de la fermentación del mosto de la uva. Llamamos mosto al jugo que se obtiene como resultado del estrujado de las uvas, es decir cuando estas son aplastadas y se obtiene el jugo que reposa en grandes tanques, regularmente de acero inoxidable y que tienen una temperatura controlada, lo que permite que comience el proceso de fermentado donde se transforma el azúcar en alcohol. <br/> <br/> Para conocer las diferentes clasificaciones y tipos de vino se tienen muchos criterios, más les recomiendo usar nuestros sentidos para poder clasificarlos de manera intuitiva y naturales.",
+    "last_paragraph": "“El vino es agua cargada de sol”. La poética sabiduría del físico, filósofo y astrónomo Galileo Galilei. Todo empieza con el suelo, la viña, la uva. El olor del viñedo-como inhalar el principio de todo. Despierta algo ancestral, algo primordial…como decir, algo profundamente grabado, y probablemente subconsciente, en alguna parte de mi alma. <br/> <br/> Me gusta como el vino evoluciona, como, si abro una botella hoy, sabría diferente que si la abriera cualquier otro día. Por que una botella de vino está en realidad viva; está constantemente evolucionando y ganando complejidad. <br/> <br/> Mete la nariz. De verdad, no seas tímido y pon la nariz dentro. Un poco de cítrico, puede que algo de frambuesa, fruta de la pasión, y hay una fragancia de espárrago y como un aleteo de nuez de queso Edam."
+  },
+  "navbar": {
+    "home": "Home",
+    "about_us": "Sobre Nosotros",
+    "products": "Productos",
+    "select_language": "Selecciona un idioma",
+    "search_bar": {
+      "search_placeholder": "Buscar un producto...",
+      "no_results": "No se han encontrado productos"
+    },
+    "cart": {
+      "title": "Productos añadidos al carrito",
+      "cart_page_title": "Resumen de tu compra",
+      "empty": "Tu carrito está vacio",
+      "remove": "remove",
+      "quantity": "Cantidad: ",
+      "subtotal": "Subtotal: ",
+      "total": "Total: ",
+      "clear_cart": "Vaciar carrito"
+    }
+  },
+  "footer": {
+    "home": "Home",
+    "about_us": "Sobre Nosotros",
+    "products": "Productos",
+    "cookies": "Política de Cookies",
+    "privacy": "Política de Privacidad",
+    "terms_and_conditions": "Términos y condiciones",
+    "shipping_and_return_policy": "Política de envios y devoluciones"
+  },
+  "cart_page": {
+    "title": "Resumen de tu compra",
+    "empty": "Tu carrito está vacio",
+    "product": "Producto",
+    "quantity": "Cantidad",
+    "price": "Precio",
+    "remove": "Eliminar",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "clear_cart": "Vaciar carrito",
+    "shipping": "Envío",
+    "checkout": "Ir a pagar"
+  },
+  "contact_page": {
+    "title": "Esta es la pagina de contacto"
+  },
+  "products_page": {
+    "meta_title": "Productos - DcWine",
+    "meta_description": "Explora nuestra amplia selección de vinos premium, incluyendo vinos tintos, blancos y espumosos, provenientes de las mejores bodegas.",
+    "title": "Productos",
+    "filters": "Filtros",
+    "sort_by_price": "Ordenar por precio",
+    "default": "Por defecto",
+    "low_to_high": "De menor a mayor",
+    "high_to_low": "De mayor a menor",
+    "category": "Categoría",
+    "all_categories": "Todas las categorias",
+    "red_wine": "Vino tinto",
+    "white_wine": "Vino blanco",
+    "sparkling_wine": "Vino de espumas",
+    "grape_type": "Tipo de Uva",
+    "origin": "Denominación de origen",
+    "all_origins": "Todas las denominaciones de origen",
+    "all_grape_types": "Todos los tipos de uvas"
+  },
+  "privacy_policy_page": {
+    "meta_title": "Política de Privacidad - DcWine",
+    "meta_description": "Lee nuestra Política de Privacidad para entender cómo recopilamos, usamos y protegemos tus datos personales al utilizar DcWine.",
+    "title": "Política de Privacidad",
+    "description_start": "A continuación, le informamos sobre la política de privacidad que se aplicará en aquellos casos en los que el interesado, a través de la navegación por el sitio web",
+    "description_end": ", nos facilite sus datos de carácter personal. Esta política informará del destino de los datos personales que nos facilita, incluyendo aquellos que recabamos por el hecho de navegar en nuestro Sitio Web.",
+    "identification_title": "1. Identificación de Responsable",
+    "identification_list": {
+      "owner": "Titular: DCWine (en adelante el “Responsable”)",
+      "address": "Domicilio social: Calle Chabusquillo (el), 21 35500 - ARRECIFE (LAS PALMAS)",
+      "nif": "N.I.F: X67755528G",
+      "email": "E-mail: lanzarotedcwine@gmail.com",
+      "phone": "Teléfono: 828042420"
+    },
+    "information_and_consent_title": "2. Información y Consentimiento",
+    "information_and_consent_description": "De conformidad con lo dispuesto en el Reglamento General UE 679/2016 de Protección de Datos ( “RGPD”) y en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos y Garantía de los Derechos Digitales ( “LOPDGDD”) mediante la aceptación de la presente Política de Privacidad el interesado web (el “Interesado”) PRESTA SU CONSENTIMIENTO informado, expreso, libre e inequívoco para tratar los datos personales recabados a través del Sitio Web, ya sea través de formularios habilitados al efecto o bien a través de la información recabada por las cookies. Asimismo, el Interesado consiente que estos datos sean tratados por el Responsable para prestar sus servicios aplicando las medidas organizativas y de seguridad requeridas por el RGPD. Todos los datos personales solicitados al Interesado en el Sitio Web son obligatorios, no siendo posible prestar el servicio sin el correspondiente tratamiento de datos por parte del Responsable. Ello, no obstante, la navegación en el Sitio Web es gratuita. El Interesado garantiza que los datos personales facilitados al Responsable son ciertos y exactos, con lo que el Responsable no se hará responsable de cualquier incidencia derivada de la inexactitud o falsedad de la información proporcionada por los Interesados, más allá de la posibilidad que tiene el Interesado de ejercitar su derecho de rectificación. En el caso que el Interesado nos facilite datos de terceras personas, como responsable o encargado del tratamiento, será responsable de cumplir con toda la normativa de protección de datos aplicable. Además, el Interesado garantiza que ha obtenido todos los consentimientos, autorizaciones y/o aprobaciones legalmente necesarias antes de incluir datos personales de terceros en el Sitio Web.",
+    "table_data_activity": "ACTIVIDAD: CONTACTO O PEDIDOS",
+    "table_origin_title": "PROCEDENCIA",
+    "table_origin_description": "Del propio Interesado a través del envío de comunicaciones al correo electrónico indicado en el Sitio Web, así como a través de su línea de atención telefónica.",
+    "table_legal_title": "BASE JURÍDICA",
+    "table_legal_description": "Reglamento General de Protección de Datos, en particular: Art 6.1 b): petición de medidas precontractuales.",
+    "table_treatment_title": "FINES TRATAMIENTO",
+    "table_treatment_description": "Atender y responder las consultas solicitadas por el Interesado y a sus pedidos.",
+    "table_collective_title": "COLECTIVO",
+    "table_collective_description": "Personas físicas o jurídicas.",
+    "table_data_category_title": "CATEGORÍA DE DATOS",
+    "table_data_category_description": "Datos personales, datos de envío, datos de facturación.",
+    "table_recipients_title": "DESTINATARIOS",
+    "table_recipients_description": "No está prevista la cesión a terceros, salvo obligación legal.",
+    "table_international_title": "TRANSFERENCIA INTERNACIONAL",
+    "table_international_description": "No está prevista la transferencia internacional de datos.",
+    "table_storage_title": "PLAZOS DE CONSERVACIÓN",
+    "table_storage_description": "Los datos serán conservados hasta que el Interesado retire su consentimiento o haya acabado la finalidad para la que fueron recabados, salvo que los datos deban mantenerse por una obligación legal.",
+    "data_of_the_interested_party_title": "3. Datos del Interesado",
+    "data_of_the_interested_party_description": "El Interesado garantiza que es mayor de dieciocho (18) años y que los datos aportados son verdaderos, exactos, completos y actualizados, siendo este responsable de cualquier daño o perjuicio, directo o indirecto, que pudiera ocasionarse como consecuencia del incumplimiento de tal obligación, más allá de la posibilidad que tiene el Interesado de ejercitar su derecho de rectificación. En el caso de que los datos aportados pertenecieran a un tercero, el Interesado garantiza que ha informado a dicho tercero de los aspectos contenidos en este documento y obtenido su autorización para facilitar sus datos al responsable para los fines anteriormente señalados. El Responsable no puede garantizar la absoluta invulnerabilidad de los sistemas, por tanto, no asume ninguna responsabilidad por los daños y perjuicios derivados de alteraciones que terceros puedan causar en los sistemas informáticos, documentos electrónicos o ficheros.",
+    "cookies_policy_title": "4. Política de Cookies",
+    "cookies_policy_description": "De conformidad con lo dispuesto por el RGPD y la Ley 34/2002, de Servicios de la Sociedad de la Información, todos los datos de carácter personal obtenidos mediante las cookies durante la utilización del Sitio Web serán tratados de conformidad con los dispuesto en la Política de Cookies",
+    "exercise_of_rights_title": "5. Ejercicio de Derechos",
+    "exercise_of_rights_description": "De conformidad con lo dispuesto en el RGPD, le informamos que puede ejercer sus derechos de acceso, rectificación, supresión, oposición, portabilidad de los datos y limitación del tratamiento directamente ante el Responsable.Para el ejercicio de dichos derechos, el Interesado podrá enviar un mensaje al efecto, indicando nombre, apellidos, email, número de DNI o pasaporte, a la siguiente dirección de correo electrónico: lanzarotedcwine@gmail.com. El Interesado también podrá ejercer sus derechos mediante la presentación de una reclamación ante la",
+    "acceptance_of_the_privacy_policy_title": "6. Aceptación de la Política de Privacidad",
+    "acceptance_of_the_privacy_policy_description": "El Interesado RECONOCE Y ACEPTA HABER LEÍDO Y COMPRENDIDO la presente Política de Privacidad cuyo contenido constituye la totalidad del acuerdo entre el Interesado y el Responsable con respecto al uso y tratamiento de su información personal. El Interesado expresamente acepta obligarse en los términos de la presente Política de Privacidad, en toda su extensión y alcance, sin exceptuar cualquiera de sus disposiciones.Será indispensable la aceptación expresa del presente cuando el Interesado se registre a través del Sitio Web rellenando el correspondiente formulario de registro."
+  },
+  "terms_and_conditions_page": {
+    "meta_title": "Términos y Condiciones - DcWine",
+    "meta_description": "Lee nuestros Términos y Condiciones para conocer las reglas y pautas de uso de nuestro sitio web, incluyendo políticas de pago, envío y reembolso. Compra con confianza.",
+    "title": "Términos y Condiciones",
+    "first_paragraph": "Te pedimos que leas detenidamente nuestros Términos y Condiciones, ya que al hacer uso de nuestros servicios estás aceptando cumplir con las disposiciones aquí establecidas. <br/> <br/> Alcance del Contrato <br/> <br/> Nuestros Términos y Condiciones rigen todas las transacciones comerciales realizadas en nuestra tienda en línea y se aplican a todos los consumidores que puedan recibir entregas en las Islas Canarias. El Sitio Web está dirigido principalmente a Usuarios residentes en Islas Canarias, España. DCWine no asegura que el Sitio Web cumpla con legislaciones de otros países, ya sea total o parcialmente. DCWine declina toda responsabilidad que se pueda derivar de dicho acceso, así como tampoco asegura envíos fuera de las Islas Canarias. Nos reservamos el derecho de cancelar cualquier pedido que sospechemos sea fraudulento, especulativo o realizado de mala fe. Si razonablemente se pudiera considerar que se ha hecho una compra de esta índole, podría ser anulada y se informaría a las autoridades pertinentes. El Usuario declara ser mayor de 18 años y tener capacidad legal para celebrar contratos a través de este Sitio Web. Asimismo debe facilitar datos de contacto veraces y lícitos, por ejemplo, dirección de correo electrónico, dirección postal y/u otros datos. El Usuario podrá formalizar, a su elección, con DCWine el contrato de compraventa de los productos deseados en cualquiera de los idiomas en los que los presentes Términos y Condiciones estén disponibles en este Sitio Web. A efectos de estos Términos y Condiciones se entiende que la actividad que DCWine desarrolla a través del Sitio Web comprende: -Venta de vinos. Además de leer los presentes Términos y Condiciones, antes de acceder, navegar y/o usar esta página web, el Usuario ha de haber leído el Aviso Legal, la Política de Cookies, y la Política de Privacidad y de protección de datos de DCWine. Al utilizar este Sitio Web o al hacer y/o solicitar la adquisición de un producto a través del mismo el Usuario consiente quedar vinculado por estas Condiciones y por todo lo anteriormente mencionado, por lo que si no está de acuerdo con todo ello, no debe usar este Sitio Web. Asimismo, se informa que estos Términos y Condiciones podrían ser modificadas. El Usuario es responsable de consultarlas cada vez que acceda, navegue y/o use el Sitio Web ya que serán aplicables aquellas que se encuentren vigentes en el momento en que se solicite la adquisición de productos y/o servicios. Para todas las preguntas que el Usuario pueda tener en relación con estos Términos y Condiciones puede ponerse en contacto con el titular utilizando los datos de contacto facilitados en el Aviso Legal, en su caso, utilizando el formulario de contacto. <br/> <br/> Proceso de compra <br/> <br/> Los Usuarios pueden comprar en el Sitio Web por los medios y formas establecidos. Deberán seguir el procedimiento de compra y/o adquisición online de www.dcwinecanarias.com, durante el cual varios productos pueden ser seleccionados y añadidos al carrito, cesta o espacio final de compra y, finalmente, hacer clic en: &#39;Comprar&#39;. Asimismo, el Usuario deberá rellenar y/o comprobar la información que en cada paso se le solicita, aunque, durante el proceso de compra, antes de realizar el pago, se pueden modificar los datos de la compra. Una vez el procedimiento de compra ha concluido, el Usuario consiente que el Sitio Web genere una factura electrónica que se hará llegar al Usuario a través del correo electrónico. Asimismo, el Usuario puede, si así lo desea, obtener una copia de su factura en papel, solicitándolo a DCWine utilizando los espacios de contacto del Sitio Web o a través de los datos de contacto facilitados en el Aviso Legal. El Usuario reconoce estar al corriente, en el momento de la compra, de ciertas condiciones particulares de venta que conciernen al producto en cuestión y que se muestran junto a la presentación o, en su caso, imagen de éste en su página del Sitio Web, indicando, a modo enunciativo, pero no exhaustivo, y atendiendo a cada caso: nombre, precio, componentes, peso, cantidad, color, detalles de los productos, o características; y reconoce que la realización del pedido de compra materializa la aceptación plena y completa de las condiciones particulares de venta aplicables a cada caso. Las comunicaciones, órdenes de compra y pagos que intervengan durante las transacciones efectuadas en el Sitio Web podrían ser archivadas y conservadas en los registros informatizados de DCWine con el fin de constituir un medio de prueba de las transacciones, en todo caso, respetando las condiciones razonables de seguridad y las leyes y normativas vigentes que a este respecto sean de aplicación, y particularmente atendiendo al Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, y a los derechos que asisten a los Usuarios conforme a la política de privacidad de este Sitio Web. <br/> <br/> Precios y pagos  <br/> <br/> Ofrecemos diversas formas de pago para tu comodidad, incluyendo: tarjeta de débito o crédito a través de un TPV virtual.DCWine utiliza todos los medios para garantizar la confidencialidad y la seguridad de los datos de pago transmitidos por el Usuario durante las transacciones a través del Sitio Web. Como tal, el Sitio Web utiliza un sistema de pago seguro SSL (Secure Socket Layer).Las tarjetas de crédito estarán sujetas a comprobaciones y autorizaciones por parte de la entidad bancaria emisora de las mismas. Si dicha entidad no autorizase el pago, DCWine no será responsable por ningún retraso o falta de entrega y no podrá formalizar ningún contrato con el Usuario. Es importante tener en cuenta que los proveedores o emisores de medios de pago pueden aplicar medidas antifraude, por lo que no nos hacemos responsables de estas políticas de seguridad.Una vez que DCWine reciba la orden de compra por parte del Usuario a través del Sitio Web, se hará una pre-autorización en la tarjeta que corresponda para asegurar que existen fondos suficientes para completar la transacción. El cargo en la tarjeta de crédito se realizará en el instante en que se le envíe la confirmación de la realización de tu pedido. <br/> <br/> Pedidos <br/> <br/> Todos los pedidos de compra recibidos por DCWine a través del Sitio Web están sujetos a la disponibilidad de los productos y/o a que ninguna circunstancia o causa de fuerza mayor (Exoneración de Responsabilidad) afecte al suministro de los mismos. <br/> <br/> Condiciones de Envío <br/> <br/> Realizamos envíos únicamente dentro de las Islas Canarias. Los gastos de envío serán calculados en base al destino y al total de tu compra, y se detallarán durante el proceso de compra para tu revisión antes de finalizar la transacción.El tiempo de entrega varía en función de la demanda de pedidos y la disponibilidad de stock. El mismo puede variar dependiendo de la carga de trabajo y otros factores logísticos.Los envíos no cuentan con seguro por defecto. Si desea asegurar su envío, puede contratar un seguro opcional durante el proceso de compra.No nos hacemos responsables de retrasos en la entrega debido a circunstancias ajenas a nuestra voluntad o casos fortuitos. Las entregas se efectuarán en el ámbito del siguiente territorio: Islas Canarias.DCWine queda exonerado de cualquier responsabilidad derivada del transporte de los productos. Si el Usuario no va a estar en el lugar de entrega en la franja horaria convenida, debe ponerse en contacto. <br/> <br/> Gastos de envío adicionales: En caso de que la empresa de mensajería realice un segundo o tercer intento de entrega, podrían generarse gastos adicionales. Estos costos, de ser aplicados, serán facturados al cliente. DCWine queda exonerada de cualquier responsabilidad derivada de estos gastos adicionales, los cuales son gestionados directamente por la empresa de mensajería y están sujetos a sus condiciones generales.Si resultara imposible efectuar la entrega del pedido por ausencia del Usuario, el pedido podría ser devuelto al almacén. No obstante, el transportista dejaría un aviso explicando dónde se encuentra el pedido y cómo hacer para que sea entregado de nuevo.A efectos de las presentes Condiciones, se entenderá que se ha producido la entrega o que el pedido ha sido entregado en el momento en el que el Usuario o un tercero indicado por el Usuario adquiera la posesión material de los productos, lo que se acreditará mediante la firma de la recepción del pedido en la dirección de entrega convenida.El Usuario adquiere la propiedad de los productos cuando DCWine recibe el pago completo de todas las cantidades debidas en relación a la compra efectuada. <br/> <br/> Medios técnicos para corregir errores <br/> <br/> Se pone en conocimiento del Usuario que en caso de que detecte que se ha producido un error al introducir datos necesarios para procesar su solicitud de compra en el Sitio Web, podrá modificar los mismos poniéndose en contacto con DCWine a través de los espacios de contacto habilitados en el Sitio Web, y, en su caso, a través de aquellos habilitados para contactar con el servicio de atención al cliente, y/o utilizando los datos de contacto facilitados en el Aviso Legal. En cualquier caso, el Usuario, antes de hacer clic en &#39;Comprar&#39;, tiene acceso al espacio, carrito, o cesta donde se van anotando sus solicitudes de compra y puede hacer modificaciones. De igual forma, se remite al Usuario a consultar el Aviso Legal y, en concreto, la Política de Privacidad para recabar más información sobre cómo ejercer su derecho de rectificación según lo establecido en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD) y en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales. <br/> <br/> Cambios y Devoluciones <br/> <br/> Nos reservamos el derecho de aceptar cambios y devoluciones. En caso de recibir un producto defectuoso, debe notificarlo sin ninguna demora indebida y, en cualquier caso, a más tardar en un plazo máximo de 48 horas. Para realizar cambios, no se hará la devolución en efectivo, sino que se realizará la devolución del importe a la misma tarjeta con la que se realizó la compra.Su satisfacción es nuestra prioridad. Si has recibido algún producto con defecto, por favor contáctanos a food@dadilogistica.com y responderemos a tu solicitud en un plazo máximo de 10 días, ofreciéndote una solución adecuada. No nos hacemos responsables de daños en los productos realizados debido a circunstancias ajenas a nuestra voluntad o casos fortuitos. En el caso de envío de productos incorrectos, se realizará la devolución del importe correspondiente a la misma tarjeta con la que se efectuó la compra.El Usuario reconoce que, en caso de desistimiento, deberá asumir el coste directo de la devolución (transporte, entrega) de los bienes, salvo cuando se trate de productos defectuosos, en mal estado o entregados de forma incorrecta, en cuyo caso los gastos serán asumidos por DCWine. No obstante, si el coste de la devolución resultase manifiestamente desproporcionado en relación con el valor del producto (por ejemplo, cuando el importe del transporte supere con creces el precio abonado), el Usuario podrá contactar con DCWine para negociar una solución que reduzca dichos costes, siempre cumpliendo con la normativa de defensa de los consumidores y usuarios. Asimismo, el Usuario acepta que, si en el momento de la entrega considera que el producto no se ajusta a lo estipulado en el contrato o en el pedido de compra (por defecto o error), deberá comunicarlo de inmediato a DCWine, describiendo la disconformidad, ya sea a través de los datos de contacto facilitados o mediante el correo electrónico lanzarotedcwine@gmail.com.Además, será responsable de la disminución de valor de los productos resultante de una manipulación distinta a la necesaria para establecer la naturaleza, las características y el funcionamiento de los bienes. Asimismo, se debe devolver los productos usando o incluyendo todos sus envoltorios originales, y demás documentos que en su caso los acompañen, además de una copia de la factura de compra.El Usuario puede devolver o enviar los productos a DCWine en:Calle Chabusquillo (el) , 35500 Arrecife (Las Palmas).El Usuario será entonces informado a su solicitud en un plazo máximo de 10 días, ofreciéndole una solución adecuada.En todo caso, se estará siempre a los derechos reconocidos en la legislación vigente en cada momento para el Usuario, en tanto que consumidor y usuario. <br/> <br/> Exoneración de Responsabilidad <br/> <br/> Salvo que la ley disponga lo contrario, DCWine no asumirá responsabilidad por:",
+    "list_1": {
+      "li_1": "Pérdidas que no sean atribuibles a un incumplimiento por su parte.",
+      "li_2": "Cualquier pérdida empresarial (incluyendo, sin carácter limitativo, lucro cesante, pérdida de ingresos, contratos, ahorros previstos, datos o fondo de comercio), así como cualquier pérdida indirecta o daños consecuenciales que no fueran razonablemente previsibles en el momento de formalizar el contrato."
+    },
+    "after_list": "DCWine también limita su responsabilidad en los siguientes supuestos:",
+    "list_2": {
+      "li_1": " Visualización de productos: Se aplican todas las medidas necesarias para mostrar fielmente los productos en el Sitio Web; sin embargo, DCWine no será responsable de mínimas diferencias o inexactitudes debidas a problemas de resolución de pantalla, navegador u otros similares. ",
+      "li_2": "Transporte y entrega: DCWine actúa con la máxima diligencia. No obstante, no se hace responsable de retrasos, pérdidas o hurtos motivados por incidencias (incluidas huelgas, retenciones en carreteras, u otras circunstancias propias del sector).",
+      "li_3": "Uso indebido o devolución errónea: DCWine no responderá del uso incorrecto o negligente que el Usuario haga del producto, ni de la devolución de un artículo equivocado. Es responsabilidad del Usuario asegurar que devuelve el producto correcto conforme a las instrucciones de devolución facilitadas. Asimismo, DCWine no será responsable por cualquier incumplimiento o retraso en el cumplimiento de las obligaciones derivado de eventos de fuerza mayor, entendiéndose como tales, a modo enunciativo pero no exhaustivo, huelgas, cierres patronales u otras medidas reivindicativas; conmoción civil, amenazas o actos de terrorismo, guerra (declarada o no), incendio, explosión, inundación, terremoto u otros desastres naturales, imposibilidad de utilizar transportes públicos o privados y, en general, cualquier causa que escape a su control razonable. En tales casos, las obligaciones se entenderán suspendidas mientras dure la causa de fuerza mayor, ampliándose el plazo para su cumplimiento por un periodo equivalente a la duración de dicha causa. DCWine se compromete a emplear todos los medios razonables para encontrar una solución que permita cumplir con sus obligaciones pese a la causa de fuerza mayor."
+    },
+    "last_paragraph": "En ningún caso estas limitaciones afectarán los derechos legales del consumidor, ni se entenderán como exclusión de responsabilidad en casos de negligencia grave, dolo o cualquier otro supuesto en el que, por Ley, no pueda limitarse o excluirse la responsabilidad. <br/> <br/> Renuncia <br/> <br/>Ninguna renuncia de DCWine a un derecho o acción legal concreta o la falta de requerimiento por DCWine del cumplimiento estricto por el Usuario de alguna de sus obligaciones supondrá, ni una renuncia a otros derechos o acciones derivados de un contrato o de las Condiciones, ni exonerará al Usuario del cumplimiento de sus obligaciones. Ninguna renuncia de DCWine a alguna de los presentes Terminso y Condiciones o a los derechos o acciones derivados de un contrato surtirá efecto, a no ser que se establezca expresamente que es una renuncia y se formalice y se le comunique al Usuario por escrito. <br/> <br/> Nulidad <br/> <br/> Si alguna de las presentes Condiciones fuesen declaradas nulas y sin efecto por resolución firme dictada por autoridad competente, el resto de las cláusulas permanecerán en vigor, sin que queden afectadas por dicha declaración de nulidad. <br/> <br/> Acuerdo Completo <br/> <br/> Los presentes Términos y Condiciones y todo documento al que se haga referencia expresa en estas constituyen el acuerdo íntegro existente entre el Usuario y DCWine en relación con el objeto de compraventa y sustituyen a cualquier otro pacto, acuerdo o promesa anterior convenida verbalmente o por escrito por las mismas partes. El Usuario y DCWine reconocen haber consentido la celebración de un contrato sin haber confiado en ninguna declaración o promesa hecha por la otra parte, salvo aquello que figura expresamente mencionado en los presentes Términos y Condiciones. <br/> <br/> Protección de Datos <br/> <br/> La información o datos de carácter personal que el Usuario facilite a DCWine en el curso de una transacción en el Sitio Web, serán tratados con arreglo a lo establecido en la Política de Privacidad o de protección de datos (contenida, en su caso, en el Aviso Legal). Al acceder, navegar y/o usar el Sitio Web el Usuario consiente el tratamiento de dicha información y datos y declara que toda la información o datos que facilita son veraces. <br/> <br/> Legislación aplicable y jurisdicción <br/> <br/> El acceso, navegación y/o uso de este Sitio Web y los contratos de compra de productos a través del mismo se regirán por la legislación española. Cualquier controversia, problema o desacuerdo que surja o este relacionado con el acceso, navegación y/o uso del Sitio Web, o con la interpretación y ejecución de estos Términos y Condiciones, o con los contratos de venta entre DCWine y el Usuario, será sometida a la jurisdicción exclusiva de los juzgados y tribunales españoles. Asimismo, si de la celebración de este contrato de compra entre DCWine y el Usuario emanara una controversia, el Usuario como consumidor puede solicitar una solución extrajudicial de controversias, de acuerdo con el Reglamento (UE) 524/2013 del Parlamento Europeo y del Consejo, de 21 de mayo de 2013, sobre resolución de litigios en línea en materia de consumo y por el que se modifica el Reglamento (CE) 2006/2004 y la Directiva 2009/22/CE. Puede acceder a este método a través del siguiente sitio web: https://ec.europa.eu/consumers/odr/. <br/> <br/> Atención al Cliente <br/> <br/> Estamos aquí para ayudarle. Puede ponerse en contacto con nosotros a través de nuestros canales."
+  },
+
+  "cookies_policy_page": {
+    "meta_title": "Política de Cookies - DcWine",
+    "meta_description": "Descubre cómo utilizamos cookies para mejorar tu experiencia en DcWine y cómo puedes controlarlas.",
+    "title": "Política de cookies",
+    "description": "Una Cookie es un fichero que se descarga en su ordenador al acceder a determinadas páginas web. Las cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los hábitos de navegación de un usuario o de su equipo y, dependiendo de la información que contenga y de la forma en que utilice su equipo, pueden utilizarse para reconocer al usuario. Las cookies son esenciales para el funcionamiento de internet, aportando innumerables ventajas en la prestación de servicios interactivos, facilitándole la navegación y usabilidad de nuestra web. La información que le proporcionamos a continuación, le ayudará a comprender los diferentes tipos de cookies:",
+    "first_table": {
+      "headers": ["Tipos de cookies"],
+      "rows": [
+        {
+          "category": "Según la entidad que las gestione",
+          "type": "Cookies propias",
+          "description": "Son aquellas que se recaban por el propio editor para prestar el servicio solicitado por el usuario."
+        },
+        {
+          "category": "",
+          "type": "Cookies propias",
+          "description": "Son aquellas que son recabadas y gestionadas por un tercero, estas no se pueden considerar propias."
+        },
+        {
+          "category": "SEGÚN EL PLAZO DE TIEMPO QUE PERMANEZCAN ACTIVADAS",
+          "type": "Cookies de sesión",
+          "description": "Recaban datos mientras el usuario navega por la red con la finalidad de prestar el servicio solicitado."
+        },
+        {
+          "category": "",
+          "type": "Cookies persistentes",
+          "description": "Se almacenan en el terminal y la información obtenida, será utilizada por el responsable de la cookie con la finalidad de prestar el servicio solicitado."
+        },
+        {
+          "category": "SEGÚN SU FINALIDAD",
+          "type": "Cookies técnicas",
+          "description": "Son las necesarias para la correcta navegación por la web."
+        },
+        {
+          "category": "",
+          "type": "Cookies de personalización",
+          "description": "Permiten al usuario las características (idioma) para la navegación por la website."
+        },
+        {
+          "category": "",
+          "type": "Cookies de análisis",
+          "description": "Permiten al prestador el análisis vinculado a la navegación realizada por el usuario, con la finalidad de llevar un seguimiento de uso de la página web así como realizar estadísticas de los contenidos más visitados, número de visitantes, etc."
+        },
+        {
+          "category": "",
+          "type": "Cookies publicitarias",
+          "description": "Permiten al editor incluir en la web espacios publicitarios, según el contenido de la propia web."
+        },
+        {
+          "category": "",
+          "type": "Cookies de publicidad comportamental",
+          "description": "Permiten al editor incluir en la página web espacios publicitarios según la información obtenida a través de los hábitos de navegación del usuario."
+        }
+      ]
+    },
+    "after_table_1": "Según lo dispuesto en el artículo 22.2 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), DADI FOOD informa de las cookies utilizadas en nuestra website:",
+    "second_table": {
+      "title": "Tipos de Cookies",
+      "subtitle": "F <br /> I<br /> N<br /> A<br /> L<br /> I<br /> D<br /> A<br /> D",
+      "own_cookies": "Cookies propias",
+      "third_party_cookies": "Cookies de terceros",
+      "session_cookies": "Cookies de sesión",
+      "technical_cookies": "Cookies técnicas",
+      "personalization_cookies": "Cookies de personalización",
+      "analysis_cookies": "Cookies de análisis",
+      "advertising_cookies": "Cookies publicitarias",
+      "behavioural_advertising_cookies": "Cookies de publicidad comportamental"
+    },
+    "after_table_2": "Asimismo, DCWine informa al usuario de que tiene la posibilidad de configurar su navegador de modo que se le informe de la recepción de cookies, pudiendo, si así lo desea, impedir que sean instaladas en su disco duro. A continuación le proporcionamos los enlaces de diversos navegadores, a través de los cuales podrá realizar dicha configuración:"
+  },
+  "age_verification_pop_up": {
+    "title": "Bienvenido a DcWine",
+    "message": "Debes tener más de 18 años para acceder a esta página",
+    "accept": "Si tengo más de 18 años",
+    "exit": "Salir ahora"
+  },
+  "cookies_popup": {
+    "title": "Cookies",
+    "message": " En nuestro sitio web utilizamos cookies propias y de terceros para finalidades analíticas mediante el análisis del tráfico web.",
+    "accept": "Aceptar",
+    "reject": "Rechazar"
+  }
+}
